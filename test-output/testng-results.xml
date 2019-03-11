@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="29843" started-at="2019-03-08T14:56:20Z" finished-at="2019-03-08T14:56:50Z">
+    <groups>
+    </groups>
+    <test name="Spring 7 UI" duration-ms="29843" started-at="2019-03-08T14:56:20Z" finished-at="2019-03-08T14:56:50Z">
+      <class name="com.SpringSeven.qa.testcases.initialPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@7085bdee]" name="setUp" is-config="true" duration-ms="15609" started-at="2019-03-08T14:56:20Z" finished-at="2019-03-08T14:56:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateCorrectPageForLogin()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@7085bdee]" name="validateCorrectPageForLogin" duration-ms="2641" started-at="2019-03-08T14:56:36Z" finished-at="2019-03-08T14:56:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCorrectPageForLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@7085bdee]" name="tearDown" is-config="true" duration-ms="155" started-at="2019-03-08T14:56:39Z" finished-at="2019-03-08T14:56:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@7085bdee]" name="setUp" is-config="true" duration-ms="10795" started-at="2019-03-08T14:56:39Z" finished-at="2019-03-08T14:56:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateLoginLinkOnLogin()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@7085bdee]" name="validateLoginLinkOnLogin" duration-ms="347" started-at="2019-03-08T14:56:50Z" finished-at="2019-03-08T14:56:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginLinkOnLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@7085bdee]" name="tearDown" is-config="true" duration-ms="140" started-at="2019-03-08T14:56:50Z" finished-at="2019-03-08T14:56:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.SpringSeven.qa.testcases.initialPageTest -->
+    </test> <!-- Spring 7 UI -->
+  </suite> <!-- Suite -->
+</testng-results>

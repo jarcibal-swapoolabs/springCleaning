@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Spring7 Test Automation Test Suite]">
+  <listeners>
+    <listener class-name="com.springSeven.qa.Analyzer.MyTransformer"/>
+    <listener class-name="com.springSeven.qa.ExtentReportListener.extentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Spring7 Test Cases(failed)">
+    <classes>
+      <class name="com.SpringSeven.qa.testcases.loginPageTest">
+        <methods>
+          <include name="validateLoginPageTitle"/>
+          <include name="validateLoginWorks"/>
+          <include name="setUp"/>
+          <include name="validateFailedLoginIncorrectPW"/>
+          <include name="validateFailedLoginIncorrectUN"/>
+          <include name="validateFailedLoginWorks"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.SpringSeven.qa.testcases.loginPageTest -->
+    </classes>
+  </test> <!-- Spring7 Test Cases(failed) -->
+</suite> <!-- Failed suite [Spring7 Test Automation Test Suite] -->
