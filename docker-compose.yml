@@ -2,8 +2,6 @@ version: "3"
 services:
   selenium-hub:
     image: selenium/hub
-    ports:
-      - "4444:4444"
   chrome:
     image: selenium/node-chrome-debug
     depends_on:
@@ -17,7 +15,7 @@ services:
     environment:
       - HUB_HOST=selenium-hub
   dockering2:
-    image: jarcibal/selenium-docker-linux
+    image: smileys009/selenium-docker-linux
     depends_on:
       - chrome
       - firefox
@@ -26,9 +24,9 @@ services:
       - HUB_HOST=selenium-hub
       - MODULE=dockering.xml
     volumes:
-      - ./resulta/firefox:/usr/share/udemy/test-output
+      - ./output/firefox:/usr/share/udemy/test-output
   dockering1:
-    image: jarcibal/selenium-docker-linux
+    image: smileys009/selenium-docker-linux
     depends_on:
       - chrome
       - firefox
@@ -37,4 +35,4 @@ services:
       - HUB_HOST=selenium-hub
       - MODULE=dockering.xml
     volumes:
-      - ./resulta/chrome:/usr/share/udemy/test-output
+      - ./output/chrome:/usr/share/udemy/test-output
