@@ -1,6 +1,5 @@
 package com.SpringSeven.qa.testcases;
 
-
 import java.net.MalformedURLException;
 
 import org.testng.Assert;
@@ -33,19 +32,24 @@ public class initialPageTest extends testBase{
 	}
 	
 	@Test
-	public void validateLoginLinkOnLogin(){
-		String linkText = initialPage.getLoginLinkText();
-		Assert.assertEquals(linkText, "LOGIN");
+	public void tester(){
+		driver.get("http://localhost:80");
 	}
-	
-	@Test
-	public void validateCorrectPageForLogin(){
-		loginPage = initialPage.loginClick();
-		loadingWait(loginPage.loginButton);
-		String header = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(header, "Sign In");
 
-	}
+//	@Test
+//	public void validateLoginLinkOnLogin(){
+//		String linkText = initialPage.getLoginLinkText();
+//		Assert.assertEquals(linkText, "LOGIN");
+//	}
+//	
+//	@Test
+//	public void validateCorrectPageForLogin(){
+//		loginPage = initialPage.loginClick();
+//		loadingWait(loginPage.loginButton);
+//		String header = loginPage.validateLoginPageTitle();
+//		Assert.assertEquals(header, "Sign In");
+//
+//	}
 
 	
 	

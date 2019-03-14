@@ -36,3 +36,10 @@ services:
       - MODULE=dockering.xml
     volumes:
       - ./output/chrome:/usr/share/udemy/test-output
+  website:
+    image: selenium/node-firefox-debug
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      
