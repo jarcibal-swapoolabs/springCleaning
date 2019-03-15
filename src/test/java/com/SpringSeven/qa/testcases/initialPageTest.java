@@ -2,6 +2,9 @@ package com.SpringSeven.qa.testcases;
 
 import java.net.MalformedURLException;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -34,7 +37,8 @@ public class initialPageTest extends testBase{
 	@Test
 	public void tester(){
 		driver.get("http://localhost:80");
-	}
+		driver.findElement(By.xpath("//h1[contains(text(),'Hello Digital Ocean']"));
+		}
 
 //	@Test
 //	public void validateLoginLinkOnLogin(){
