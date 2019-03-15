@@ -33,7 +33,7 @@ public class initialPageTest extends testBase{
 	
 	@Test
 	public void tester(){
-		driver.get("http://192.168.99.100:80");
+		driver.get("http://localhost:80");
 	}
 
 //	@Test
