@@ -37,7 +37,8 @@ public class initialPageTest extends testBase{
 	@Test
 	public void tester(){
 		driver.get("http://localhost:80");
-		driver.findElement(By.xpath("//h1[contains(text(),'Hello Digital Ocean']"));
+		String value = driver.findElement(By.tagName("h1")).getText();
+		System.out.println(value);
 		}
 
 //	@Test
