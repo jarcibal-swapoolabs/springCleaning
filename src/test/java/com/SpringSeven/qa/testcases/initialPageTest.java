@@ -36,7 +36,7 @@ public class initialPageTest extends testBase{
 	
 	@Test
 	public void tester(){
-		driver.get("http://localhost:80");
+		driver.get("http://127.0.0.1:80");
 		String value = driver.findElement(By.tagName("h1")).getText();
 		System.out.println(value);
 		}
