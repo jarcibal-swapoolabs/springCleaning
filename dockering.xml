@@ -16,7 +16,7 @@
 			<class name="com.SpringSeven.qa.testcases.homePageTest"></class>
 			<class name="com.SpringSeven.qa.testcases.productsPageTest"></class>
 			<class name="com.SpringSeven.qa.testcases.enrollmentTreePageTest"></class>
-			<class name="com.SpringSeven.qa.testcases.profileTreePageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.profilePageTest"></class>
        </classes>
     </test>
  
