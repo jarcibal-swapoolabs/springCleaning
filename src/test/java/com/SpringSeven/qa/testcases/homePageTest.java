@@ -52,7 +52,7 @@ public class homePageTest extends testBase{
 	@Test
 	public void verifySwapooHomepage() {
 		String name = homePage.validateSwapooHomepage();
-		Assert.assertEquals(name, "clarence layba");	
+		Assert.assertEquals(name, "Ricardo Dalisay");	
 	    }
 
 	
