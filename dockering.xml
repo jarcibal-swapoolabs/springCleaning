@@ -9,7 +9,7 @@
  
     <test name="Spring 7 UI">
         <classes>
-			<class name="com.SpringSeven.qa.testcases.homePageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.productsPageTest"></class>
        </classes>
     </test>
  
