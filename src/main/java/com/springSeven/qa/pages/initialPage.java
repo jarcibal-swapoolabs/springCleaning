@@ -11,7 +11,7 @@ public class initialPage extends testBase{
 	
 	
 	
-	@FindBy(xpath="//span[contains(text(),'LOGIN.')]")
+	@FindBy(xpath="//span[contains(text(),'LOGIN')]")
 	WebElement loginLinktext;
 
 	
