@@ -2,10 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite"  parallel="tests" >
 
-    <listeners>
-        <listener class-name="com.SpringSeven.qa.ExtentReportListener.extentReportListener"/>
-    </listeners>
-
+	<listeners>
+		<listener class-name="com.springSeven.qa.ExtentReportListener.extentReportListener"/>
+	</listeners>
+	
     <test name="Spring 7 UI">
         <classes>
 			<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
