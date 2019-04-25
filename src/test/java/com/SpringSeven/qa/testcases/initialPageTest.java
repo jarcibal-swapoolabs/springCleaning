@@ -37,7 +37,7 @@ public class initialPageTest extends testBase{
 	@Test
 	public void validateLoginLinkOnLogin(){
 		String linkText = initialPage.getLoginLinkText();
-		Assert.assertEquals(linkText, "LOGIN");
+		Assert.assertEquals(linkText, "LOGIN.");
 	}
 	
 	@Test
