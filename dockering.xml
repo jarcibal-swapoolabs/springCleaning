@@ -7,7 +7,7 @@
 	</listeners>
 
  
-    <test name="Spring 7 UI" verbose="2" time-out="60000" configfailurepolicy="continue">
+    <test name="Spring 7 UI" verbose="2" time-out="60000">
         <classes>
 			<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
 			<class name="com.SpringSeven.qa.testcases.homePageTest"></class>
