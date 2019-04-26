@@ -6,11 +6,12 @@
 		<listener class-name="com.springSeven.qa.ExtentReportListener.extentReportListener"/>
 	</listeners>
 
+ 
     <test name="Spring 7 UI" verbose="2" time-out="60000">
         <classes>
 			<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
-			<class name="com.SpringSeven.qa.testcases.loginPageTest"></class>
-			<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.homePageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.productsPageTest"></class>
        </classes>
     </test>
  
