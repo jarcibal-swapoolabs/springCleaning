@@ -37,22 +37,33 @@ public class homePageTest extends testBase{
 		loginPage = initialPage.loginClick();
 		loadingWait(loginPage.loginButton);
 		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-		processing();	
+		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 }
 	
 	
 	@Test
 	public void verifyLogout(){
-		testUtil.JSClick(homePage.logoutLink);
-		processing();
+		homePage.clickOnLogoutLink();
 		boolean displayed = initialPage.initialPageLoginDisplayed();
 		Assert.assertTrue(displayed);		
 	}
 	
 	@Test
-	public void verifySwapooHomepage() {
-		String name = homePage.validateSwapooHomepage();
+	public void verifySwapooFooterIcon() {
+		String name = homePage.validateSwapooHomepage(homePage.swapooLinkFooter);
 		Assert.assertEquals(name, "Ricardo Dalisay");	
+	    }
+
+	@Test
+	public void verifySwapooHeaderIcon() {
+		String name = homePage.validateSwapooHomepage(homePage.swapooLinkHeader);
+		Assert.assertEquals(name, "Ricardo Dalisay");	
+	    }
+	
+	@Test
+	public void verifyHomepageHeader() {
+		String header = homePage.getHeader();
+		Assert.assertEquals(header, "Welcome, beth_logan!");	
 	    }
 
 	

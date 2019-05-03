@@ -13,29 +13,29 @@ public class setupSecurityQuestionsPage extends testBase{
 	}
 	
 	//title
-	@FindBy(xpath="//h1[@title='Change Security Questions']")
+	@FindBy(xpath="//h1[@title='Setup Security Questions']")
 	public WebElement setupSecurityQuestionsPageTitle;
 
 	//textbox
-	@FindBy(id="CHANGE_SECURITY_QUESTIONS_password")
+	@FindBy(id="SETUP_SECURITY_QUESTIONS_password")
 	WebElement passwordTextBox;
 	
-	@FindBy(id="CHANGE_SECURITY_QUESTIONS_securityQuestion1")
+	@FindBy(id="SETUP_SECURITY_QUESTIONS_securityQuestion1")
 	WebElement questionOneTextbox;
 
-	@FindBy(id="CHANGE_SECURITY_QUESTIONS_securityQuestion2")
+	@FindBy(id="SETUP_SECURITY_QUESTIONS_securityQuestion2")
 	WebElement questionTwoTextbox;
 
-	@FindBy(id="CHANGE_SECURITY_QUESTIONS_securityQuestion3")
+	@FindBy(id="SETUP_SECURITY_QUESTIONS_securityQuestion3")
 	WebElement questionThreeTextbox;
 
-	@FindBy(id="CHANGE_SECURITY_QUESTIONS_securityAnswer1")
+	@FindBy(id="SETUP_SECURITY_QUESTIONS_securityAnswer1")
 	WebElement answerOneTextbox;
 
-	@FindBy(id="CHANGE_SECURITY_QUESTIONS_securityAnswer2")
+	@FindBy(id="SETUP_SECURITY_QUESTIONS_securityAnswer2")
 	WebElement answerTwoTextbox;
 
-	@FindBy(id="CHANGE_SECURITY_QUESTIONS_securityAnswer3")
+	@FindBy(id="SETUP_SECURITY_QUESTIONS_securityAnswer3")
 	WebElement answerThreeTextbox;
 
 	@FindBy(xpath="//*[@id=\"app\"]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/div/form/div[1]/div[1]/div")
@@ -61,7 +61,7 @@ public class setupSecurityQuestionsPage extends testBase{
 	WebElement continueButton;
 		
 	@FindBy(xpath="//span[contains(text(),'SUBMIT')]")
-	WebElement submitButton;
+	public WebElement submitButton;
 
 	@FindBy(xpath="//span[text()='OK']")
 	WebElement successOkButton;

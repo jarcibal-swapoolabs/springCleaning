@@ -36,7 +36,7 @@ public class profilePageTest extends testBase{
 		loadingWait(loginPage.loginButton);
 		
 		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-		processing();
+		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.profileLink);

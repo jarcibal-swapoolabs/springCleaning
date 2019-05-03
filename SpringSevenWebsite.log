@@ -1,10 +1,10 @@
-2019-03-08 22:56:52,026 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_PH", UTF-8, parsed); will try to load it.
-2019-03-08 22:56:52,068 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_PH.ftl"): Not found
-2019-03-08 22:56:52,075 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
-2019-03-08 22:56:52,096 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
-2019-03-08 22:56:52,099 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_PH", UTF-8, parsed) from "jar:file:/home/jarcibal/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
-2019-03-08 22:56:54,072 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_PH", UTF-8, parsed); will try to load it.
-2019-03-08 22:56:54,092 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_PH.ftl"): Not found
-2019-03-08 22:56:54,093 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
-2019-03-08 22:56:54,099 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
-2019-03-08 22:56:54,109 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_PH", UTF-8, parsed) from "jar:file:/home/jarcibal/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2019-05-03 09:58:48,037 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_PH", UTF-8, parsed); will try to load it.
+2019-05-03 09:58:48,046 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_PH.ftl"): Not found
+2019-05-03 09:58:48,052 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2019-05-03 09:58:48,054 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2019-05-03 09:58:48,055 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_PH", UTF-8, parsed) from "jar:file:/home/jarcibal/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2019-05-03 09:58:49,197 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_PH", UTF-8, parsed); will try to load it.
+2019-05-03 09:58:49,198 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_PH.ftl"): Not found
+2019-05-03 09:58:49,200 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2019-05-03 09:58:49,200 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2019-05-03 09:58:49,204 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_PH", UTF-8, parsed) from "jar:file:/home/jarcibal/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"

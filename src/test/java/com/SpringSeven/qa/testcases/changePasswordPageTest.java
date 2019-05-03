@@ -35,8 +35,8 @@ public class changePasswordPageTest extends testBase {
 		loginPage = initialPage.loginClick();
 		loadingWait(loginPage.loginButton);
 
-		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		processing();
+		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.settingsLink);
@@ -119,7 +119,7 @@ public class changePasswordPageTest extends testBase {
 	@Test
 	public void validateIncorrectNewCurrentPW() {
 		changePasswordPage.enterPW("mksoft_password");
-		loadingWait(changePasswordPage.submitButton);
+		clickableWait(changePasswordPage.submitButton);
 		changePasswordPage.enterPW("pass", "password");
 		loadingWait(changePasswordPage.confirmPasswordNotMatch);
 		String errorMessage = changePasswordPage.getErrorNoNewPassword();

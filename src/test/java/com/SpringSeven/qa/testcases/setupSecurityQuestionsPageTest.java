@@ -35,8 +35,8 @@ public class setupSecurityQuestionsPageTest extends testBase {
 		loginPage = initialPage.loginClick();
 		loadingWait(loginPage.loginButton);
 
-		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		processing();
+		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.settingsLink);
@@ -51,7 +51,7 @@ public class setupSecurityQuestionsPageTest extends testBase {
 	@Test
 	public void validatesetupSecurityQuestionsPageTitle() {
 		String header = setupSecurityQuestionsPage.getSetupSecurityQuestionsPageTitle();
-		Assert.assertEquals(header, "Change Security Questions");
+		Assert.assertEquals(header, "Setup Security Questions");
 	}
 
 	@Test
@@ -70,14 +70,14 @@ public class setupSecurityQuestionsPageTest extends testBase {
 		Assert.assertEquals(errorMessage, "Password is invalid");
 	}
 
-//	@Test
-//	public void validateCorrectCurrentPW() {
-//		setupSecurityQuestionsPage.enterPW("mksoft_password");
-//		loadingWait(setupSecurityQuestionsPage.passwordErrorMessage);
-//		boolean submitBtnDisplayed = setupSecurityQuestionsPage.getCorrectCurrentPW();
-//		Assert.assertTrue(submitBtnDisplayed);
-//	}
-//
+	@Test
+	public void validateCorrectCurrentPW() {
+		setupSecurityQuestionsPage.enterPW("mksoft_password");
+		loadingWait(setupSecurityQuestionsPage.submitButton);
+		boolean submitBtnDisplayed = setupSecurityQuestionsPage.getCorrectCurrentPW();
+		Assert.assertTrue(submitBtnDisplayed);
+	}
+
 //	@Test
 //	public void validateSetupSecurityQuestionsPageWorks() {
 //		setupSecurityQuestionsPage.getSuccessfullSetupSecurity("name?", "jericho", "address?", "pasay", "bad or wrong?","bad");

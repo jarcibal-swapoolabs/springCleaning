@@ -29,7 +29,7 @@ public class settingsPage extends testBase{
 	@FindBy(xpath="//a[contains(@href,'/settings/change-account-password')]")
 	WebElement changePasswordLink;
 
-	@FindBy(xpath="//a[contains(@href,'settings/change-security-questions')]")
+	@FindBy(xpath="//a[contains(@href,'settings/setup-security-questions')]")
 	WebElement setupSecurityQuestionsLink;
 
 	//link

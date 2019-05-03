@@ -33,8 +33,6 @@ public class completeRegistrationTest  extends testBase {
 		initialPage = new initialPage();
 		loginPage = initialPage.loginClick();		
 		loadingWait(loginPage.loginButton);
-		completeRegistrationPage = loginPage.loginRegister("","");
-		processing();
 	}
 
 //	@Test

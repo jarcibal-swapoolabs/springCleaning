@@ -2,20 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
   <listeners>
-    <listener class-name="com.springSeven.qa.Analyzer.MyTransformer"/>
     <listener class-name="com.springSeven.qa.ExtentReportListener.extentReportListener"/>
   </listeners>
   <test thread-count="5" name="Spring 7 UI(failed)" parallel="tests">
-    <parameter name="browserName" value="linuxChrome"/>
     <classes>
-      <class name="com.SpringSeven.qa.testcases.initialPageTest">
+      <class name="com.SpringSeven.qa.testcases.changePasswordPageTest">
         <methods>
-          <include name="validateLoginLinkOnLogin"/>
-          <include name="validateCorrectPageForLogin"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="validateIncorrectNewCurrentPW"/>
         </methods>
-      </class> <!-- com.SpringSeven.qa.testcases.initialPageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.changePasswordPageTest -->
     </classes>
   </test> <!-- Spring 7 UI(failed) -->
 </suite> <!-- Failed suite [Suite] -->

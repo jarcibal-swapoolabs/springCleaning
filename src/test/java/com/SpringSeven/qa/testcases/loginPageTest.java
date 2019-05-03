@@ -51,9 +51,7 @@ public class loginPageTest extends testBase{
 	@Test
 	public void validateFailedLoginIncorrectUN()
 	{
-		loginPage.updateUsername("smileys009@yahoo.com");
-		loginPage.updatePassword("Makatisoft01!");	
-		loginPage.loginClick();
+		loginPage.inputCredential("smileys009@yahoo.com","mksoft_password");
 		loadingWait(loginPage.loginFailedErrorMessage);
 		errorMessage = loginPage.getIncorrectCredentialsError();
 		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
@@ -61,46 +59,76 @@ public class loginPageTest extends testBase{
 
 	
 	@Test
-	public void validateFailedLoginIncorrectPW() 
+	public void validateFailedLoginIncorrectPWOne() 
 	{
-		loginPage.updateUsername("larry.decastro@swapoolabs.com");
-		loginPage.updatePassword("pass");	
-		loginPage.loginClick();
+		loginPage.inputCredential("clarence.layba@swapoolabs.com","pass");
+		loadingWait(loginPage.loginFailedErrorMessage);
+		errorMessage = loginPage.getIncorrectCredentialsError();
+		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
+	}
+
+	public void validateFailedLoginIncorrectPWTwo() 
+	{
+		loginPage.inputCredential("beth_logan","pass");
 		loadingWait(loginPage.loginFailedErrorMessage);
 		errorMessage = loginPage.getIncorrectCredentialsError();
 		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
 	}
 
 	@Test
-	public void validateLoginWorks() {
+	public void validateLoginWorksOne() {
 		//homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
 		loadingWait(homePage.logoutLink);
 		Assert.assertTrue(homePage.logoutDisplayed());
 	}
 	
+	@Test
+	public void validateLoginWorksTwo() {
+		homePage = loginPage.login("beth_logan","mksoft_password");
+		loadingWait(homePage.logoutLink);
+		Assert.assertTrue(homePage.logoutDisplayed());
+	}
+
 	//not in testcase
 	@Test
-	public void validateLoginErrorMessageBlankUsername(){
-		loginPage.loginClick();
+	public void validateLoginErrorMessageBlankUsernameOne(){
+		loginPage.inputCredential("","");
 		errorMessage = loginPage.getUsernameError();
 		Assert.assertEquals(errorMessage, "Please provide an email or username");
 	}
 	
+	public void validateLoginErrorMessageBlankUsernameTwo(){
+		loginPage.inputCredential("","mksoft_password");
+		errorMessage = loginPage.getUsernameError();
+		Assert.assertEquals(errorMessage, "Please provide an email or username");
+	}
 	
 	@Test
-	public void validateLoginErrorMessageBlankPassword(){
-		loginPage.loginClick();
+	public void validateLoginErrorMessageBlankPasswordOne(){
+		loginPage.inputCredential("","");
 		errorMessage = loginPage.getPasswordError();
 		Assert.assertEquals(errorMessage, "Please provide a password");
 	}
 	
 	@Test
+	public void validateLoginErrorMessageBlankPasswordTwo(){
+		loginPage.inputCredential("clarence.layba@swapoolabs.com","");
+		errorMessage = loginPage.getPasswordError();
+		Assert.assertEquals(errorMessage, "Please provide a password");
+	}
+
+	@Test
+	public void validateLoginErrorMessageBlankPasswordThree(){
+		loginPage.inputCredential("beth_logan","");
+		errorMessage = loginPage.getPasswordError();
+		Assert.assertEquals(errorMessage, "Please provide a password");
+	}
+
+	@Test
 	public void validateFailedLoginWorks() 
 	{
-		loginPage.updateUsername("jabroni@yahoo.com");
-		loginPage.updatePassword("pass");	
-		loginPage.loginClick();
+		loginPage.inputCredential("jabroni@yahoo.com","pass");
 		loadingWait(loginPage.loginFailedErrorMessage);
 		errorMessage = loginPage.getIncorrectCredentialsError();
 		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");

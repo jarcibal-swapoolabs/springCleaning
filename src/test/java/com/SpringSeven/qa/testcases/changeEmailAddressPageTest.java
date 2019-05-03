@@ -38,8 +38,8 @@ public class changeEmailAddressPageTest extends testBase
 		loginPage = initialPage.loginClick();		
 		loadingWait(loginPage.loginButton);
 		
-		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		processing();
+		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.settingsLink);

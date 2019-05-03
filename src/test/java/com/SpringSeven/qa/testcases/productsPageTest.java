@@ -37,7 +37,7 @@ public class productsPageTest extends testBase{
 		loginPage = initialPage.loginClick();		
 		loadingWait(loginPage.loginButton);
 		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-		processing();
+		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		productsPage = homePage.clickOnProductsLink();
 		loadingWait(productsPage.productPageTitle);
 }

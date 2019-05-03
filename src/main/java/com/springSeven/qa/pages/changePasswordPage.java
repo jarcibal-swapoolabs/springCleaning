@@ -96,6 +96,8 @@ public class changePasswordPage extends testBase{
 	{
 		newPasswordTextbox.sendKeys(newPw);
 		confirmPasswordTextbox.sendKeys(confirmPw);
+		newPasswordTextbox.click();
+		clickableWait(verifyButton);
 		verifyButton.click();		
 	}
 

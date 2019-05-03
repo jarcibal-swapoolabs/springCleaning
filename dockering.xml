@@ -10,7 +10,17 @@
     <test name="Spring 7 UI" verbose="2" time-out="20000">
         <classes>
 			<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
-			<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.loginPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.homePageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.productsPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.enrollmentTreePageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.profilePageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.settingsPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.editProfilePageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.changeMobileNumberPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.changeEmailAddressPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.changePasswordPageTest"></class>
        </classes>
     </test>
  

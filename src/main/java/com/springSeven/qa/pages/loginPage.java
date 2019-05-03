@@ -68,22 +68,22 @@ public class loginPage extends testBase{
 	
 
 		
+	public void inputCredential(String un, String pw) 
+	{
+		loginUsername.sendKeys(un);
+		loginPassword.sendKeys(pw);
+		loginButton.click();
+		}
+
+	
 	public homePage login(String un, String pw) 
 	{
-		loginPassword.sendKeys(pw);
 		loginUsername.sendKeys(un);
+		loginPassword.sendKeys(pw);
 		loginButton.click();
 		return new homePage();
 		}
 	
-	public completeRegistrationPage loginRegister(String un, String pw) 
-	{
-		loginPassword.sendKeys(pw);
-		loginUsername.sendKeys(un);
-		loginButton.click();
-		return new completeRegistrationPage();
-		}
-
 	
 	public String validateLoginPageTitle()
 	{

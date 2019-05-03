@@ -37,29 +37,30 @@ public class testBase {
 
 	public static void initialization() throws MalformedURLException{
 //		String browserName = prop.getProperty("browser");
+		String browserName = "FF";
 		
-//		if(browserName.equals("chrome")){
-//			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
-//			driver = new ChromeDriver(); 
-//		}
-//		else if(browserName.equals("FF")){
-//			System.setProperty("webdriver.gecko.driver", "C:\\qa\\geckodriver-v0.23.0-win64\\geckodriver.exe");	
-//			driver = new FirefoxDriver(); 		
-//		}
-//		else if(browserName.equals("linuxFirefox")){
-//		testBase.dockerf();
-//		}		
-//		else if(browserName.equals("linuxChrome")){
-//		testBase.dockerc();
-//		}
+		if(browserName.equals("chrome")){
+			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
+			driver = new ChromeDriver(); 
+		}
+		else if(browserName.equals("FF")){
+			System.setProperty("webdriver.gecko.driver", "/home/jarcibal/Downloads/geckodriver");	
+			driver = new FirefoxDriver(); 		
+		}
+		else if(browserName.equals("linuxFirefox")){
+		testBase.dockerf();
+		}		
+		else if(browserName.equals("linuxChrome")){
+		testBase.dockerc();
+		}
 		
 		
-		 if(System.getProperty("BROWSER") != null &&
-	                System.getProperty("BROWSER").equalsIgnoreCase("firefox")){
-				testBase.dockerf();
-	        }else{
-	    		testBase.dockerc();
-	        }
+//		 if(System.getProperty("BROWSER") != null &&
+//	                System.getProperty("BROWSER").equalsIgnoreCase("firefox")){
+//				testBase.dockerf();
+//	        }else{
+//	    		testBase.dockerc();
+//	        }
 		
 		
 
@@ -170,13 +171,38 @@ public class testBase {
 	    wait.until(ExpectedConditions.visibilityOf(element)); // wait for loader to disappear
 	}
 		
+	//clickable
+	public static void clickableWait(WebElement element) {
+	    WebDriverWait wait = new WebDriverWait(driver, 15);
+	    wait.until(ExpectedConditions.elementToBeClickable(element)); // wait for loader to disappear
+	}
+
 	//explicit wait which is better
 	public static void processing(){ 
+		try {
 	    WebDriverWait wait = new WebDriverWait(driver, 15);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Page is loading')]")));
 	    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//p[contains(text(),'Page is loading')]")));
 	    wait.ignoring(NoSuchElementException.class).ignoring(StaleElementReferenceException.class); 
+		}
+		catch (Exception e) {	
+		}
 	}
 	
-	
+
+	public static void tryCatch(WebElement element1,WebElement element2){ 
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 15);
+			wait.until(
+			      ExpectedConditions.and(
+			           ExpectedConditions.visibilityOf(element1),
+			           ExpectedConditions.visibilityOf(element2)
+			      )
+			  );	
+			}
+		catch (Exception e) {	
+		}
+		element2.click();
+	}
+
 }
