@@ -51,6 +51,20 @@ public class profilePageTest extends testBase{
 		Assert.assertEquals(header, "Profile");
 	}
 	
+	
+	@Test
+	public void validateReferralLinkIncorrectFormat(){
+		profilePage.inputEmail("jericho-yahoo.com");
+		String errorMessage = profilePage.getEmailError();
+		Assert.assertEquals(errorMessage, "Please provide a valid email address format");
+	}
+
+//	@Test
+//	public void validateReferralLinkNoEmail(){
+//		String errorMessage = profilePage.getBlankError();
+//		Assert.assertEquals(errorMessage, "");
+//	}
+
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();

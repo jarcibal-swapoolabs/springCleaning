@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.SpringSeven.qa.testcases.homePageTest">
+      <class name="com.SpringSeven.qa.testcases.settingsPageTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="validateReportAccountBlankPassword"/>
           <include name="setUp"/>
-          <include name="verifyHomepageHeader"/>
+          <include name="validateReportAccountIncorrectPassword"/>
+          <include name="tearDown"/>
+          <include name="validateSettingsPageTitle"/>
         </methods>
-      </class> <!-- com.SpringSeven.qa.testcases.homePageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.settingsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

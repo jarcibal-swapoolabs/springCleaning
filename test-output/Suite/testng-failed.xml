@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Spring 7 UI(failed)" parallel="tests">
     <classes>
-      <class name="com.SpringSeven.qa.testcases.changePasswordPageTest">
+      <class name="com.SpringSeven.qa.testcases.homePageTest">
         <methods>
-          <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="validateIncorrectNewCurrentPW"/>
+          <include name="setUp"/>
+          <include name="verifyHomepageHeader"/>
         </methods>
-      </class> <!-- com.SpringSeven.qa.testcases.changePasswordPageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.homePageTest -->
     </classes>
   </test> <!-- Spring 7 UI(failed) -->
 </suite> <!-- Failed suite [Suite] -->

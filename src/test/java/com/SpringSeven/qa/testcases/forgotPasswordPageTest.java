@@ -47,6 +47,7 @@ public class forgotPasswordPageTest extends testBase{
 		String errorMessage = forgotPasswordPage.getfpwErrorWrongEmail();
 		Assert.assertEquals(errorMessage, "This email cannot be recognized");
 	}
+
 	@Test
 	public void validateNoEmail(){
 		forgotPasswordPage.inputEmail("");

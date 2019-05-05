@@ -22,6 +22,7 @@ public class productsPageTest extends testBase{
 	productsPage productsPage;
 	String header;
 	testUtil testUtil;
+	String errorMessage;
 	
 	
 	public productsPageTest(){
@@ -39,15 +40,32 @@ public class productsPageTest extends testBase{
 		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
 		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		productsPage = homePage.clickOnProductsLink();
-		loadingWait(productsPage.productPageTitle);
+		clickableWait(productsPage.standardProductButton);
 }
 	
 	@Test
 	public void validateProductsPageTitle(){
-		waitForPageLoaded();
 		header = productsPage.getProductPageTitle();
 		Assert.assertEquals(header, "Product Catalog");
 	}
+	
+	
+	@Test
+	public void validateProductsPageBlankPassword(){
+		productsPage.standardProductButton.click();
+		productsPage.inputPassword("");
+		errorMessage = productsPage.getIncorrectPasswordError();
+		Assert.assertEquals(errorMessage, "Please provide a password");}
+
+
+//	@Test
+//	public void validateProductsPageIncorrectPassword(){
+//		clickableWait(productsPage.standardProductButton);
+//		productsPage.standardProductButton.click();
+//		productsPage.inputPassword("pass");
+//		errorMessage = productsPage.getIncorrectPasswordError();
+//		Assert.assertEquals(errorMessage, "Please provide a password");
+//		}
 	
 	
 	@AfterMethod

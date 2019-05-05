@@ -17,19 +17,33 @@ public class profilePage extends testBase{
 	@FindBy(xpath="//h1[@title='Profile']")
 	public WebElement profilePageTitle;
 
-	//textbox
 	//	@FindBy(xpath="//span[text()='Edit']")
 	@FindBy(xpath="//a[@class='edit-profile-link right valign-wrapper']")
 	public WebElement editProfileLink;
+	
+	//textbox
+	@FindBy(id="SEND_REFERRAL_EMAIL_FORM_tempEmails")
+	public WebElement shareEmailTextbox;
+
 
 	//button
 	@FindBy(id="clipboard-btn")
 	public WebElement copyButon;
 
+	@FindBy(xpath="//button[@class='waves-effect waves-light btn right Button__button___3vjDD Button__primary___Dv0Je']")
+	public WebElement sendEmailButton;
+
 	//loading
 	@FindBy(xpath="//p[contains(text(),'Page is loading')]")
 	public WebElement loadingElement;
-	
+		
+	//error
+	@FindBy(xpath="//div[@class='helper-text error-message']")
+	public WebElement emailError;
+
+	@FindBy(xpath="//div[contains(text(),'This field is required')][2]")
+//	@FindBy(xpath="//div[@class='helper-text error-message']")
+	public WebElement blankError;
 	
 	//action
 	public String getProfilePageTitle()
@@ -44,5 +58,28 @@ public class profilePage extends testBase{
 		return new editProfilePage();
 	}
 
+	//input Email
+	public void inputEmail(String mail)
+	{
+		shareEmailTextbox.sendKeys(mail);
+		sendEmailButton.click();
+		loadingWait(emailError);
 
+	}
+
+	//get error
+	public String getEmailError()
+	{
+		
+		String getEmailError = emailError.getText();
+		return getEmailError;
+	}
+
+	public String getBlankError()
+	{
+		sendEmailButton.click();
+		String getEmailError = blankError.getText();
+		return getEmailError;
+	}
+	
 }

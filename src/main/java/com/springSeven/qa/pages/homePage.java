@@ -71,6 +71,7 @@ public class homePage extends testBase{
 	
 	//action
 	public String getHeader() {
+		loadingWait(swapooHeader);
 		return swapooHeader.getText();
 	}
 
@@ -101,6 +102,7 @@ public class homePage extends testBase{
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", productsLink);
 		return new productsPage();
+		
 	}
 	
 	public enrollmentTreePage clickOnEnrollmentLink(){
