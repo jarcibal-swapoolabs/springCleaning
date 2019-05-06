@@ -3,7 +3,6 @@ package com.SpringSeven.qa.testcases;
 
 import java.net.MalformedURLException;
 
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,13 +19,12 @@ public class registrationPageTest extends testBase {
 
 	registrationPage registrationPage;
 	String errorMessage;
-	WebElement emailTextbox;
 
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
 		initialization();
 		registrationPage = new registrationPage();
-		driver.get("https://d1uu7efqb688sd.cloudfront.net/signup?id=KVKcEta");
+		driver.get("https://d1uu7efqb688sd.cloudfront.net/signup?id=4jxLxJU");
 		processing();
 }
 
@@ -36,6 +34,16 @@ public class registrationPageTest extends testBase {
 		Assert.assertEquals(header, "Register Now!");
 	}
 
+	@Test
+	public void validateNoEmail() 
+	{
+		registrationPage.click(registrationPage.emailTextbox);
+		registrationPage.click(registrationPage.registerButton);
+		errorMessage = registrationPage.getEmailError();
+		Assert.assertEquals(errorMessage, "Please provide an email address");
+	}
+
+	
 	@Test
 	public void validateInvalidEmailFormat() 
 	{
@@ -56,7 +64,7 @@ public class registrationPageTest extends testBase {
 	@Test
 	public void validateExistingEmail()
 	{
-		registrationPage.inputEmail("jhesed.tacadena@swapoolabs.com");
+		registrationPage.inputEmail("clarence.layba@swapoolabs.com");
 		loadingWait(registrationPage.emailExist);
 		errorMessage = registrationPage.getEmailExist();
 		Assert.assertEquals(errorMessage, "This email already exists");
@@ -64,22 +72,14 @@ public class registrationPageTest extends testBase {
 	
 	@Test
 	public void validatePasswordMismatch() {
-		registrationPage.inputEmail("smileys010@gmail.com");
-		loadingWait(registrationPage.emailIsUnique);
-		registrationPage.updatePasswordTextbox("word");
-		registrationPage.updateConfirmTextbox("pass");
-		registrationPage.clickRegister();
+		registrationPage.proper("smileys010@gmail.com", "Ppass", "Pword");
 		errorMessage = registrationPage.getConfirmPasswordError();
 		Assert.assertEquals(errorMessage, "Passwords do not match");
 	}
 
 	@Test
 	public void validateNotVerifiedEmail() {
-		registrationPage.inputEmail("smileys010@gmail.com");
-		loadingWait(registrationPage.emailIsUnique);
-		registrationPage.updatePasswordTextbox("Pasuwarudo01");
-		registrationPage.updateConfirmTextbox("Pasuwarudo01");
-		registrationPage.clickRegister();
+		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "P@suwarudo01");
 		errorMessage = registrationPage.getEmailNotVerifiedError();
 		Assert.assertEquals(errorMessage, "The email you are trying to register has not been verified");
 	}

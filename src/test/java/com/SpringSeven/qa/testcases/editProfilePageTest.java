@@ -48,11 +48,11 @@ public class editProfilePageTest extends testBase {
 		loadingWait(editProfilePage.editProfilePageTitle);
 	}
 
-	@Test
-	public void validateEditProfilePageTitle() {
-		String header = editProfilePage.getEditProfilePageTitle();
-		Assert.assertEquals(header, "Edit Profile");
-	}
+//	@Test
+//	public void validateEditProfilePageTitle() {
+//		String header = editProfilePage.getEditProfilePageTitle();
+//		Assert.assertEquals(header, "Edit Profile");
+//	}
 
 //hard as fuck
 //	@Test

@@ -20,6 +20,7 @@ public class registrationPage extends testBase {
 	// textbox
 	@FindBy(id = "REGISTRATION_EMAIL_email")
 	public WebElement emailTextbox;
+	
 	@FindBy(id = "REGISTRATION_password")
 	WebElement passwordTextbox;
 
@@ -47,10 +48,10 @@ public class registrationPage extends testBase {
 	WebElement passwordError;
 
 	@FindBy(xpath = "//*[@id=\"app\"]/div/div/div[2]/div/div/div[2]/form[2]/div[2]/div/div")
-	WebElement confirmPasswordError;
+	public	WebElement confirmPasswordError;
 
 	@FindBy(xpath = "//span[contains(text(),'The email you are trying to register has not been')]")
-	WebElement emailNotVerifiedError;
+	public WebElement emailNotVerifiedError;
 
 	@FindBy(xpath = "//div[contains(text(),'This email already exists')]")
 	public WebElement emailExist;
@@ -124,24 +125,20 @@ public class registrationPage extends testBase {
 	}
 
 	// click
-	public void clickRegister() {
-		registerButton.click();
+	public void click(WebElement element) {
+		element.click();
 	}
 
-	public void clicksendVerification() {
-		sendVerificationButton.click();
-	}
-
-	public void clickVerifyEmail() {
-		verifyEmailButton.click();
-	}
 
 	// clean
 	// input Email
 	public void proper(String email, String password, String confirmpw) {
 		emailTextbox.sendKeys(email);
+		registerButton.click();
+		loadingWait(emailIsUnique);
 		passwordTextbox.sendKeys(password);
 		confirmPasswordTextbox.sendKeys(confirmpw);
+		clickableWait(registerButton);
 		registerButton.click();
 	}
 

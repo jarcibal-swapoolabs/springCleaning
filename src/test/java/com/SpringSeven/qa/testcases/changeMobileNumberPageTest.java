@@ -71,6 +71,22 @@ public class changeMobileNumberPageTest extends testBase
 	}
 
 	
+	@Test
+	public void validateChangeMobileNumberIncorrectPassword(){
+		changeMobileNumberPage.updatePasswordTextbox("wrong");
+		loadingWait(changeMobileNumberPage.passwordErrorMessage);
+		String error = settingsPage.getErrorReportAccountPassword();
+		Assert.assertEquals(error, "Password is invalid");
+	}
+
+	@Test
+	public void validateChangeMobileNumberNoPassword(){
+		changeMobileNumberPage.updatePasswordTextbox("");
+		String error = settingsPage.getErrorReportAccountPassword();
+		Assert.assertEquals(error, "Please provide a password");
+	}
+
+	
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();

@@ -51,23 +51,22 @@ public class settingsPageTest extends testBase{
 		Assert.assertEquals(header, "SETTINGS");
 	}
 
-//	@Test
-//	public void validateReportAccountBlankPassword(){
-//		settingsPage.inputPassword("");
-//		String error = settingsPage.getErrorReportAccountPassword();
-//		Assert.assertEquals(error, "This field is required");
-//
-//	}
-
 	@Test
 	public void validateReportAccountIncorrectPassword(){
 		settingsPage.inputPassword("wrong");
-		loadingWait(settingsPage.reportPasswordError);
 		String error = settingsPage.getErrorReportAccountPassword();
 		Assert.assertEquals(error, "Password is invalid");
 	}
 
-//	@Test
+	@Test
+	public void validateReportAccountBlankPassword(){
+		settingsPage.inputPassword("");
+		String error = settingsPage.getErrorReportAccountPassword();
+		Assert.assertEquals(error, "This field is required");
+	}
+
+	
+	//	@Test
 //	public void validateReportAccountCorrectPassword() {
 //		settingsPage.inputPassword("mksoft_password");
 //		loadingWait(settingsPage.confirmIcon);

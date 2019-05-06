@@ -42,6 +42,12 @@ public class homePageTest extends testBase{
 	
 	
 	@Test
+	public void verifyHomepageHeader() {
+		String header = homePage.getHeader();
+		Assert.assertEquals(header, "Welcome, beth_logan!");	
+	    }
+
+	@Test
 	public void verifyLogout(){
 		homePage.clickOnLogoutLink();
 		boolean displayed = initialPage.initialPageLoginDisplayed();
@@ -59,14 +65,7 @@ public class homePageTest extends testBase{
 		String name = homePage.validateSwapooHomepage(homePage.swapooLinkHeader);
 		Assert.assertEquals(name, "Ricardo Dalisay");	
 	    }
-	
-	@Test
-	public void verifyHomepageHeader() {
-		String header = homePage.getHeader();
-		Assert.assertEquals(header, "Welcome, beth_logan!");	
-	    }
-
-	
+		
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();

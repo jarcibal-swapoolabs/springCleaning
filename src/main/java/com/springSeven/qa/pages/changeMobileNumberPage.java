@@ -33,7 +33,8 @@ public class changeMobileNumberPage extends testBase {
 	WebElement otpNewTextbox;
 
 	//button
-	@FindBy(xpath="//span[contains(text(),'Continue')]")
+//	@FindBy(xpath="//span[contains(text(),'Continue')]")
+	@FindBy(xpath="//span[text()='CONTINUE']")
 	WebElement continueButton;
 		
 	@FindBy(xpath="//button[text()='Resend']")
@@ -45,7 +46,7 @@ public class changeMobileNumberPage extends testBase {
 
 	//error
 	@FindBy(xpath="//div[@class='helper-text error-message']")
-	WebElement passwordErrorMessage;
+	public WebElement passwordErrorMessage;
 
 
 	//actions
@@ -55,46 +56,35 @@ public class changeMobileNumberPage extends testBase {
 		return getchangeMobileNumberPageTitle;
 	}
 	
-	//click
-	public void clickContinue()
-	{
-		continueButton.click();
-	}
-	
-	public void clickResendOTP()
-	{
-		resendOTPButton.click();
-	}
-
-	public void clickSubmit()
-	{
-		submitButton.click();
-	}
-
 	//input
 	public void updatePasswordTextbox(String input) 
 	{
 		passwordTextbox.sendKeys(input);
+		continueButton.click();
 	}
 
 	public void updateotpTextbox(String input) 
 	{
 		otpTextbox.sendKeys(input);
+		continueButton.click();
 	}
 
 	public void updateCountryCodeTextbox(String input) 
 	{
 		countryCodeTextbox.sendKeys(input);
+		continueButton.click();
 	}
 
 	public void updateNewMobileTextbox(String input) 
 	{
 		newMobileTextbox.sendKeys(input);
+		continueButton.click();
 	}
 
 	public void updateotpNewTextbox(String input) 
 	{
 		otpNewTextbox.sendKeys(input);
+		continueButton.click();
 	}
 	
 	
@@ -112,6 +102,5 @@ public class changeMobileNumberPage extends testBase {
 		String getChangeMobilePageTitle = changeMobileNumberPageTitle.getText();
 		return getChangeMobilePageTitle;
 	}
-
 
 }

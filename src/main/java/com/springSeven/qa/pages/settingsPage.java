@@ -32,6 +32,11 @@ public class settingsPage extends testBase{
 	@FindBy(xpath="//a[contains(@href,'settings/setup-security-questions')]")
 	WebElement setupSecurityQuestionsLink;
 
+	//report prompt
+	@FindBy(xpath="//div[contains(@class,'modal modal-xs Modal__modal___3mKNW open')]")
+	WebElement reportModal;
+	
+
 	//link
 	@FindBy(xpath="//text()[.='My Account is Compromised']/ancestor::a[1]")
 	public WebElement reportAccountLink;
@@ -124,6 +129,13 @@ public class settingsPage extends testBase{
 		reportAccountLink.click();
 		reportPassword.sendKeys(pass);
 		reportAccountVerify.click();
+		loadingWait(reportPasswordError);
+	}
+
+	
+	//displayed
+	public boolean verifyDisplayed() {
+		return reportModal.isDisplayed();
 	}
 
 	
