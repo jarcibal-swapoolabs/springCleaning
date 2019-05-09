@@ -75,7 +75,7 @@ public class loginPage extends testBase{
 		loginButton.click();
 		}
 
-	
+	//page
 	public homePage login(String un, String pw) 
 	{
 		loginUsername.sendKeys(un);
@@ -84,7 +84,15 @@ public class loginPage extends testBase{
 		return new homePage();
 		}
 	
-	
+	public completeRegistrationPage loginRegister(String un, String pw) 
+	{
+		loginUsername.sendKeys(un);
+		loginPassword.sendKeys(pw);
+		loginButton.click();
+		return new completeRegistrationPage();
+		}
+
+	//title and error
 	public String validateLoginPageTitle()
 	{
 		String validateLoginPageTitle = loginHeader.getText();

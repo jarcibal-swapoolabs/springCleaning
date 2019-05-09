@@ -37,30 +37,30 @@ public class testBase {
 
 	public static void initialization() throws MalformedURLException{
 //		String browserName = prop.getProperty("browser");
-		String browserName = "FF";
+//		String browserName = "FF";
+//		
+//		if(browserName.equals("chrome")){
+//			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
+//			driver = new ChromeDriver(); 
+//		}
+//		else if(browserName.equals("FF")){
+//			System.setProperty("webdriver.gecko.driver", "/home/jarcibal/Downloads/geckodriver");	
+//			driver = new FirefoxDriver(); 		
+//		}
+//		else if(browserName.equals("linuxFirefox")){
+//		testBase.dockerf();
+//		}		
+//		else if(browserName.equals("linuxChrome")){
+//		testBase.dockerc();
+//		}
 		
-		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
-			driver = new ChromeDriver(); 
-		}
-		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", "/home/jarcibal/Downloads/geckodriver");	
-			driver = new FirefoxDriver(); 		
-		}
-		else if(browserName.equals("linuxFirefox")){
-		testBase.dockerf();
-		}		
-		else if(browserName.equals("linuxChrome")){
-		testBase.dockerc();
-		}
 		
-		
-//		 if(System.getProperty("BROWSER") != null &&
-//	                System.getProperty("BROWSER").equalsIgnoreCase("firefox")){
-//				testBase.dockerf();
-//	        }else{
-//	    		testBase.dockerc();
-//	        }
+		 if(System.getProperty("BROWSER") != null &&
+	                System.getProperty("BROWSER").equalsIgnoreCase("firefox")){
+				testBase.dockerf();
+	        }else{
+	    		testBase.dockerc();
+	        }
 		
 		
 
@@ -86,7 +86,8 @@ public class testBase {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		//driver.get(prop.getProperty("url"));
-		driver.get("https://d1uu7efqb688sd.cloudfront.net");
+		//driver.get("https://d1uu7efqb688sd.cloudfront.net");
+		driver.get("https://localhost:8080");
 	} 
 	
 	

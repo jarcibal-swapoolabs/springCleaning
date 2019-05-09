@@ -1,6 +1,5 @@
 package com.SpringSeven.qa.testcases;
 
-import java.awt.AWTException;
 import java.net.MalformedURLException;
 
 import org.testng.Assert;
@@ -27,107 +26,162 @@ public class completeRegistrationTest  extends testBase {
 	}
 
 	@BeforeMethod
-	public void setUp() throws InterruptedException, MalformedURLException {
+	public void setUp() throws MalformedURLException {
 		initialization();		
 		testUtil = new testUtil();
 		initialPage = new initialPage();
-		loginPage = initialPage.loginClick();		
+		loginPage = initialPage.loginClick();
 		loadingWait(loginPage.loginButton);
+		completeRegistrationPage = loginPage.loginRegister("jericho.arcibal@swapoolabs.com","mksoft_password");
+		loadingWait(completeRegistrationPage.completeRegistrationHeader);
+
+		}
+
+	@Test
+	public void validateCompleteRegistrationPageTitle() {
+		String header = completeRegistrationPage.getCompleteRegistrationPageTitle();
+		Assert.assertEquals(header, "Complete Your Profile");
+	}
+	
+	@Test
+	public void validateBlankUsername() {
+		completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+		errorMessage = completeRegistrationPage.getError(completeRegistrationPage.usernameError);
+		Assert.assertEquals(errorMessage, "Please provide a username");
+	}
+	
+	@Test
+	public void validateExistingUsername() {
+		completeRegistrationPage.sendKeys(completeRegistrationPage.userNameTextbox,"beth_logan");
+		completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+		errorMessage = completeRegistrationPage.getError(completeRegistrationPage.uniqueUsernameError);
+		Assert.assertEquals(errorMessage, "This username is already taken");
 	}
 
-//	@Test
-//	public void validateCompleteRegistrationPageTitle() {
-//		String header = completeRegistrationPage.getCompleteRegistrationPageTitle();
-//		Assert.assertEquals(header, "Register Now!");
-//	}
-//	
-//	@Test
-//	public void validateBlankUsername() {
-//		completeRegistrationPage.clickContinueOne();
-//		errorMessage = completeRegistrationPage.getUsernameError();
-//		Assert.assertEquals(errorMessage, "Please provide an username");
-//	}
-//	
-//	@Test
-//	public void validateExistingUsername() {
-//		completeRegistrationPage.updateUsername("larrydecastro");
-//		completeRegistrationPage.clickContinueOne();
-//		errorMessage = completeRegistrationPage.getUniqueUsernameError();
-//		Assert.assertEquals(errorMessage, "This username is already taken");
-//	}
+	@Test
+	public void validateBlankFirstName() {
+		completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+		errorMessage = completeRegistrationPage.getError(completeRegistrationPage.firstNameError);
+		Assert.assertEquals(errorMessage, "Please enter your first name");
+	}
+
+	@Test
+	public void validateBlankLastName() {
+		completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+		errorMessage = completeRegistrationPage.getError(completeRegistrationPage.lastNameError);
+		Assert.assertEquals(errorMessage, "Please enter your last name");
+	}
+////	@Test
+////	public void validateWorkingUsername() {
+////		completeRegistrationPage.updateUsername("smileys001");
+////		completeRegistrationPage.clickContinueOne();
+////		textboxcolor = completeRegistrationPage.getUsernameColor();
+////		Assert.assertEquals(textboxcolor, "green");
+////	}
+////
 //
-//	@Test
-//	public void validateWorkingUsername() {
-//		completeRegistrationPage.updateUsername("smileys001");
-//		completeRegistrationPage.clickContinueOne();
-//		textboxcolor = completeRegistrationPage.getUsernameColor();
-//		Assert.assertEquals(textboxcolor, "green");
-//	}
+////	@Test
+////	public void validateWorkingFirstname() {
+////		completeRegistrationPage.updateFirstName("ray");
+////		completeRegistrationPage.clickContinueOne();
+////		textboxcolor = completeRegistrationPage.getFirstNameColor();
+////		Assert.assertEquals(textboxcolor, "green");
+////	}
 //
-//	@Test
-//	public void validateBlankFirstName() {
-//		completeRegistrationPage.clickContinueOne();
-//		errorMessage = completeRegistrationPage.getFirstNameError();
-//		Assert.assertEquals(errorMessage, "Please enter your first username");
-//	}
-//
-//	@Test
-//	public void validateWorkingFirstname() {
-//		completeRegistrationPage.updateFirstName("ray");
-//		completeRegistrationPage.clickContinueOne();
-//		textboxcolor = completeRegistrationPage.getFirstNameColor();
-//		Assert.assertEquals(textboxcolor, "green");
-//	}
-//
-//	
-//	@Test
-//	public void validateBlankULastName() {
-//		completeRegistrationPage.clickContinueOne();
-//		errorMessage = completeRegistrationPage.getLastNameError();
-//		Assert.assertEquals(errorMessage, "Please enter your last username");
-//	}
-//
-//	@Test
-//	public void validateWorkingLastname() {
-//		completeRegistrationPage.updateLastName("arcibal");
-//		completeRegistrationPage.clickContinueOne();
-//		textboxcolor = completeRegistrationPage.getLastNameColor();
-//		Assert.assertEquals(textboxcolor, "green");
-//	}
-//
-//
-//	@Test
-//	public void validateBlankDOB() {
-//		completeRegistrationPage.clickContinueOne();
-//		errorMessage = completeRegistrationPage.getDOBError();
-//		Assert.assertEquals(errorMessage, "Please enter your birthdate");
-//	}
-//	
-//	@Test
-//	public void validateInvalidDOB() {
-//		completeRegistrationPage.updateDOB("24/24/24");
-//		completeRegistrationPage.clickContinueOne();
-//		errorMessage = completeRegistrationPage.getInvalidDOBError();
-//		Assert.assertEquals(errorMessage, "Please provide a valid date format (mm/dd/yyyy)");
-//	}
-//		
-//	@Test
-//	public void validateBelow18() {
-//		completeRegistrationPage.updateDOB("12/24/2015");
-//		completeRegistrationPage.clickContinueOne();
-//		errorMessage = completeRegistrationPage.getDOBBelowAgeError();
-//		Assert.assertEquals(errorMessage, "Sorry, you should be at least 18 years old to register");
-//	}
-//	
-//		
-//	@Test
-//	public void validateOverage() {
-//		completeRegistrationPage.updateDOB("12/24/1916");
-//		completeRegistrationPage.clickContinueOne();
-//		errorMessage = completeRegistrationPage.getOverageError();
-//		Assert.assertEquals(errorMessage, "Please provide a valid date format (mm/dd/yyyy)");
-//	}
-//	
+////
+////	@Test
+////	public void validateWorkingLastname() {
+////		completeRegistrationPage.updateLastName("arcibal");
+////		completeRegistrationPage.clickContinueOne();
+////		textboxcolor = completeRegistrationPage.getLastNameColor();
+////		Assert.assertEquals(textboxcolor, "green");
+////	}
+////
+////
+	@Test
+	public void validateUniqueUsername() {
+		completeRegistrationPage.sendKeys(completeRegistrationPage.userNameTextbox,"smileys1990");
+		completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+		errorMessage = completeRegistrationPage.getError(completeRegistrationPage.uniqueUsername);
+		Assert.assertEquals(errorMessage, "check_circle Username is unique");
+	}
+
+	
+	@Test
+	public void validateBlankDOB() {
+		completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+		errorMessage = completeRegistrationPage.getError(completeRegistrationPage.dobError);
+		Assert.assertEquals(errorMessage, "Please enter your birthdate");
+	}
+	
+	@Test
+	public void validateInvalidDOBOne() {
+	completeRegistrationPage.sendKeys(completeRegistrationPage.dobTextbox,"24/24/24");
+	completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+	errorMessage = completeRegistrationPage.getError(completeRegistrationPage.invaliddobError);
+	Assert.assertEquals(errorMessage, "Please provide a valid date format (mm/dd/yyyy)");
+	}
+
+	@Test
+	public void validateInvalidDOBTwo() {
+	completeRegistrationPage.sendKeys(completeRegistrationPage.dobTextbox,"aa/bb/cc");
+	completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+	errorMessage = completeRegistrationPage.getError(completeRegistrationPage.invaliddobError);
+	Assert.assertEquals(errorMessage, "Please provide a valid date format (mm/dd/yyyy)");
+	}
+
+	
+	@Test
+	public void validateInvalidDOBThree() {
+	completeRegistrationPage.sendKeys(completeRegistrationPage.dobTextbox,"May 10 2018");
+	completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+	errorMessage = completeRegistrationPage.getError(completeRegistrationPage.invaliddobError);
+	Assert.assertEquals(errorMessage, "Please provide a valid date format (mm/dd/yyyy)");
+	}
+
+	@Test
+	public void validateBelow18() {
+		completeRegistrationPage.sendKeys(completeRegistrationPage.dobTextbox,"12/24/2015");
+		completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+		errorMessage = completeRegistrationPage.getError(completeRegistrationPage.belowDOBAgeEDrror);
+		Assert.assertEquals(errorMessage, "Sorry, you should be at least 18 years old to register");
+	}
+	
+		
+	@Test
+	public void validateOverage() {
+		completeRegistrationPage.sendKeys(completeRegistrationPage.dobTextbox,"12/24/1900");
+		completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+		errorMessage = completeRegistrationPage.getError(completeRegistrationPage.overAgeError);
+		Assert.assertEquals(errorMessage, "Date out of range. Please provide a valid date");
+	}
+	
+	@Test
+	public void validateBlankIDType() {
+		completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+		errorMessage = completeRegistrationPage.getError(completeRegistrationPage.idError);
+		Assert.assertEquals(errorMessage, "Please select an ID type");
+	}
+	
+	@Test
+	public void validateBlankImage() {
+		completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+		errorMessage = completeRegistrationPage.getError(completeRegistrationPage.imageError);
+		Assert.assertEquals(errorMessage, "Please choose a valid image");
+	}
+	
+	@Test
+	public void validateProperInfoOne() throws Exception  {
+		completeRegistrationPage.properInfoOne("smileys001", "jeric", "", "arcibal", "07/19/1990", "Passport");
+		completeRegistrationPage.click(completeRegistrationPage.uploadIdFileInput);
+		testUtil.uploadFile();
+		completeRegistrationPage.click(completeRegistrationPage.continueOneButton);
+//		errorMessage = completeRegistrationPage.getError(completeRegistrationPage.imageError);
+//		Assert.assertEquals(errorMessage, "Please choose a valid image");
+	}
+
+	
+	//	
 //	@Test
 //	public void validateUploadID() throws AWTException, InterruptedException{
 //		completeRegistrationPage.updateUsername("smileys001");

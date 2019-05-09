@@ -45,7 +45,10 @@ public class testUtil extends testBase{
 	
 	//upload file
 	public void uploadFile() throws AWTException, InterruptedException {
-		StringSelection ss = new StringSelection("C:\\Users\\jarcibal\\Pictures\\Saved Pictures\\jabroni.jpg");
+		String currentDir = System.getProperty("user.dir");
+		StringSelection ss = new StringSelection(currentDir + "/screenshot/screenshot.png");
+		System.out.println("direcotry is " + ss);
+		System.out.println("direcotry is " + currentDir);
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 		
 		// Ctrl + v
@@ -54,7 +57,7 @@ public class testUtil extends testBase{
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 	}

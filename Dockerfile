@@ -19,6 +19,8 @@ ADD target/libs							libs
 # ADD suite files
 ADD dockering.xml				dockering.xml
 ADD healthcheck.sh				healthcheck.sh
+ADD screenshot/screenshot.png   screenshot.png				
+
 # BROWSER
 # HUB_HOST
 # MODULE

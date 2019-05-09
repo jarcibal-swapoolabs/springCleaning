@@ -40,15 +40,25 @@ public class registrationPage extends testBase {
 	@FindBy(xpath = "//button[contains(text(),'VERIFY EMAIL')]")
 	WebElement verifyEmailButton;
 
-	// error
-	@FindBy(xpath = "//*[@id=\"app\"]/div/div/div[2]/div/div/div[2]/form[1]/div[1]/div/div")
-	WebElement emailError;
+	//error
+	//@FindBy(xpath = "//*[@id=\"app\"]/div/div/div[2]/div/div/div[2]/form[1]/div[1]/div/div")
+	@FindBy(xpath = "//div[contains(text(),'Please provide a valid email address format')]")
+	public WebElement emailErrorOne;
+	
+	@FindBy(xpath = "//div[contains(text(),'Please provide an email address')]")
+	public WebElement emailErrorTwo;
+	
+	//@FindBy(xpath = "//*[@id=\"app\"]/div/div/div[2]/div/div/div[2]/form[2]/div[1]/div/div")
+	@FindBy(xpath = "//div[contains(text(),'Please provide a password')]")
+	public WebElement passwordError;
+	
+	//@FindBy(xpath = "//*[@id=\"app\"]/div/div/div[2]/div/div/div[2]/form[2]/div[2]/div/div")
+	@FindBy(xpath = "//div[contains(text(),'Passwords do not match')]")
+	public WebElement confirmPasswordErrorOne;
+	
+	@FindBy(xpath = "//div[contains(text(),'Please confirm your password')]")
+	public WebElement confirmPasswordErrorTwo;
 
-	@FindBy(xpath = "//*[@id=\"app\"]/div/div/div[2]/div/div/div[2]/form[2]/div[1]/div/div")
-	WebElement passwordError;
-
-	@FindBy(xpath = "//*[@id=\"app\"]/div/div/div[2]/div/div/div[2]/form[2]/div[2]/div/div")
-	public	WebElement confirmPasswordError;
 
 	@FindBy(xpath = "//span[contains(text(),'The email you are trying to register has not been')]")
 	public WebElement emailNotVerifiedError;
@@ -63,6 +73,18 @@ public class registrationPage extends testBase {
 	@FindBy(xpath = "//div[@class='helper-text success-message']")
 	public WebElement emailIsVerified;
 
+	//password strength
+	@FindBy(xpath = "//div[@class='col s3 m2']")
+	public WebElement passwordStrength;
+	
+	//verification error
+	@FindBy(xpath = "//div[contains(text(),'Please provide a verification code')]")
+	public WebElement verificationErrorOne;
+	
+	@FindBy(xpath = "//div[contains(text(),'Invalid verification code')]")
+	public WebElement verificationErrorTwo;
+
+	
 	// actions
 	public String getRegistrationPageTitle() {
 		String getRegistrationPageTitle = registrationHeader.getText();
@@ -70,31 +92,17 @@ public class registrationPage extends testBase {
 	}
 
 	// error messages
-	public String getEmailError() {
-		String getEmailError = emailError.getText();
-		return getEmailError;
+	public String getError(WebElement element) {
+		String getError = element.getText();
+		return getError;
 	}
 
-	public String getPasswordError() {
-		String getPasswordError = passwordError.getText();
-		return getPasswordError;
+	// click
+	public void click(WebElement element) {
+		element.click();
 	}
 
-	public String getConfirmPasswordError() {
-		String getConfirmPasswordError = confirmPasswordError.getText();
-		return getConfirmPasswordError;
-	}
-
-	public String getEmailNotVerifiedError() {
-		String getEmailNotVerifiedError = emailNotVerifiedError.getText();
-		return getEmailNotVerifiedError;
-	}
-
-	public String getEmailExist() {
-		String getEmailExist = emailExist.getText();
-		return getEmailExist;
-	}
-
+	
 	//not errormessage
 	public String getEmailIsUnique() {
 		String getEmailIsUnique = emailIsUnique.getText();
@@ -107,36 +115,16 @@ public class registrationPage extends testBase {
 	}
 
 	
-	// input
-	public void updateEmailTextbox(String value) {
-		emailTextbox.sendKeys(value);
-	}
-
-	public void updatePasswordTextbox(String value) {
-		passwordTextbox.sendKeys(value);
-	}
-
-	public void updateConfirmTextbox(String value) {
-		confirmPasswordTextbox.sendKeys(value);
-	}
-
-	public void updateVerificationTextbox(String value) {
-		emailOTPTextbox.sendKeys(value);
-	}
-
-	// click
-	public void click(WebElement element) {
-		element.click();
-	}
-
-
 	// clean
 	// input Email
 	public void proper(String email, String password, String confirmpw) {
 		emailTextbox.sendKeys(email);
 		registerButton.click();
 		loadingWait(emailIsUnique);
+		
 		passwordTextbox.sendKeys(password);
+		clickableWait(registerButton);
+
 		confirmPasswordTextbox.sendKeys(confirmpw);
 		clickableWait(registerButton);
 		registerButton.click();
@@ -146,4 +134,14 @@ public class registrationPage extends testBase {
 		emailTextbox.sendKeys(email);
 		registerButton.click();
 	}
+
+
+	public void inputVerificationOTP(String otp) {
+		sendVerificationButton.click();
+		loadingWait(emailOTPTextbox);
+		emailOTPTextbox.sendKeys(otp);
+		verifyEmailButton.click();
+	}
+
+
 }
