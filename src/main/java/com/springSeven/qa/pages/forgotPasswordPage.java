@@ -65,6 +65,10 @@ public class forgotPasswordPage extends testBase{
 	
 	@FindBy(xpath = "//div[contains(text(),'Please confirm your password')]")
 	public WebElement confirmPasswordErrorTwo;
+
+	@FindBy(xpath="//div[@class='col s3 m2']")
+	public WebElement fpwPasswordRanking;
+
 	//actions
 	public String getForgotPasswordPageTitle()
 	{

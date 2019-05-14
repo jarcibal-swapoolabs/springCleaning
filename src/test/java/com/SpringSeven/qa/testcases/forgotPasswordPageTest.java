@@ -70,39 +70,39 @@ public class forgotPasswordPageTest extends testBase{
 	}
 
 	
-	@Test
-	public void validateWorkingEmail(){
-		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-		loadingWait(forgotPasswordPage.btnOtpResend);
-		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.btnOtpResend);
-		Assert.assertTrue(displayed);		
-	}
-
-	
-	@Test
-	public void validateBlankOTP(){
-		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-		forgotPasswordPage.inputOTP("");
-		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
-		Assert.assertEquals(errorMessage, "Please provide a verification code");
-	}
-
-	@Test
-	public void validateInvalidOTPOne(){
-		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-		forgotPasswordPage.inputOTP("abc!@#");
-		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
-		Assert.assertEquals(errorMessage, "Please provide a verification code");
-	}
-
-	@Test
-	public void validateInvalidOTPtWO(){
-		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-		forgotPasswordPage.inputOTP("000000");
-		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
-		Assert.assertEquals(errorMessage, "Invalid verification code");
-	}
-
+//	@Test
+//	public void validateWorkingEmail(){
+//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		loadingWait(forgotPasswordPage.btnOtpResend);
+//		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.btnOtpResend);
+//		Assert.assertTrue(displayed);		
+//	}
+//
+//	
+//	@Test
+//	public void validateBlankOTP(){
+//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		forgotPasswordPage.inputOTP("");
+//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
+//		Assert.assertEquals(errorMessage, "Please provide a verification code");
+//	}
+//
+//	@Test
+//	public void validateInvalidOTPOne(){
+//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		forgotPasswordPage.inputOTP("abc!@#");
+//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
+//		Assert.assertEquals(errorMessage, "Please provide a verification code");
+//	}
+//
+//	@Test
+//	public void validateInvalidOTPtWO(){
+//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		forgotPasswordPage.inputOTP("000000");
+//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
+//		Assert.assertEquals(errorMessage, "Invalid verification code");
+//	}
+//
 //start here
 //	@Test
 //	public void validateWorkingOTP(){
@@ -167,43 +167,53 @@ public class forgotPasswordPageTest extends testBase{
 //		Assert.assertEquals(errorMessage, "Please confirm your password");
 //	}
 //
-//	may issue
+//
 //	@Test
 //	public void validatePWRankingOne(){
-//		registrationPage.proper("smileys010@gmail.com", "pass", "pass");
-//		pwStrength = registrationPage.getError(registrationPage.passwordStrength);
+//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		forgotPasswordPage.inputOTP("111111");
+//		forgotPasswordPage.inputPassword("p","");
+//		String pwStrength = forgotPasswordPage.getError(forgotPasswordPage.fpwPasswordRanking);
 //		Assert.assertEquals(pwStrength, "WORST");
 //	}
 //
 //	@Test
 //	public void validatePWRankingTwo(){
-//		registrationPage.proper("smileys010@gmail.com", "pass01", "pass01");
-//		pwStrength = registrationPage.getError(registrationPage.passwordStrength);
+//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		forgotPasswordPage.inputOTP("111111");
+//		forgotPasswordPage.inputPassword("p","");
+//		String pwStrength = forgotPasswordPage.getError(forgotPasswordPage.fpwPasswordRanking);
 //		Assert.assertEquals(pwStrength, "BAD");
 //	}
 //	
 //	@Test
 //	public void validatePWRankingThree(){
-//		registrationPage.proper("smileys010@gmail.com", "makatisoft", "makatisoft");
-//		pwStrength = registrationPage.getError(registrationPage.passwordStrength);
+//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		forgotPasswordPage.inputOTP("111111");
+//		forgotPasswordPage.inputPassword("makatisoft","");
+//		String pwStrength = forgotPasswordPage.getError(forgotPasswordPage.fpwPasswordRanking);
 //		Assert.assertEquals(pwStrength, "WEAK");
 //	}
 //
 //	@Test
 //	public void validatePWRankingFour(){
-//		registrationPage.proper("smileys010@gmail.com", "makatisoft01", "makatisoft01");
-//		pwStrength = registrationPage.getError(registrationPage.passwordStrength);
+//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		forgotPasswordPage.inputOTP("111111");
+//		forgotPasswordPage.inputPassword("makatisoft01","");
+//		String pwStrength = forgotPasswordPage.getError(forgotPasswordPage.fpwPasswordRanking);
 //		Assert.assertEquals(pwStrength, "GOOD");
 //	}
 //	
 //	@Test
 //	public void validatePWRankingFive(){
-//		registrationPage.proper("smileys010@gmail.com", "Makatisoft01", "Makatisoft01");
-//		pwStrength = registrationPage.getError(registrationPage.passwordStrength);
+//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		forgotPasswordPage.inputOTP("111111");
+//		forgotPasswordPage.inputPassword("makatisoft01","");
+//		String pwStrength = forgotPasswordPage.getError(forgotPasswordPage.fpwPasswordRanking);
 //		Assert.assertEquals(pwStrength, "STRONG");
 //	}
-//
-//	
+
+	
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();
