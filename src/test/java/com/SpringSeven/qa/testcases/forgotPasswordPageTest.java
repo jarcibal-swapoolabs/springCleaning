@@ -40,44 +40,44 @@ public class forgotPasswordPageTest extends testBase{
 		Assert.assertEquals(header, "Forgot Password");
 	}
 	
-	@Test
-	public void validateNonExistingEmail() {
-		forgotPasswordPage.inputEmail("smileys009@yahoo.com");
-		loadingWait(forgotPasswordPage.fpwErrorMessageEmail);
-		String errorMessage = forgotPasswordPage.getfpwErrorWrongEmail();
-		Assert.assertEquals(errorMessage, "This email cannot be recognized");
-	}
-
-	@Test
-	public void validateNoEmail(){
-		forgotPasswordPage.inputEmail("");
-		String errorMessage = forgotPasswordPage.getfpwErrorWrongEmail();
-		Assert.assertEquals(errorMessage, "Please provide an email address");
-	}
-
-	@Test
-	public void validateIncorrectFormat(){
-		forgotPasswordPage.inputEmail("jericho-yahoo.com");
-		String errorMessage = forgotPasswordPage.getfpwErrorWrongEmail();
-		Assert.assertEquals(errorMessage, "Please provide a valid email address format");
-	}
-
-	@Test
-	public void validateUsernameNotEMail(){
-		forgotPasswordPage.inputEmail("beth_logan");
-		String errorMessage = forgotPasswordPage.getfpwErrorWrongEmail();
-		Assert.assertEquals(errorMessage, "Please provide an email address");
-	}
-
-	
-	@Test
-	public void validateWorkingEmail(){
-		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-		loadingWait(forgotPasswordPage.btnOtpResend);
-		boolean displayed = forgotPasswordPage.resendOTPDisplayed();
-		Assert.assertTrue(displayed);		
-	}
-
+//	@Test
+//	public void validateNonExistingEmail() {
+//		forgotPasswordPage.inputEmail("smileys009@yahoo.com");
+//		loadingWait(forgotPasswordPage.fpwErrorMessageEmail);
+//		String errorMessage = forgotPasswordPage.getfpwErrorWrongEmail();
+//		Assert.assertEquals(errorMessage, "This email cannot be recognized");
+//	}
+//
+//	@Test
+//	public void validateNoEmail(){
+//		forgotPasswordPage.inputEmail("");
+//		String errorMessage = forgotPasswordPage.getfpwErrorWrongEmail();
+//		Assert.assertEquals(errorMessage, "Please provide an email address");
+//	}
+//
+//	@Test
+//	public void validateIncorrectFormat(){
+//		forgotPasswordPage.inputEmail("jericho-yahoo.com");
+//		String errorMessage = forgotPasswordPage.getfpwErrorWrongEmail();
+//		Assert.assertEquals(errorMessage, "Please provide a valid email address format");
+//	}
+//
+//	@Test
+//	public void validateUsernameNotEMail(){
+//		forgotPasswordPage.inputEmail("beth_logan");
+//		String errorMessage = forgotPasswordPage.getfpwErrorWrongEmail();
+//		Assert.assertEquals(errorMessage, "Please provide an email address");
+//	}
+//
+//	
+//	@Test
+//	public void validateWorkingEmail(){
+//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		loadingWait(forgotPasswordPage.btnOtpResend);
+//		boolean displayed = forgotPasswordPage.resendOTPDisplayed();
+//		Assert.assertTrue(displayed);		
+//	}
+//
 	
 	@AfterMethod
 	public void tearDown(){
