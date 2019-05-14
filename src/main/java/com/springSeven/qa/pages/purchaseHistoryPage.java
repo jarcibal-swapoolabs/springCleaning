@@ -12,10 +12,17 @@ public class purchaseHistoryPage extends testBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	
-	@FindBy(xpath="//h1[text()='Purchase History']")
+	//elements
+	@FindBy(xpath="//h1[text()='PURCHASE HISTORY']")
 	WebElement purchaseHistoryPageTitle;
 	
+	//button
+	@FindBy(xpath="//a[href='/products']")
+	WebElement purchaseButton;
+
+
+	
+	//action
 	public String getpurchaseHistoryPageTitle()
 	{
 		String getpurchaseHistoryPageTitle = purchaseHistoryPageTitle.getText();

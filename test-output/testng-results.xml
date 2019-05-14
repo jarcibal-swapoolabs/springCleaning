@@ -1,193 +1,221 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
+<testng-results skipped="0" failed="0" ignored="0" total="17" passed="17">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="626168" started-at="2019-05-09T06:46:31Z" finished-at="2019-05-09T06:56:58Z">
+  <suite name="Suite" duration-ms="517152" started-at="2019-05-09T08:20:05Z" finished-at="2019-05-09T08:28:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="626168" started-at="2019-05-09T06:46:31Z" finished-at="2019-05-09T06:56:58Z">
-      <class name="com.SpringSeven.qa.testcases.completeRegistrationTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="32807" started-at="2019-05-09T06:46:32Z" finished-at="2019-05-09T06:47:04Z">
+    <test name="Spring 7 UI" duration-ms="517152" started-at="2019-05-09T08:20:05Z" finished-at="2019-05-09T08:28:42Z">
+      <class name="com.SpringSeven.qa.testcases.changeMobileNumberPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@1e397ed7]" name="setUp" is-config="true" duration-ms="23669" started-at="2019-05-09T08:20:05Z" finished-at="2019-05-09T08:20:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBelow18()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateBelow18" duration-ms="3971" started-at="2019-05-09T06:47:04Z" finished-at="2019-05-09T06:47:08Z">
+        <test-method status="PASS" signature="validateChangeMobileNumberIncorrectPassword()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@1e397ed7]" name="validateChangeMobileNumberIncorrectPassword" duration-ms="2277" started-at="2019-05-09T08:20:28Z" finished-at="2019-05-09T08:20:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateBelow18 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="2669" started-at="2019-05-09T06:47:08Z" finished-at="2019-05-09T06:47:11Z">
+        </test-method> <!-- validateChangeMobileNumberIncorrectPassword -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@1e397ed7]" name="tearDown" is-config="true" duration-ms="1451" started-at="2019-05-09T08:20:31Z" finished-at="2019-05-09T08:20:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="29966" started-at="2019-05-09T06:47:11Z" finished-at="2019-05-09T06:47:41Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@1e397ed7]" name="setUp" is-config="true" duration-ms="24669" started-at="2019-05-09T08:20:32Z" finished-at="2019-05-09T08:20:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBlankDOB()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateBlankDOB" duration-ms="3009" started-at="2019-05-09T06:47:41Z" finished-at="2019-05-09T06:47:44Z">
+        <test-method status="PASS" signature="validateChangeMobileNumberNoPassword()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@1e397ed7]" name="validateChangeMobileNumberNoPassword" duration-ms="1929" started-at="2019-05-09T08:20:57Z" finished-at="2019-05-09T08:20:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateBlankDOB -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="2522" started-at="2019-05-09T06:47:44Z" finished-at="2019-05-09T06:47:46Z">
+        </test-method> <!-- validateChangeMobileNumberNoPassword -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@1e397ed7]" name="tearDown" is-config="true" duration-ms="2060" started-at="2019-05-09T08:20:59Z" finished-at="2019-05-09T08:21:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="36057" started-at="2019-05-09T06:47:46Z" finished-at="2019-05-09T06:48:23Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@1e397ed7]" name="setUp" is-config="true" duration-ms="22611" started-at="2019-05-09T08:21:01Z" finished-at="2019-05-09T08:21:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBlankFirstName()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateBlankFirstName" duration-ms="4148" started-at="2019-05-09T06:48:23Z" finished-at="2019-05-09T06:48:27Z">
+        <test-method status="PASS" signature="validateChangeMobilePageTitle()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@1e397ed7]" name="validateChangeMobilePageTitle" duration-ms="102" started-at="2019-05-09T08:21:23Z" finished-at="2019-05-09T08:21:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateBlankFirstName -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="2851" started-at="2019-05-09T06:48:27Z" finished-at="2019-05-09T06:48:30Z">
+        </test-method> <!-- validateChangeMobilePageTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@1e397ed7]" name="tearDown" is-config="true" duration-ms="1520" started-at="2019-05-09T08:21:24Z" finished-at="2019-05-09T08:21:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="32605" started-at="2019-05-09T06:48:30Z" finished-at="2019-05-09T06:49:02Z">
+      </class> <!-- com.SpringSeven.qa.testcases.changeMobileNumberPageTest -->
+      <class name="com.SpringSeven.qa.testcases.changePasswordPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="21677" started-at="2019-05-09T08:21:49Z" finished-at="2019-05-09T08:22:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBlankIDType()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateBlankIDType" duration-ms="4469" started-at="2019-05-09T06:49:02Z" finished-at="2019-05-09T06:49:07Z">
+        <test-method status="PASS" signature="validateChangePasswordTitle()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validateChangePasswordTitle" duration-ms="73" started-at="2019-05-09T08:22:11Z" finished-at="2019-05-09T08:22:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateBlankIDType -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="3287" started-at="2019-05-09T06:49:07Z" finished-at="2019-05-09T06:49:10Z">
+        </test-method> <!-- validateChangePasswordTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="1652" started-at="2019-05-09T08:22:11Z" finished-at="2019-05-09T08:22:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="30879" started-at="2019-05-09T06:49:10Z" finished-at="2019-05-09T06:49:41Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="21883" started-at="2019-05-09T08:22:13Z" finished-at="2019-05-09T08:22:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBlankImage()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateBlankImage" duration-ms="3181" started-at="2019-05-09T06:49:41Z" finished-at="2019-05-09T06:49:44Z">
+        <test-method status="PASS" signature="validateIncorrectCurrentPW()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validateIncorrectCurrentPW" duration-ms="2010" started-at="2019-05-09T08:22:35Z" finished-at="2019-05-09T08:22:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateBlankImage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="2616" started-at="2019-05-09T06:49:44Z" finished-at="2019-05-09T06:49:47Z">
+        </test-method> <!-- validateIncorrectCurrentPW -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="3018" started-at="2019-05-09T08:22:37Z" finished-at="2019-05-09T08:22:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="27795" started-at="2019-05-09T06:49:47Z" finished-at="2019-05-09T06:50:14Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="31171" started-at="2019-05-09T08:22:40Z" finished-at="2019-05-09T08:23:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBlankLastName()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateBlankLastName" duration-ms="3546" started-at="2019-05-09T06:50:14Z" finished-at="2019-05-09T06:50:18Z">
+        <test-method status="PASS" signature="validateIncorrectNewCurrentPW()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validateIncorrectNewCurrentPW" duration-ms="5885" started-at="2019-05-09T08:23:11Z" finished-at="2019-05-09T08:23:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateBlankLastName -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="2497" started-at="2019-05-09T06:50:18Z" finished-at="2019-05-09T06:50:20Z">
+        </test-method> <!-- validateIncorrectNewCurrentPW -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="1699" started-at="2019-05-09T08:23:17Z" finished-at="2019-05-09T08:23:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="30519" started-at="2019-05-09T06:50:20Z" finished-at="2019-05-09T06:50:51Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="23427" started-at="2019-05-09T08:23:18Z" finished-at="2019-05-09T08:23:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBlankUsername()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateBlankUsername" duration-ms="4425" started-at="2019-05-09T06:50:51Z" finished-at="2019-05-09T06:50:55Z">
+        <test-method status="PASS" signature="validateNoConfirmPW()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validateNoConfirmPW" duration-ms="7350" started-at="2019-05-09T08:23:42Z" finished-at="2019-05-09T08:23:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateBlankUsername -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="3042" started-at="2019-05-09T06:50:55Z" finished-at="2019-05-09T06:50:58Z">
+        </test-method> <!-- validateNoConfirmPW -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="1633" started-at="2019-05-09T08:23:49Z" finished-at="2019-05-09T08:23:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="31230" started-at="2019-05-09T06:50:58Z" finished-at="2019-05-09T06:51:30Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="28971" started-at="2019-05-09T08:23:51Z" finished-at="2019-05-09T08:24:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateCompleteRegistrationPageTitle()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateCompleteRegistrationPageTitle" duration-ms="585" started-at="2019-05-09T06:51:30Z" finished-at="2019-05-09T06:51:30Z">
+        <test-method status="PASS" signature="validateNoConfirmPWTwo()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validateNoConfirmPWTwo" duration-ms="5782" started-at="2019-05-09T08:24:20Z" finished-at="2019-05-09T08:24:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCompleteRegistrationPageTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="3149" started-at="2019-05-09T06:51:30Z" finished-at="2019-05-09T06:51:33Z">
+        </test-method> <!-- validateNoConfirmPWTwo -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="2085" started-at="2019-05-09T08:24:26Z" finished-at="2019-05-09T08:24:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="30912" started-at="2019-05-09T06:51:33Z" finished-at="2019-05-09T06:52:04Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="24739" started-at="2019-05-09T08:24:28Z" finished-at="2019-05-09T08:24:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateExistingUsername()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateExistingUsername" duration-ms="7139" started-at="2019-05-09T06:52:04Z" finished-at="2019-05-09T06:52:11Z">
+        <test-method status="PASS" signature="validateNoCurrentPW()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validateNoCurrentPW" duration-ms="968" started-at="2019-05-09T08:24:52Z" finished-at="2019-05-09T08:24:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateExistingUsername -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="3179" started-at="2019-05-09T06:52:11Z" finished-at="2019-05-09T06:52:15Z">
+        </test-method> <!-- validateNoCurrentPW -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="1622" started-at="2019-05-09T08:24:53Z" finished-at="2019-05-09T08:24:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="37161" started-at="2019-05-09T06:52:15Z" finished-at="2019-05-09T06:52:52Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="25170" started-at="2019-05-09T08:24:55Z" finished-at="2019-05-09T08:25:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateInvalidDOBOne()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateInvalidDOBOne" duration-ms="6390" started-at="2019-05-09T06:52:52Z" finished-at="2019-05-09T06:52:58Z">
+        <test-method status="PASS" signature="validateNoNewPW()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validateNoNewPW" duration-ms="4176" started-at="2019-05-09T08:25:20Z" finished-at="2019-05-09T08:25:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateInvalidDOBOne -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="2449" started-at="2019-05-09T06:52:58Z" finished-at="2019-05-09T06:53:01Z">
+        </test-method> <!-- validateNoNewPW -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="1834" started-at="2019-05-09T08:25:24Z" finished-at="2019-05-09T08:25:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="34582" started-at="2019-05-09T06:53:01Z" finished-at="2019-05-09T06:53:35Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="24544" started-at="2019-05-09T08:25:26Z" finished-at="2019-05-09T08:25:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateInvalidDOBThree()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateInvalidDOBThree" duration-ms="5146" started-at="2019-05-09T06:53:35Z" finished-at="2019-05-09T06:53:40Z">
+        <test-method status="PASS" signature="validateNoNewPWTwo()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validateNoNewPWTwo" duration-ms="4610" started-at="2019-05-09T08:25:51Z" finished-at="2019-05-09T08:25:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateInvalidDOBThree -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="3565" started-at="2019-05-09T06:53:40Z" finished-at="2019-05-09T06:53:44Z">
+        </test-method> <!-- validateNoNewPWTwo -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="1538" started-at="2019-05-09T08:25:55Z" finished-at="2019-05-09T08:25:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="37032" started-at="2019-05-09T06:53:44Z" finished-at="2019-05-09T06:54:21Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="24119" started-at="2019-05-09T08:25:57Z" finished-at="2019-05-09T08:26:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateInvalidDOBTwo()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateInvalidDOBTwo" duration-ms="5482" started-at="2019-05-09T06:54:21Z" finished-at="2019-05-09T06:54:26Z">
+        <test-method status="PASS" signature="validateNoNewPassword()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validateNoNewPassword" duration-ms="4705" started-at="2019-05-09T08:26:21Z" finished-at="2019-05-09T08:26:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateInvalidDOBTwo -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="3703" started-at="2019-05-09T06:54:26Z" finished-at="2019-05-09T06:54:30Z">
+        </test-method> <!-- validateNoNewPassword -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="1870" started-at="2019-05-09T08:26:26Z" finished-at="2019-05-09T08:26:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="32865" started-at="2019-05-09T06:54:30Z" finished-at="2019-05-09T06:55:03Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="21812" started-at="2019-05-09T08:26:28Z" finished-at="2019-05-09T08:26:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateOverage()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateOverage" duration-ms="5044" started-at="2019-05-09T06:55:03Z" finished-at="2019-05-09T06:55:08Z">
+        <test-method status="PASS" signature="validatePWRankinGood()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validatePWRankinGood" duration-ms="4328" started-at="2019-05-09T08:26:49Z" finished-at="2019-05-09T08:26:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateOverage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="3414" started-at="2019-05-09T06:55:08Z" finished-at="2019-05-09T06:55:11Z">
+        </test-method> <!-- validatePWRankinGood -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="1520" started-at="2019-05-09T08:26:54Z" finished-at="2019-05-09T08:26:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="37526" started-at="2019-05-09T06:55:11Z" finished-at="2019-05-09T06:55:49Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="32011" started-at="2019-05-09T08:26:55Z" finished-at="2019-05-09T08:27:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateProperInfoOne()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateProperInfoOne" duration-ms="20384" started-at="2019-05-09T06:55:49Z" finished-at="2019-05-09T06:56:09Z">
+        <test-method status="PASS" signature="validatePWRankinStrong()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validatePWRankinStrong" duration-ms="4809" started-at="2019-05-09T08:27:27Z" finished-at="2019-05-09T08:27:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateProperInfoOne -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="2816" started-at="2019-05-09T06:56:09Z" finished-at="2019-05-09T06:56:12Z">
+        </test-method> <!-- validatePWRankinStrong -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="4674" started-at="2019-05-09T08:27:32Z" finished-at="2019-05-09T08:27:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="setUp" is-config="true" duration-ms="36625" started-at="2019-05-09T06:56:12Z" finished-at="2019-05-09T06:56:49Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="23505" started-at="2019-05-09T08:27:37Z" finished-at="2019-05-09T08:28:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateUniqueUsername()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="validateUniqueUsername" duration-ms="6782" started-at="2019-05-09T06:56:49Z" finished-at="2019-05-09T06:56:56Z">
+        <test-method status="PASS" signature="validatePWRankingBad()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validatePWRankingBad" duration-ms="4320" started-at="2019-05-09T08:28:00Z" finished-at="2019-05-09T08:28:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateUniqueUsername -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.completeRegistrationTest@e45f292]" name="tearDown" is-config="true" duration-ms="1975" started-at="2019-05-09T06:56:56Z" finished-at="2019-05-09T06:56:58Z">
+        </test-method> <!-- validatePWRankingBad -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="3326" started-at="2019-05-09T08:28:05Z" finished-at="2019-05-09T08:28:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.SpringSeven.qa.testcases.completeRegistrationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="27349" started-at="2019-05-09T08:28:08Z" finished-at="2019-05-09T08:28:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validatePWRankingWorst()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="validatePWRankingWorst" duration-ms="5041" started-at="2019-05-09T08:28:35Z" finished-at="2019-05-09T08:28:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePWRankingWorst -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changePasswordPageTest@56ac3a89]" name="tearDown" is-config="true" duration-ms="1544" started-at="2019-05-09T08:28:40Z" finished-at="2019-05-09T08:28:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.SpringSeven.qa.testcases.changePasswordPageTest -->
+      <class name="com.SpringSeven.qa.testcases.changeEmailAddressPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changeEmailAddressPageTest@490ab905]" name="setUp" is-config="true" duration-ms="22826" started-at="2019-05-09T08:21:25Z" finished-at="2019-05-09T08:21:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateChangeEmailPageTitle()[pri:0, instance:com.SpringSeven.qa.testcases.changeEmailAddressPageTest@490ab905]" name="validateChangeEmailPageTitle" duration-ms="82" started-at="2019-05-09T08:21:48Z" finished-at="2019-05-09T08:21:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateChangeEmailPageTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changeEmailAddressPageTest@490ab905]" name="tearDown" is-config="true" duration-ms="1392" started-at="2019-05-09T08:21:48Z" finished-at="2019-05-09T08:21:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.SpringSeven.qa.testcases.changeEmailAddressPageTest -->
+    </test> <!-- Spring 7 UI -->
+  </suite> <!-- Suite -->
 </testng-results>

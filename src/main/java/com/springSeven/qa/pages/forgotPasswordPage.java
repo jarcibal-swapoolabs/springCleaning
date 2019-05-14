@@ -22,17 +22,34 @@ public class forgotPasswordPage extends testBase{
 	@FindBy(id="FORGOT_PASSWORD_accountEmail")
 	public WebElement fpwTextbox;
 	
+	
+	@FindBy(id="FORGOT_PASSWORD_verificationCode")
+	public WebElement fpwOTPTextbox;
+
+
 	//button
 	@FindBy(id="submitBtn")
 	public WebElement btnContinue;
 
 	@FindBy(xpath="//a[@class='waves-effect waves-dark btn grey back-btn Button__button___3vjDD']")
 	public WebElement btnCancel;
+	
+	@FindBy(id="continueButton")
+	public WebElement btnOtpContinue;
+	
+	@FindBy(id="previousButton")
+	public WebElement btnOtpPrevious;
+
+	@FindBy(xpath="//button[@class='btn-link-text Button__text___3O8GS Button__link___3KyiJ']")
+	public WebElement btnOtpResend;
 
 	//error
 	@FindBy(xpath="//div[@class='helper-text error-message']")
 	public WebElement fpwErrorMessageEmail;
 
+	@FindBy(xpath="//div[@class='helper-text error-message']")
+	public WebElement fpwErrorMessageOtp;
+	
 	//actions
 	public String getForgotPasswordPageTitle()
 	{
@@ -40,32 +57,28 @@ public class forgotPasswordPage extends testBase{
 		return getForgotPasswordPageTitle;
 	}
 	
-	public void btnContinueClick()
-	{
-		btnContinue.click();
-	}
-	
-	
-	public void btnCancelClick()
-	{
-		btnCancel.click();
-	}
-	
-	public String getfpwErrorWrongEmail()
-	{
-		
-		String getfpwErrorWrongEmail = fpwErrorMessageEmail.getText();
-		return getfpwErrorWrongEmail;
-	}
-	
-	
 	//input Email
 	public void inputEmail(String mail)
 	{
 		fpwTextbox.sendKeys(mail);
 		btnContinue.click();
 	}
-
 	
+	// error messages
+	public String getError(WebElement element) {
+		String getError = element.getText();
+		return getError;
+	}
+
+	// click
+	public void click(WebElement element) {
+		element.click();
+	}
+
+
+	public boolean resendOTPDisplayed() {
+		return btnOtpResend.isDisplayed();
+	}
+
 	
 }

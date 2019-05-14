@@ -28,7 +28,7 @@ public class changePasswordPageTest extends testBase {
 	}
 
 	@BeforeMethod
-	public void setUp() throws InterruptedException, MalformedURLException {
+	public void setUp() throws MalformedURLException {
 		initialization();
 		testUtil = new testUtil();
 		initialPage = new initialPage();

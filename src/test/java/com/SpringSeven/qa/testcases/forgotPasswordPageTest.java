@@ -62,6 +62,23 @@ public class forgotPasswordPageTest extends testBase{
 		Assert.assertEquals(errorMessage, "Please provide a valid email address format");
 	}
 
+	@Test
+	public void validateUsernameNotEMail(){
+		forgotPasswordPage.inputEmail("beth_logan");
+		String errorMessage = forgotPasswordPage.getfpwErrorWrongEmail();
+		Assert.assertEquals(errorMessage, "Please provide an email address");
+	}
+
+	
+	@Test
+	public void validateWorkingEmail(){
+		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+		loadingWait(forgotPasswordPage.btnOtpResend);
+		boolean displayed = forgotPasswordPage.resendOTPDisplayed();
+		Assert.assertTrue(displayed);		
+	}
+
+	
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();

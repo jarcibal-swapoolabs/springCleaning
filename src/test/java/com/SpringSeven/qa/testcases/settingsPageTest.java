@@ -27,7 +27,7 @@ public class settingsPageTest extends testBase{
 		
 	
 	@BeforeMethod
-	public void setUp() throws InterruptedException, MalformedURLException
+	public void setUp() throws MalformedURLException
 	{
 		initialization();		
 		testUtil = new testUtil();
@@ -66,7 +66,7 @@ public class settingsPageTest extends testBase{
 	}
 
 	
-	//	@Test
+//	@Test
 //	public void validateReportAccountCorrectPassword() {
 //		settingsPage.inputPassword("mksoft_password");
 //		loadingWait(settingsPage.confirmIcon);

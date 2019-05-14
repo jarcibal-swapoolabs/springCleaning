@@ -27,7 +27,7 @@ public class profilePageTest extends testBase{
 		
 	
 	@BeforeMethod
-	public void setUp() throws InterruptedException, MalformedURLException
+	public void setUp() throws MalformedURLException 
 	{
 		initialization();		
 		testUtil = new testUtil();
@@ -65,7 +65,7 @@ public class profilePageTest extends testBase{
 		String errorMessage = profilePage.getEmailError();
 		Assert.assertEquals(errorMessage, "Duplicate emails found");
 	}
-//
+
 	
 	@Test
 	public void validateReferralLinkElevenEmail(){

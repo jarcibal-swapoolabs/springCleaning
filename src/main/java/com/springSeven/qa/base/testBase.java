@@ -35,8 +35,8 @@ public class testBase {
 	public static WebDriverEventListener eventListener;
 	
 
-	public static void initialization() throws MalformedURLException{
-//		String browserName = prop.getProperty("browser");
+	public static void initialization() throws MalformedURLException {
+		//String browserName = prop.getProperty("browser");
 //		String browserName = "FF";
 //		
 //		if(browserName.equals("chrome")){
@@ -87,7 +87,7 @@ public class testBase {
 		driver.manage().deleteAllCookies();
 		//driver.get(prop.getProperty("url"));
 		//driver.get("https://d1uu7efqb688sd.cloudfront.net");
-		driver.get("https://localhost:8080");
+		driver.get("https://localhost:80");
 	} 
 	
 	

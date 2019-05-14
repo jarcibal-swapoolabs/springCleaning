@@ -30,7 +30,7 @@ public class productsPageTest extends testBase{
 	}
 	
 	@BeforeMethod
-	public void setUp() throws InterruptedException, MalformedURLException
+	public void setUp() throws MalformedURLException
 	{
 		initialization();		
 		testUtil = new testUtil();
@@ -55,7 +55,8 @@ public class productsPageTest extends testBase{
 		productsPage.standardProductButton.click();
 		productsPage.inputPassword("");
 		errorMessage = productsPage.getIncorrectPasswordError();
-		Assert.assertEquals(errorMessage, "Please provide a password");}
+		Assert.assertEquals(errorMessage, "Please provide a password");
+		}
 
 
 //	@Test
