@@ -214,6 +214,15 @@ public class forgotPasswordPageTest extends testBase{
 //	}
 
 	
+//	@Test
+//	public void validateWorkingChangePassword(){
+//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		forgotPasswordPage.inputOTP("111111");
+//		forgotPasswordPage.inputPassword("mksoft_password","mksoft_password");
+//	}
+
+	
+	
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();

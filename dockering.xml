@@ -10,7 +10,6 @@
     <test name="Spring 7 UI" verbose="2" time-out="20000">
         <classes>
         	<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
-			<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
           </classes>
     </test>
  
