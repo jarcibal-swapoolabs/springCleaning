@@ -27,6 +27,13 @@ public class forgotPasswordPage extends testBase{
 	public WebElement fpwOTPTextbox;
 
 
+	@FindBy(id="FORGOT_PASSWORD_newPassword")
+	public WebElement fpwPasswordTextbox;
+	
+	
+	@FindBy(id="FORGOT_PASSWORD_confirmNewPassword")
+	public WebElement fpwConfirmPasswordTextbox;
+
 	//button
 	@FindBy(id="submitBtn")
 	public WebElement btnContinue;
@@ -50,6 +57,14 @@ public class forgotPasswordPage extends testBase{
 	@FindBy(xpath="//div[@class='helper-text error-message']")
 	public WebElement fpwErrorMessageOtp;
 	
+	@FindBy(xpath = "//div[contains(text(),'Please provide a password')]")
+	public WebElement passwordErrorOne;
+
+	@FindBy(xpath = "//div[contains(text(),'Passwords do not match')]")
+	public WebElement confirmPasswordErrorOne;
+	
+	@FindBy(xpath = "//div[contains(text(),'Please confirm your password')]")
+	public WebElement confirmPasswordErrorTwo;
 	//actions
 	public String getForgotPasswordPageTitle()
 	{
@@ -64,8 +79,26 @@ public class forgotPasswordPage extends testBase{
 		btnContinue.click();
 	}
 	
+	public void inputOTP(String otp)
+	{
+		loadingWait(fpwOTPTextbox);
+		fpwOTPTextbox.sendKeys(otp);
+		btnOtpContinue.click();
+	}
+
+	public void inputPassword(String password, String confirmPassword)
+	{
+		loadingWait(fpwPasswordTextbox);
+		fpwPasswordTextbox.sendKeys(password);
+		clickableWait(btnOtpContinue);
+		fpwConfirmPasswordTextbox.sendKeys(confirmPassword);
+		clickableWait(btnOtpContinue);
+		btnOtpContinue.click();
+	}
+
 	// error messages
 	public String getError(WebElement element) {
+		loadingWait(element);
 		String getError = element.getText();
 		return getError;
 	}
@@ -75,9 +108,9 @@ public class forgotPasswordPage extends testBase{
 		element.click();
 	}
 
-
-	public boolean resendOTPDisplayed() {
-		return btnOtpResend.isDisplayed();
+	//displayed
+	public boolean displayed(WebElement element) {
+		return element.isDisplayed();
 	}
 
 	
