@@ -33,6 +33,9 @@ public class productsPage extends testBase{
 	@FindBy(xpath="//span[contains(text(),'CANCEL')]")
 	public WebElement productsCancelButton;
 
+	@FindBy(xpath="//span[contains(text(),'CONFIRM')]")
+	public WebElement productsConfirmPurchaseButton;
+
 	//error
 	@FindBy(xpath="//div[@class='helper-text error-message']")
 	public WebElement productPasswordTextboxError;
@@ -47,6 +50,7 @@ public class productsPage extends testBase{
 		return getProductPageTitle;
 	}
 	
+	//input
 	public void inputPassword(String pw) 
 	{
 		loadingWait(productsPasswordTextbox);
@@ -54,12 +58,28 @@ public class productsPage extends testBase{
 		productsContinueButton.click();
 		}
 
-	
+	//get error
 	public String getIncorrectPasswordError()
 	{
+		loadingWait(productPasswordTextboxError);
 		String getIncorrectPasswordError = productPasswordTextboxError.getText();
 		return getIncorrectPasswordError;
 	}
 
+	//purchase
+	public void purchaseItem()
+	{
+		clickableWait(standardProductButton);
+		standardProductButton.click();
+		inputPassword("mksoft_password");
+		clickableWait(productsConfirmPurchaseButton);
+		productsConfirmPurchaseButton.click();
+	}
+	
+	
+	//displayed
+	public boolean displayed(WebElement element) {
+		return element.isDisplayed();
+	}
 	
 }

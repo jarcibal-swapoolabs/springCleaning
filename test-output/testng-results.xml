@@ -1,121 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="133008" started-at="2019-05-14T06:24:50Z" finished-at="2019-05-14T06:27:03Z">
+  <suite name="Default suite" duration-ms="58535" started-at="2019-05-14T11:07:16Z" finished-at="2019-05-14T11:08:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="133008" started-at="2019-05-14T06:24:50Z" finished-at="2019-05-14T06:27:03Z">
-      <class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="setUp" is-config="true" duration-ms="13111" started-at="2019-05-14T06:24:50Z" finished-at="2019-05-14T06:25:03Z">
+    <test name="Default test" duration-ms="58535" started-at="2019-05-14T11:07:16Z" finished-at="2019-05-14T11:08:15Z">
+      <class name="com.SpringSeven.qa.testcases.productsPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="19222" started-at="2019-05-14T11:07:16Z" finished-at="2019-05-14T11:07:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBlankOTP()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="validateBlankOTP" duration-ms="3111" started-at="2019-05-14T06:25:03Z" finished-at="2019-05-14T06:25:06Z">
+        <test-method status="FAIL" signature="validateProductsPagePurchase()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="validateProductsPagePurchase" duration-ms="17649" started-at="2019-05-14T11:07:36Z" finished-at="2019-05-14T11:07:53Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on LINUX (697ff4b4-c7ae-49a8-826e-994e5960ad04)] -> xpath: //span[contains(text(),'CONFIRM')]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'jarcibal-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.8.0-36-generic', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.support.events.EventFiringWebDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 66.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 16902, moz:profile: /tmp/rust_mozprofile.dZYEmH..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 697ff4b4-c7ae-49a8-826e-994e5960ad04]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[FirefoxDriver: firefox on LINUX (697ff4b4-c7ae-49a8-826e-994e5960ad04)] -> xpath: //span[contains(text(),'CONFIRM')]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'jarcibal-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.8.0-36-generic', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.support.events.EventFiringWebDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 66.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 16902, moz:profile: /tmp/rust_mozprofile.dZYEmH..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 697ff4b4-c7ae-49a8-826e-994e5960ad04
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.springSeven.qa.base.testBase.clickableWait(testBase.java:178)
+at com.springSeven.qa.pages.productsPage.purchaseItem(productsPage.java:75)
+at com.SpringSeven.qa.testcases.productsPageTest.validateProductsPagePurchase(productsPageTest.java:84)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateBlankOTP -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="tearDown" is-config="true" duration-ms="1257" started-at="2019-05-14T06:25:06Z" finished-at="2019-05-14T06:25:07Z">
+        </test-method> <!-- validateProductsPagePurchase -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1544" started-at="2019-05-14T11:07:53Z" finished-at="2019-05-14T11:07:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="setUp" is-config="true" duration-ms="11451" started-at="2019-05-14T06:25:07Z" finished-at="2019-05-14T06:25:19Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="17804" started-at="2019-05-14T11:07:55Z" finished-at="2019-05-14T11:08:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateFpwPageTitle()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="validateFpwPageTitle" duration-ms="53" started-at="2019-05-14T06:25:19Z" finished-at="2019-05-14T06:25:19Z">
+        <test-method status="PASS" signature="validateProductsPageTitle()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="validateProductsPageTitle" duration-ms="625" started-at="2019-05-14T11:08:13Z" finished-at="2019-05-14T11:08:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateFpwPageTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="tearDown" is-config="true" duration-ms="1332" started-at="2019-05-14T06:25:19Z" finished-at="2019-05-14T06:25:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="setUp" is-config="true" duration-ms="11063" started-at="2019-05-14T06:25:20Z" finished-at="2019-05-14T06:25:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateIncorrectFormat()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="validateIncorrectFormat" duration-ms="1152" started-at="2019-05-14T06:25:31Z" finished-at="2019-05-14T06:25:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateIncorrectFormat -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="tearDown" is-config="true" duration-ms="1595" started-at="2019-05-14T06:25:32Z" finished-at="2019-05-14T06:25:34Z">
+        </test-method> <!-- validateProductsPageTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1588" started-at="2019-05-14T11:08:13Z" finished-at="2019-05-14T11:08:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="setUp" is-config="true" duration-ms="10343" started-at="2019-05-14T06:25:34Z" finished-at="2019-05-14T06:25:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateInvalidOTPOne()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="validateInvalidOTPOne" duration-ms="3450" started-at="2019-05-14T06:25:44Z" finished-at="2019-05-14T06:25:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateInvalidOTPOne -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="tearDown" is-config="true" duration-ms="1172" started-at="2019-05-14T06:25:48Z" finished-at="2019-05-14T06:25:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="setUp" is-config="true" duration-ms="11120" started-at="2019-05-14T06:25:49Z" finished-at="2019-05-14T06:26:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateInvalidOTPtWO()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="validateInvalidOTPtWO" duration-ms="3498" started-at="2019-05-14T06:26:00Z" finished-at="2019-05-14T06:26:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateInvalidOTPtWO -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="tearDown" is-config="true" duration-ms="1100" started-at="2019-05-14T06:26:04Z" finished-at="2019-05-14T06:26:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="setUp" is-config="true" duration-ms="10926" started-at="2019-05-14T06:26:05Z" finished-at="2019-05-14T06:26:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateNoEmail()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="validateNoEmail" duration-ms="871" started-at="2019-05-14T06:26:16Z" finished-at="2019-05-14T06:26:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateNoEmail -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="tearDown" is-config="true" duration-ms="1676" started-at="2019-05-14T06:26:17Z" finished-at="2019-05-14T06:26:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="setUp" is-config="true" duration-ms="13681" started-at="2019-05-14T06:26:18Z" finished-at="2019-05-14T06:26:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateNonExistingEmail()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="validateNonExistingEmail" duration-ms="2105" started-at="2019-05-14T06:26:32Z" finished-at="2019-05-14T06:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateNonExistingEmail -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="tearDown" is-config="true" duration-ms="1325" started-at="2019-05-14T06:26:34Z" finished-at="2019-05-14T06:26:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="setUp" is-config="true" duration-ms="10296" started-at="2019-05-14T06:26:35Z" finished-at="2019-05-14T06:26:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateUsernameNotEMail()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="validateUsernameNotEMail" duration-ms="898" started-at="2019-05-14T06:26:46Z" finished-at="2019-05-14T06:26:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateUsernameNotEMail -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="tearDown" is-config="true" duration-ms="1194" started-at="2019-05-14T06:26:47Z" finished-at="2019-05-14T06:26:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="setUp" is-config="true" duration-ms="10864" started-at="2019-05-14T06:26:48Z" finished-at="2019-05-14T06:26:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateWorkingEmail()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="validateWorkingEmail" duration-ms="2864" started-at="2019-05-14T06:26:59Z" finished-at="2019-05-14T06:27:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateWorkingEmail -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.forgotPasswordPageTest@e45f292]" name="tearDown" is-config="true" duration-ms="1317" started-at="2019-05-14T06:27:01Z" finished-at="2019-05-14T06:27:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.SpringSeven.qa.testcases.forgotPasswordPageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.productsPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

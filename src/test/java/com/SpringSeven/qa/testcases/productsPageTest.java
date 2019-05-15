@@ -48,26 +48,42 @@ public class productsPageTest extends testBase{
 		header = productsPage.getProductPageTitle();
 		Assert.assertEquals(header, "Product Catalog");
 	}
-	
-	
-	@Test
-	public void validateProductsPageBlankPassword(){
-		productsPage.standardProductButton.click();
-		productsPage.inputPassword("");
-		errorMessage = productsPage.getIncorrectPasswordError();
-		Assert.assertEquals(errorMessage, "Please provide a password");
-		}
-
-
+//	
+//	
+//	@Test
+//	public void validateProductsPageBlankPassword(){
+//		productsPage.standardProductButton.click();
+//		productsPage.inputPassword("");
+//		errorMessage = productsPage.getIncorrectPasswordError();
+//		Assert.assertEquals(errorMessage, "Please provide a password");
+//		}
+//
+//
 //	@Test
 //	public void validateProductsPageIncorrectPassword(){
 //		clickableWait(productsPage.standardProductButton);
 //		productsPage.standardProductButton.click();
 //		productsPage.inputPassword("pass");
 //		errorMessage = productsPage.getIncorrectPasswordError();
-//		Assert.assertEquals(errorMessage, "Please provide a password");
+//		Assert.assertEquals(errorMessage, "Password is invalid");
 //		}
 	
+	
+//	@Test
+//	public void validateProductsPageCorrectPassword(){
+//		clickableWait(productsPage.standardProductButton);
+//		productsPage.standardProductButton.click();
+//		productsPage.inputPassword("mksoft_password");
+//		boolean displayed = forgotPasswordPage.displayed(productsPage.productsConfirmPurchaseButton);
+//		Assert.assertTrue(displayed);		
+//		}
+
+	
+	@Test
+	public void validateProductsPagePurchase(){
+		productsPage.purchaseItem();
+		}
+
 	
 	@AfterMethod
 	public void tearDown(){
