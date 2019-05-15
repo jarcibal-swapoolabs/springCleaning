@@ -82,4 +82,16 @@ public class productsPage extends testBase{
 		return element.isDisplayed();
 	}
 	
+//	//page
+//	public homePage login(String un, String pw) 
+//	{
+//		loginUsername.sendKeys(un);
+//		loginPassword.sendKeys(pw);
+//		loginButton.click();
+//		return new homePage();
+//		}
+
+	
+	
+	
 }

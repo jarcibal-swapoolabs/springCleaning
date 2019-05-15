@@ -53,7 +53,7 @@ public class testBase {
 //		else if(browserName.equals("linuxChrome")){
 //		testBase.dockerc();
 //		}
-		
+//		
 		
 		 if(System.getProperty("BROWSER") != null &&
 	                System.getProperty("BROWSER").equalsIgnoreCase("firefox")){
@@ -87,7 +87,7 @@ public class testBase {
 		driver.manage().deleteAllCookies();
 		//driver.get(prop.getProperty("url"));
 		//driver.get("https://d1uu7efqb688sd.cloudfront.net");
-		driver.get("http://0.0.0.0:5003");
+		driver.get("http://10.5.0.7");
 	} 
 	
 	
