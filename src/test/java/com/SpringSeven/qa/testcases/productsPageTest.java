@@ -13,6 +13,7 @@ import com.springSeven.qa.pages.initialPage;
 import com.springSeven.qa.pages.loginPage;
 import com.springSeven.qa.pages.productsPage;
 import com.springSeven.qa.util.testUtil;
+import com.springSeven.qa.pages.transactionDetailPage;
 
 
 public class productsPageTest extends testBase{
@@ -23,6 +24,7 @@ public class productsPageTest extends testBase{
 	String header;
 	testUtil testUtil;
 	String errorMessage;
+	transactionDetailPage transactionDetailPage;
 	
 	
 	public productsPageTest(){
@@ -48,40 +50,52 @@ public class productsPageTest extends testBase{
 		header = productsPage.getProductPageTitle();
 		Assert.assertEquals(header, "Product Catalog");
 	}
-//	
-//	
-//	@Test
-//	public void validateProductsPageBlankPassword(){
-//		productsPage.standardProductButton.click();
-//		productsPage.inputPassword("");
-//		errorMessage = productsPage.getIncorrectPasswordError();
-//		Assert.assertEquals(errorMessage, "Please provide a password");
-//		}
-//
-//
-//	@Test
-//	public void validateProductsPageIncorrectPassword(){
-//		clickableWait(productsPage.standardProductButton);
-//		productsPage.standardProductButton.click();
-//		productsPage.inputPassword("pass");
-//		errorMessage = productsPage.getIncorrectPasswordError();
-//		Assert.assertEquals(errorMessage, "Password is invalid");
-//		}
 	
 	
-//	@Test
-//	public void validateProductsPageCorrectPassword(){
-//		clickableWait(productsPage.standardProductButton);
-//		productsPage.standardProductButton.click();
-//		productsPage.inputPassword("mksoft_password");
-//		boolean displayed = forgotPasswordPage.displayed(productsPage.productsConfirmPurchaseButton);
-//		Assert.assertTrue(displayed);		
-//		}
+	@Test
+	public void validateProductsPageBlankPassword(){
+		productsPage.standardProductButton.click();
+		productsPage.inputPassword("");
+		errorMessage = productsPage.getIncorrectPasswordError();
+		Assert.assertEquals(errorMessage, "Please provide a password");
+		}
 
 
 	@Test
+	public void validateProductsPageIncorrectPassword(){
+		productsPage.standardProductButton.click();
+		productsPage.inputPassword("pass");
+		errorMessage = productsPage.getIncorrectPasswordError();
+		Assert.assertEquals(errorMessage, "Password is invalid");
+		}
+	
+	
+	@Test
+	public void validateProductsPageCorrectPassword(){
+		productsPage.standardProductButton.click();
+		productsPage.inputPassword("mksoft_password");
+		clickableWait(productsPage.productsConfirmPurchaseButton);
+		boolean displayed = productsPage.displayed(productsPage.productsConfirmPurchaseButton);
+		Assert.assertTrue(displayed);		
+		}
+
+	
+	@Test
+	public void validateProductsPageInsufficientBalance(){
+		productsPage.standardProductButton.click();
+		productsPage.inputPassword("mksoft_password");
+		clickableWait(productsPage.productsConfirmPurchaseButton);
+		boolean displayed = productsPage.displayed(productsPage.productsConfirmPurchaseButton);
+		Assert.assertTrue(displayed);		
+		}
+
+	
+	@Test
 	public void validateProductsPagePurchase(){
-		productsPage.purchaseItem();
+		transactionDetailPage = productsPage.purchaseItem();
+		processing();
+		header = transactionDetailPage.getTransactionDetailPageTitle();
+		Assert.assertEquals(header, "done_allThank you, Ricardo Dalisay, for purchasing this product.");
 		}
 
 	

@@ -33,7 +33,8 @@ public class productsPage extends testBase{
 	@FindBy(xpath="//span[contains(text(),'CANCEL')]")
 	public WebElement productsCancelButton;
 
-	@FindBy(xpath="//span[contains(text(),'CONFIRM')]")
+	//@FindBy(xpath="//span[contains(text(),'CONFIRM')]")
+	@FindBy(xpath="//button[@type='submit']")
 	public WebElement productsConfirmPurchaseButton;
 
 	//error
@@ -67,13 +68,14 @@ public class productsPage extends testBase{
 	}
 
 	//purchase
-	public void purchaseItem()
+	public transactionDetailPage purchaseItem()
 	{
 		clickableWait(standardProductButton);
 		standardProductButton.click();
 		inputPassword("mksoft_password");
 		clickableWait(productsConfirmPurchaseButton);
 		productsConfirmPurchaseButton.click();
+		return new transactionDetailPage();
 	}
 	
 	
@@ -82,14 +84,10 @@ public class productsPage extends testBase{
 		return element.isDisplayed();
 	}
 	
-//	//page
-//	public homePage login(String un, String pw) 
-//	{
-//		loginUsername.sendKeys(un);
-//		loginPassword.sendKeys(pw);
-//		loginButton.click();
-//		return new homePage();
-//		}
+	// click
+	public void click(WebElement element) {
+		element.click();
+	}
 
 	
 	

@@ -5,8 +5,13 @@
     <classes>
       <class name="com.SpringSeven.qa.testcases.productsPageTest">
         <methods>
+          <include name="validateProductsPageInsufficientBalance"/>
           <include name="validateProductsPagePurchase"/>
+          <include name="validateProductsPageTitle"/>
+          <include name="validateProductsPageBlankPassword"/>
           <include name="tearDown"/>
+          <include name="validateProductsPageIncorrectPassword"/>
+          <include name="validateProductsPageCorrectPassword"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.SpringSeven.qa.testcases.productsPageTest -->
