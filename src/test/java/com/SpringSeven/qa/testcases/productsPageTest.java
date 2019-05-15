@@ -78,7 +78,7 @@ public class productsPageTest extends testBase{
 //		Assert.assertTrue(displayed);		
 //		}
 
-	
+
 	@Test
 	public void validateProductsPagePurchase(){
 		productsPage.purchaseItem();
