@@ -75,20 +75,20 @@ public class loginPageTest extends testBase{
 		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
 	}
 
-	@Test
-	public void validateLoginWorksOne() {
-		//homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-		loadingWait(homePage.logoutLink);
-		Assert.assertTrue(homePage.logoutDisplayed());
-	}
-	
-	@Test
-	public void validateLoginWorksTwo() {
-		homePage = loginPage.login("beth_logan","mksoft_password");
-		loadingWait(homePage.logoutLink);
-		Assert.assertTrue(homePage.logoutDisplayed());
-	}
+//	@Test
+//	public void validateLoginWorksOne() {
+//		//homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+//		loadingWait(homePage.logoutLink);
+//		Assert.assertTrue(homePage.logoutDisplayed());
+//	}
+//	
+//	@Test
+//	public void validateLoginWorksTwo() {
+//		homePage = loginPage.login("beth_logan","mksoft_password");
+//		loadingWait(homePage.logoutLink);
+//		Assert.assertTrue(homePage.logoutDisplayed());
+//	}
 
 	//not in testcase
 	@Test
