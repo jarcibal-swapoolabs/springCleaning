@@ -79,24 +79,24 @@ public class productsPageTest extends testBase{
 		Assert.assertTrue(displayed);		
 		}
 
-	
-	@Test
-	public void validateProductsPageInsufficientBalance(){
-		productsPage.standardProductButton.click();
-		productsPage.inputPassword("mksoft_password");
-		clickableWait(productsPage.productsConfirmPurchaseButton);
-		boolean displayed = productsPage.displayed(productsPage.productsConfirmPurchaseButton);
-		Assert.assertTrue(displayed);		
-		}
-
-	
-	@Test
-	public void validateProductsPagePurchase(){
-		transactionDetailPage = productsPage.purchaseItem();
-		processing();
-		header = transactionDetailPage.getTransactionDetailPageTitle();
-		Assert.assertEquals(header, "done_allThank you, Ricardo Dalisay, for purchasing this product.");
-		}
+//	
+//	@Test
+//	public void validateProductsPageInsufficientBalance(){
+//		productsPage.standardProductButton.click();
+//		productsPage.inputPassword("mksoft_password");
+//		clickableWait(productsPage.productsConfirmPurchaseButton);
+//		boolean displayed = productsPage.displayed(productsPage.productsConfirmPurchaseButton);
+//		Assert.assertTrue(displayed);		
+//		}
+//
+//	
+//	@Test
+//	public void validateProductsPagePurchase(){
+//		transactionDetailPage = productsPage.purchaseItem();
+//		processing();
+//		header = transactionDetailPage.getTransactionDetailPageTitle();
+//		Assert.assertEquals(header, "done_allThank you, Ricardo Dalisay, for purchasing this product.");
+//		}
 
 	
 	@AfterMethod
