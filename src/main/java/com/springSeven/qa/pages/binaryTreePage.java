@@ -28,11 +28,21 @@ public class binaryTreePage extends testBase{
 	@FindBy(xpath="//div[@class='helper-text error-message RenderSelect__helper-text___2J_a0 RenderSelect__error-message___18k9D']")
 	public WebElement binaryTreeError;	
 
+	//dropdown
+	@FindBy(xpath="//button[@class='btn primary waves-effect waves-light BinaryNodeForm__add-btn___1U0bT']")
+	public WebElement selectMemberDropdown;
+	
+	
 	//button
 	@FindBy(xpath="//button[@class='btn primary waves-effect waves-light BinaryNodeForm__add-btn___1U0bT']")
 	public WebElement binaryAddButton;
 
 
+	//dropdwon
+	@FindBy(xpath="//span[@id='react-select-3--value']")
+	public WebElement memberdropdown;
+
+	
 	//action
 	public String getBinarytTreePageTitle()
 	{
