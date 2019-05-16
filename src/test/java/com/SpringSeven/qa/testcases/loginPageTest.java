@@ -35,7 +35,7 @@ public class loginPageTest extends testBase{
 	public void setUp() throws MalformedURLException
 	{
 		initialization();		
-		initialPage = new loginPage();
+		loginPage = new loginPage();
 //		testUtil = new testUtil();
 //		initialPage = new initialPage();
 //		loginPage = initialPage.loginClick();		
