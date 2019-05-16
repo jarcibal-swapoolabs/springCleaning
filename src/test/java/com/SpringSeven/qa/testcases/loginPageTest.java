@@ -35,134 +35,124 @@ public class loginPageTest extends testBase{
 	public void setUp() throws MalformedURLException
 	{
 		initialization();		
-		loginPage = new loginPage();
-//		testUtil = new testUtil();
-//		initialPage = new initialPage();
-//		loginPage = initialPage.loginClick();		
-//		loadingWait(loginPage.loginButton);
+		testUtil = new testUtil();
+		initialPage = new initialPage();
+		loginPage = initialPage.loginClick();		
+		loadingWait(loginPage.loginButton);
 	}
 	
 
 	@Test
 	public void validateLoginPageTitle(){
-		String header = driver.getTitle();
-		System.out.println(header + "title nito ay");
-//		String header = loginPage.validateLoginPageTitle();
-//		Assert.assertEquals(header, "Sign In");
+		String header = loginPage.validateLoginPageTitle();
+		Assert.assertEquals(header, "Sign In");
 	}
 	
-	@Test
-	public void validateTarg(){
-		String header = driver.getTitle();
-		System.out.println(header + "title nito ay");
+		@Test
+	public void validateFailedLoginIncorrectUN()
+	{
+		loginPage.inputCredential("smileys009@yahoo.com","mksoft_password");
+		loadingWait(loginPage.loginFailedErrorMessage);
+		errorMessage = loginPage.getIncorrectCredentialsError();
+		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
 	}
 
 	
-//		@Test
-//	public void validateFailedLoginIncorrectUN()
-//	{
-//		loginPage.inputCredential("smileys009@yahoo.com","mksoft_password");
-//		loadingWait(loginPage.loginFailedErrorMessage);
-//		errorMessage = loginPage.getIncorrectCredentialsError();
-//		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
-//	}
-//
-//	
+	@Test
+	public void validateFailedLoginIncorrectPWOne() 
+	{
+		loginPage.inputCredential("clarence.layba@swapoolabs.com","pass");
+		loadingWait(loginPage.loginFailedErrorMessage);
+		errorMessage = loginPage.getIncorrectCredentialsError();
+		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
+	}
+
+	public void validateFailedLoginIncorrectPWTwo() 
+	{
+		loginPage.inputCredential("beth_logan","pass");
+		loadingWait(loginPage.loginFailedErrorMessage);
+		errorMessage = loginPage.getIncorrectCredentialsError();
+		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
+	}
+
 //	@Test
-//	public void validateFailedLoginIncorrectPWOne() 
-//	{
-//		loginPage.inputCredential("clarence.layba@swapoolabs.com","pass");
-//		loadingWait(loginPage.loginFailedErrorMessage);
-//		errorMessage = loginPage.getIncorrectCredentialsError();
-//		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
-//	}
-//
-//	public void validateFailedLoginIncorrectPWTwo() 
-//	{
-//		loginPage.inputCredential("beth_logan","pass");
-//		loadingWait(loginPage.loginFailedErrorMessage);
-//		errorMessage = loginPage.getIncorrectCredentialsError();
-//		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
-//	}
-//
-////	@Test
-////	public void validateLoginWorksOne() {
-////		//homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-////		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-////		loadingWait(homePage.logoutLink);
-////		Assert.assertTrue(homePage.logoutDisplayed());
-////	}
-////	
-////	@Test
-////	public void validateLoginWorksTwo() {
-////		homePage = loginPage.login("beth_logan","mksoft_password");
-////		loadingWait(homePage.logoutLink);
-////		Assert.assertTrue(homePage.logoutDisplayed());
-////	}
-//
-//	//not in testcase
-//	@Test
-//	public void validateLoginErrorMessageBlankUsernameOne(){
-//		loginPage.inputCredential("","");
-//		errorMessage = loginPage.getUsernameError();
-//		Assert.assertEquals(errorMessage, "Please provide an email or username");
-//	}
-//	
-//	public void validateLoginErrorMessageBlankUsernameTwo(){
-//		loginPage.inputCredential("","mksoft_password");
-//		errorMessage = loginPage.getUsernameError();
-//		Assert.assertEquals(errorMessage, "Please provide an email or username");
+//	public void validateLoginWorksOne() {
+//		//homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+//		loadingWait(homePage.logoutLink);
+//		Assert.assertTrue(homePage.logoutDisplayed());
 //	}
 //	
 //	@Test
-//	public void validateLoginErrorMessageBlankPasswordOne(){
-//		loginPage.inputCredential("","");
+//	public void validateLoginWorksTwo() {
+//		homePage = loginPage.login("beth_logan","mksoft_password");
+//		loadingWait(homePage.logoutLink);
+//		Assert.assertTrue(homePage.logoutDisplayed());
+//	}
+
+	//not in testcase
+	@Test
+	public void validateLoginErrorMessageBlankUsernameOne(){
+		loginPage.inputCredential("","");
+		errorMessage = loginPage.getUsernameError();
+		Assert.assertEquals(errorMessage, "Please provide an email or username");
+	}
+	
+	public void validateLoginErrorMessageBlankUsernameTwo(){
+		loginPage.inputCredential("","mksoft_password");
+		errorMessage = loginPage.getUsernameError();
+		Assert.assertEquals(errorMessage, "Please provide an email or username");
+	}
+	
+	@Test
+	public void validateLoginErrorMessageBlankPasswordOne(){
+		loginPage.inputCredential("","");
+		errorMessage = loginPage.getPasswordError();
+		Assert.assertEquals(errorMessage, "Please provide a password");
+	}
+	
+	@Test
+	public void validateLoginErrorMessageBlankPasswordTwo(){
+		loginPage.inputCredential("clarence.layba@swapoolabs.com","");
+		errorMessage = loginPage.getPasswordError();
+		Assert.assertEquals(errorMessage, "Please provide a password");
+	}
+
+	@Test
+	public void validateLoginErrorMessageBlankPasswordThree(){
+		loginPage.inputCredential("beth_logan","");
+		errorMessage = loginPage.getPasswordError();
+		Assert.assertEquals(errorMessage, "Please provide a password");
+	}
+
+	@Test
+	public void validateFailedLoginWorks() 
+	{
+		loginPage.inputCredential("jabroni@yahoo.com","pass");
+		loadingWait(loginPage.loginFailedErrorMessage);
+		errorMessage = loginPage.getIncorrectCredentialsError();
+		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
+	}
+
+
+
+	
+//	@DataProvider
+//	public Object[][] getTestData(){
+//		Object data[][] = testUtil.getTestData(sheetName);
+//		return data;
+//	}
+//	
+//	@Test(dataProvider="getTestData")
+//	public void jabroni(String username, String password)
+//	{
+//		loginPage.updateUsername(username);
+//		loginPage.updatePassword(password);	
+//		loginPage.loginClick();
 //		errorMessage = loginPage.getPasswordError();
 //		Assert.assertEquals(errorMessage, "Please provide a password");
 //	}
-//	
-//	@Test
-//	public void validateLoginErrorMessageBlankPasswordTwo(){
-//		loginPage.inputCredential("clarence.layba@swapoolabs.com","");
-//		errorMessage = loginPage.getPasswordError();
-//		Assert.assertEquals(errorMessage, "Please provide a password");
-//	}
-//
-//	@Test
-//	public void validateLoginErrorMessageBlankPasswordThree(){
-//		loginPage.inputCredential("beth_logan","");
-//		errorMessage = loginPage.getPasswordError();
-//		Assert.assertEquals(errorMessage, "Please provide a password");
-//	}
-//
-//	@Test
-//	public void validateFailedLoginWorks() 
-//	{
-//		loginPage.inputCredential("jabroni@yahoo.com","pass");
-//		loadingWait(loginPage.loginFailedErrorMessage);
-//		errorMessage = loginPage.getIncorrectCredentialsError();
-//		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
-//	}
-//
-//
-//
-//	
-////	@DataProvider
-////	public Object[][] getTestData(){
-////		Object data[][] = testUtil.getTestData(sheetName);
-////		return data;
-////	}
-////	
-////	@Test(dataProvider="getTestData")
-////	public void jabroni(String username, String password)
-////	{
-////		loginPage.updateUsername(username);
-////		loginPage.updatePassword(password);	
-////		loginPage.loginClick();
-////		errorMessage = loginPage.getPasswordError();
-////		Assert.assertEquals(errorMessage, "Please provide a password");
-////	}
-//
+
 	
 	@AfterMethod
 	public void tearDown(){
