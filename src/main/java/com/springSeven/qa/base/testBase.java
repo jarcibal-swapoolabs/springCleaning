@@ -87,7 +87,7 @@ public class testBase {
 		driver.manage().deleteAllCookies();
 		//driver.get(prop.getProperty("url"));
 		//driver.get("https://d1uu7efqb688sd.cloudfront.net");
-		driver.get("http://192.168.0.1");
+		driver.get("http://localhost");
 	} 
 	
 	
