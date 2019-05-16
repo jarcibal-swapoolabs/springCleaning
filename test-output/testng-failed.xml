@@ -3,18 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.SpringSeven.qa.testcases.productsPageTest">
+      <class name="com.SpringSeven.qa.testcases.binaryTreePageTest">
         <methods>
-          <include name="validateProductsPageInsufficientBalance"/>
-          <include name="validateProductsPagePurchase"/>
-          <include name="validateProductsPageTitle"/>
-          <include name="validateProductsPageBlankPassword"/>
-          <include name="tearDown"/>
-          <include name="validateProductsPageIncorrectPassword"/>
-          <include name="validateProductsPageCorrectPassword"/>
           <include name="setUp"/>
+          <include name="validateBinaryTreePageTitle"/>
+          <include name="validateBinaryTreeUsername"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.SpringSeven.qa.testcases.productsPageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.binaryTreePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -53,7 +53,7 @@ public class testBase {
 //		else if(browserName.equals("linuxChrome")){
 //		testBase.dockerc();
 //		}
-//		
+		
 		
 		 if(System.getProperty("BROWSER") != null &&
 	                System.getProperty("BROWSER").equalsIgnoreCase("firefox")){

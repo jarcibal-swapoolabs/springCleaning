@@ -56,7 +56,11 @@ public class homePage extends testBase{
 	@FindBy(xpath="//div[text()='ENROLLMENT TREE']")
 	public WebElement enrollmentTreeLink;
 
-//	@FindBy(xpath="//class[contains(text(),'PROFILE')]")
+	@FindBy(xpath="//div[text()='BINARY TREE']")
+	public WebElement binaryTreeLink;
+
+	
+	//	@FindBy(xpath="//class[contains(text(),'PROFILE')]")
 	@FindBy(xpath="//i[contains(text(),'perm_identity')]")
 	public	WebElement profileLink;
 
@@ -112,7 +116,14 @@ public class homePage extends testBase{
 		return new enrollmentTreePage();
 	}
 	
+	public binaryTreePage clickOnBinaryTreeLink(){
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", teamLink);
+		executor.executeScript("arguments[0].click();", binaryTreeLink);
+		return new binaryTreePage();
+	}
 
+	
 	public settingsPage clickOnSettingsLink(){
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", settingsLink);
