@@ -2,6 +2,7 @@ package com.SpringSeven.qa.testcases;
 
 import java.net.MalformedURLException;
 
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -61,6 +62,16 @@ public class binaryTreePageTest extends testBase{
 	@Test
 	public void validateBlankTextonAdd(){
 		binaryTreePage.binaryAddButton.click();
+		String error = binaryTreePage.getBinaryTreeError();
+		Assert.assertEquals(error, "This field is required");
+	}
+
+	@Test
+	public void validateAddaMemberPromptAppear(){
+		binaryTreePage.memberdropdown.click();
+		binaryTreePage.memberdropdown.sendKeys(Keys.ENTER);
+		binaryTreePage.binaryAddButton.click();
+		loadingWait(binaryTreePage.confirmTetxbox);
 		String error = binaryTreePage.getBinaryTreeError();
 		Assert.assertEquals(error, "This field is required");
 	}
