@@ -1,49 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="74107" started-at="2019-05-16T06:42:52Z" finished-at="2019-05-16T06:44:06Z">
+  <suite name="Default suite" duration-ms="26927" started-at="2019-05-17T04:02:26Z" finished-at="2019-05-17T04:02:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="74107" started-at="2019-05-16T06:42:52Z" finished-at="2019-05-16T06:44:06Z">
-      <class name="com.SpringSeven.qa.testcases.binaryTreePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.binaryTreePageTest@5bcab519]" name="setUp" is-config="true" duration-ms="28026" started-at="2019-05-16T06:42:52Z" finished-at="2019-05-16T06:43:20Z">
+    <test name="Default test" duration-ms="26927" started-at="2019-05-17T04:02:26Z" finished-at="2019-05-17T04:02:53Z">
+      <class name="com.SpringSeven.qa.testcases.initialPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="13684" started-at="2019-05-17T04:02:26Z" finished-at="2019-05-17T04:02:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBinaryTreePageTitle()[pri:0, instance:com.SpringSeven.qa.testcases.binaryTreePageTest@5bcab519]" name="validateBinaryTreePageTitle" duration-ms="317" started-at="2019-05-16T06:43:20Z" finished-at="2019-05-16T06:43:20Z">
+        <test-method status="PASS" signature="validateCorrectPageForLogin()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="validateCorrectPageForLogin" duration-ms="1380" started-at="2019-05-17T04:02:39Z" finished-at="2019-05-17T04:02:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateBinaryTreePageTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.binaryTreePageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1337" started-at="2019-05-16T06:43:20Z" finished-at="2019-05-16T06:43:22Z">
+        </test-method> <!-- validateCorrectPageForLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1369" started-at="2019-05-17T04:02:41Z" finished-at="2019-05-17T04:02:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.binaryTreePageTest@5bcab519]" name="setUp" is-config="true" duration-ms="20825" started-at="2019-05-16T06:43:22Z" finished-at="2019-05-16T06:43:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="9029" started-at="2019-05-17T04:02:42Z" finished-at="2019-05-17T04:02:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBinaryTreeUsername()[pri:0, instance:com.SpringSeven.qa.testcases.binaryTreePageTest@5bcab519]" name="validateBinaryTreeUsername" duration-ms="193" started-at="2019-05-16T06:43:42Z" finished-at="2019-05-16T06:43:43Z">
+        <test-method status="PASS" signature="validateLoginLinkOnLogin()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="validateLoginLinkOnLogin" duration-ms="107" started-at="2019-05-17T04:02:51Z" finished-at="2019-05-17T04:02:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateBinaryTreeUsername -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.binaryTreePageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1856" started-at="2019-05-16T06:43:43Z" finished-at="2019-05-16T06:43:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.binaryTreePageTest@5bcab519]" name="setUp" is-config="true" duration-ms="19230" started-at="2019-05-16T06:43:44Z" finished-at="2019-05-16T06:44:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBlankTextonAdd()[pri:0, instance:com.SpringSeven.qa.testcases.binaryTreePageTest@5bcab519]" name="validateBlankTextonAdd" duration-ms="730" started-at="2019-05-16T06:44:04Z" finished-at="2019-05-16T06:44:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateBlankTextonAdd -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.binaryTreePageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1502" started-at="2019-05-16T06:44:04Z" finished-at="2019-05-16T06:44:06Z">
+        </test-method> <!-- validateLoginLinkOnLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1242" started-at="2019-05-17T04:02:51Z" finished-at="2019-05-17T04:02:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.SpringSeven.qa.testcases.binaryTreePageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.initialPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

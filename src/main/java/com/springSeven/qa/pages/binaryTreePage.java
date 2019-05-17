@@ -37,9 +37,6 @@ public class binaryTreePage extends testBase{
 	public WebElement confirmError;	
 	
 
-	
-	
-
 	//dropdown
 	@FindBy(xpath="//button[@class='btn primary waves-effect waves-light BinaryNodeForm__add-btn___1U0bT']")
 	public WebElement selectMemberDropdown;
