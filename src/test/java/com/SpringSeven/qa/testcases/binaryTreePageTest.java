@@ -66,15 +66,15 @@ public class binaryTreePageTest extends testBase{
 		Assert.assertEquals(error, "This field is required");
 	}
 
-	@Test
-	public void validateAddaMemberPromptAppear(){
-		binaryTreePage.memberdropdown.click();
-		binaryTreePage.memberdropdown.sendKeys(Keys.ENTER);
-		binaryTreePage.binaryAddButton.click();
-		loadingWait(binaryTreePage.confirmTetxbox);
-		String error = binaryTreePage.getBinaryTreeError();
-		Assert.assertEquals(error, "This field is required");
-	}
+//	@Test
+//	public void validateAddaMemberPromptAppear(){
+//		binaryTreePage.memberdropdown.click();
+//		binaryTreePage.memberdropdown.sendKeys(Keys.ENTER);
+//		binaryTreePage.binaryAddButton.click();
+//		loadingWait(binaryTreePage.confirmTetxbox);
+//		String error = binaryTreePage.getBinaryTreeError();
+//		Assert.assertEquals(error, "This field is required");
+//	}
 
 	
 	
