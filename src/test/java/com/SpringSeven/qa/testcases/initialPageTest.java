@@ -47,7 +47,7 @@ public class initialPageTest extends testBase{
 	
 	@Test
 	public void validateLoginLinkOnLogin2(){
-		driver.get("http://localhost:8080");
+		driver.get("https://d1uu7efqb688sd.cloudfront.net");
 		String header = driver.getTitle();
 		System.out.println(header + "title nito ay");
 
@@ -58,7 +58,7 @@ public class initialPageTest extends testBase{
 	public void validateLoginLinkOnLogin3(){
 //		String linkText = initialPage.getLoginLinkText();
 //		Assert.assertEquals(linkText, "LOGIN");
-		driver.get("https://localhost:80");
+		driver.get("https://192.168.0.1");
 		String header = driver.getTitle();
 		System.out.println(header + "title nito ay");
 	}
@@ -67,7 +67,7 @@ public class initialPageTest extends testBase{
 	
 	@Test
 	public void validateLoginLinkOnLogin4(){
-		driver.get("https://localhost:8080");
+		driver.get("http://192.168.0.1");
 		String header = driver.getTitle();
 		System.out.println(header + "title nito ay");
 	}
