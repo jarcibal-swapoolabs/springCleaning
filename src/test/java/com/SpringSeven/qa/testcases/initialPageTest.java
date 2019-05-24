@@ -36,57 +36,25 @@ public class initialPageTest extends testBase{
 	
 	@Test
 	public void validateLoginLinkOnLogin(){
-//		String linkText = initialPage.getLoginLinkText();
-//		Assert.assertEquals(linkText, "LOGIN");
-		driver.get("http://localhost:80");
-		String header = driver.getTitle();
-		System.out.println(header + "title nito ay");
-	}
-	
-	
-	
-	@Test
-	public void validateLoginLinkOnLogin2(){
-		driver.get("https://d1uu7efqb688sd.cloudfront.net");
-		String header = driver.getTitle();
-		System.out.println(header + "title nito ay");
-
+		String linkText = initialPage.getLoginLinkText();
+		Assert.assertEquals(linkText, "LOGIN");
 	}
 
 	
 	@Test
-	public void validateLoginLinkOnLogin3(){
-//		String linkText = initialPage.getLoginLinkText();
-//		Assert.assertEquals(linkText, "LOGIN");
-		driver.get("https://192.168.0.1");
-		String header = driver.getTitle();
-		System.out.println(header + "title nito ay");
-	}
-	
-	
-	
-	@Test
-	public void validateLoginLinkOnLogin4(){
-		driver.get("http://192.168.0.1");
-		String header = driver.getTitle();
-		System.out.println(header + "title nito ay");
-	}
+	public void validateCorrectPageForLogin(){
+		loginPage = initialPage.loginClick();
+		loadingWait(loginPage.loginButton);
+		String header = loginPage.validateLoginPageTitle();
+		Assert.assertEquals(header, "Sign In");
 
-	
-	//	@Test
-//	public void validateCorrectPageForLogin(){
-//		loginPage = initialPage.loginClick();
-//		loadingWait(loginPage.loginButton);
-//		String header = loginPage.validateLoginPageTitle();
-//		Assert.assertEquals(header, "Sign In");
-//
-//	}
+	}
 
 	
 	
 	@AfterMethod
 	public void tearDown(){
-		driver.quit();
+		
 	}
 
 }

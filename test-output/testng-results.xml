@@ -1,61 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="101056" started-at="2019-05-20T03:02:40Z" finished-at="2019-05-20T03:04:21Z">
+  <suite name="Default suite" duration-ms="10981" started-at="2019-05-23T05:14:57Z" finished-at="2019-05-23T05:15:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="101056" started-at="2019-05-20T03:02:40Z" finished-at="2019-05-20T03:04:21Z">
-      <class name="com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="28246" started-at="2019-05-20T03:02:40Z" finished-at="2019-05-20T03:03:08Z">
+    <test name="Default test" duration-ms="10981" started-at="2019-05-23T05:14:57Z" finished-at="2019-05-23T05:15:08Z">
+      <class name="com.SpringSeven.qa.testcases.initialPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="10781" started-at="2019-05-23T05:14:57Z" finished-at="2019-05-23T05:15:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateCorrectCurrentPW()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="validateCorrectCurrentPW" duration-ms="2562" started-at="2019-05-20T03:03:08Z" finished-at="2019-05-20T03:03:11Z">
+        <test-method status="PASS" signature="validateLoginLinkOnLogin()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="validateLoginLinkOnLogin" duration-ms="118" started-at="2019-05-23T05:15:07Z" finished-at="2019-05-23T05:15:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCorrectCurrentPW -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1536" started-at="2019-05-20T03:03:11Z" finished-at="2019-05-20T03:03:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="22067" started-at="2019-05-20T03:03:12Z" finished-at="2019-05-20T03:03:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateIncorrectCurrentPW()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="validateIncorrectCurrentPW" duration-ms="2200" started-at="2019-05-20T03:03:34Z" finished-at="2019-05-20T03:03:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateIncorrectCurrentPW -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1274" started-at="2019-05-20T03:03:36Z" finished-at="2019-05-20T03:03:38Z">
+        </test-method> <!-- validateLoginLinkOnLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1" started-at="2019-05-23T05:15:08Z" finished-at="2019-05-23T05:15:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="19246" started-at="2019-05-20T03:03:38Z" finished-at="2019-05-20T03:03:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateNotCurrentPW()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="validateNotCurrentPW" duration-ms="1171" started-at="2019-05-20T03:03:57Z" finished-at="2019-05-20T03:03:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateNotCurrentPW -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1287" started-at="2019-05-20T03:03:58Z" finished-at="2019-05-20T03:03:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="19752" started-at="2019-05-20T03:03:59Z" finished-at="2019-05-20T03:04:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validatesetupSecurityQuestionsPageTitle()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="validatesetupSecurityQuestionsPageTitle" duration-ms="55" started-at="2019-05-20T03:04:19Z" finished-at="2019-05-20T03:04:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatesetupSecurityQuestionsPageTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1508" started-at="2019-05-20T03:04:19Z" finished-at="2019-05-20T03:04:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.initialPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
