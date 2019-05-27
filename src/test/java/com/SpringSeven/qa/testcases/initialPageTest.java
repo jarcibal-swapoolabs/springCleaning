@@ -34,11 +34,11 @@ public class initialPageTest extends testBase{
 		initialPage = new initialPage();
 	}
 	
-//	@Test
-//	public void validateLoginLinkOnLogin(){
-//		String linkText = initialPage.getLoginLinkText();
-//		Assert.assertEquals(linkText, "LOGIN");
-//	}
+	@Test
+	public void validateLoginLinkOnLogin(){
+		String linkText = initialPage.getLoginLinkText();
+		Assert.assertEquals(linkText, "LOGIN");
+	}
 
 	
 	@Test
