@@ -34,21 +34,20 @@ public class initialPageTest extends testBase{
 		initialPage = new initialPage();
 	}
 	
-//	@Test
-//	public void validateLoginLinkOnLogin(){
-//		String linkText = initialPage.getLoginLinkText();
-//		Assert.assertEquals(linkText, "LOGIN");
-//	}
+	@Test
+	public void validateLoginLinkOnLogin(){
+		String linkText = initialPage.getLoginLinkText();
+		Assert.assertEquals(linkText, "LOGIN");
+	}
 
 	
-	@Test
-	public void validateCorrectPageForLogin(){
-		loginPage = initialPage.loginClick();
-		loadingWait(loginPage.loginButton);
-		String header = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(header, "Sign In");
-
-	}
+//	@Test
+//	public void validateCorrectPageForLogin(){
+//		loginPage = initialPage.loginClick();
+//		loadingWait(loginPage.loginButton);
+//		String header = loginPage.validateLoginPageTitle();
+//		Assert.assertEquals(header, "Sign In");
+//	}
 
 	
 	

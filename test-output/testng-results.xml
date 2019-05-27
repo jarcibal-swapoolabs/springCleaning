@@ -2,28 +2,28 @@
 <testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="105650" started-at="2019-05-27T05:45:29Z" finished-at="2019-05-27T05:47:15Z">
+  <suite name="Default suite" duration-ms="94927" started-at="2019-05-27T07:14:53Z" finished-at="2019-05-27T07:16:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="105650" started-at="2019-05-27T05:45:29Z" finished-at="2019-05-27T05:47:15Z">
+    <test name="Default test" duration-ms="94927" started-at="2019-05-27T07:14:53Z" finished-at="2019-05-27T07:16:28Z">
       <class name="com.SpringSeven.qa.testcases.initialPageTest">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="105462" started-at="2019-05-27T05:45:29Z" finished-at="2019-05-27T05:47:15Z">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="94643" started-at="2019-05-27T07:14:53Z" finished-at="2019-05-27T07:16:28Z">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Reached error page: about:neterror?e=netTimeout&u=http%3A//192.168.0.1/&c=UTF-8&f=regular&d=The%20server%20at%20192.168.0.1%20is%20taking%20too%20long%20to%20respond.
+              <![CDATA[TypeError: this.curBrowser.contentBrowser is null
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'jarcibal-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.8.0-36-generic', java.version: '1.8.0_212'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190517141553, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 3724, moz:profile: /tmp/rust_mozprofile.R126b5..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9099f111-51e7-4e42-a3cd-c1f95137843a]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190517141553, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 3014, moz:profile: /tmp/rust_mozprofile.ursq4f..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 993a7a91-00e4-4f1d-b204-5b8d0a4a205c]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=netTimeout&u=http%3A//192.168.0.1/&c=UTF-8&f=regular&d=The%20server%20at%20192.168.0.1%20is%20taking%20too%20long%20to%20respond.
+              <![CDATA[org.openqa.selenium.WebDriverException: TypeError: this.curBrowser.contentBrowser is null
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'jarcibal-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.8.0-36-generic', java.version: '1.8.0_212'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190517141553, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 3724, moz:profile: /tmp/rust_mozprofile.R126b5..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9099f111-51e7-4e42-a3cd-c1f95137843a
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190517141553, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 3014, moz:profile: /tmp/rust_mozprofile.ursq4f..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 993a7a91-00e4-4f1d-b204-5b8d0a4a205c
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -42,7 +42,7 @@ at java.lang.reflect.Method.invoke(Method.java:498)
 at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
 at com.sun.proxy.$Proxy7.get(Unknown Source)
 at org.openqa.selenium.support.events.EventFiringWebDriver.get(EventFiringWebDriver.java:165)
-at com.springSeven.qa.base.testBase.initialization(testBase.java:90)
+at com.springSeven.qa.base.testBase.initialization(testBase.java:75)
 at com.SpringSeven.qa.testcases.initialPageTest.setUp(initialPageTest.java:33)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -78,23 +78,23 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="validateLoginLinkOnLogin()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="validateLoginLinkOnLogin" duration-ms="0" started-at="2019-05-27T05:47:15Z" finished-at="2019-05-27T05:47:15Z">
+        <test-method status="SKIP" signature="validateLoginLinkOnLogin()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="validateLoginLinkOnLogin" duration-ms="0" started-at="2019-05-27T07:16:28Z" finished-at="2019-05-27T07:16:28Z">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Reached error page: about:neterror?e=netTimeout&u=http%3A//192.168.0.1/&c=UTF-8&f=regular&d=The%20server%20at%20192.168.0.1%20is%20taking%20too%20long%20to%20respond.
+              <![CDATA[TypeError: this.curBrowser.contentBrowser is null
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'jarcibal-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.8.0-36-generic', java.version: '1.8.0_212'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190517141553, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 3724, moz:profile: /tmp/rust_mozprofile.R126b5..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9099f111-51e7-4e42-a3cd-c1f95137843a]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190517141553, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 3014, moz:profile: /tmp/rust_mozprofile.ursq4f..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 993a7a91-00e4-4f1d-b204-5b8d0a4a205c]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=netTimeout&u=http%3A//192.168.0.1/&c=UTF-8&f=regular&d=The%20server%20at%20192.168.0.1%20is%20taking%20too%20long%20to%20respond.
+              <![CDATA[org.openqa.selenium.WebDriverException: TypeError: this.curBrowser.contentBrowser is null
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'jarcibal-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.8.0-36-generic', java.version: '1.8.0_212'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190517141553, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 3724, moz:profile: /tmp/rust_mozprofile.R126b5..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9099f111-51e7-4e42-a3cd-c1f95137843a
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190517141553, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 3014, moz:profile: /tmp/rust_mozprofile.ursq4f..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 993a7a91-00e4-4f1d-b204-5b8d0a4a205c
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -113,7 +113,7 @@ at java.lang.reflect.Method.invoke(Method.java:498)
 at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
 at com.sun.proxy.$Proxy7.get(Unknown Source)
 at org.openqa.selenium.support.events.EventFiringWebDriver.get(EventFiringWebDriver.java:165)
-at com.springSeven.qa.base.testBase.initialization(testBase.java:90)
+at com.springSeven.qa.base.testBase.initialization(testBase.java:75)
 at com.SpringSeven.qa.testcases.initialPageTest.setUp(initialPageTest.java:33)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -149,7 +149,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginLinkOnLogin -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-05-27T05:47:15Z" finished-at="2019-05-27T05:47:15Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.initialPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-05-27T07:16:28Z" finished-at="2019-05-27T07:16:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
