@@ -41,14 +41,14 @@ public class initialPageTest extends testBase{
 	}
 
 	
-	@Test
-	public void validateCorrectPageForLogin(){
-		loginPage = initialPage.loginClick();
-		loadingWait(loginPage.loginButton);
-		String header = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(header, "Sign In");
-
-	}
+//	@Test
+//	public void validateCorrectPageForLogin(){
+//		loginPage = initialPage.loginClick();
+//		loadingWait(loginPage.loginButton);
+//		String header = loginPage.validateLoginPageTitle();
+//		Assert.assertEquals(header, "Sign In");
+//
+//	}
 
 	
 	
