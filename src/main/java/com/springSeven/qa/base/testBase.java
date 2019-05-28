@@ -72,8 +72,8 @@ public class testBase {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		// driver.get(prop.getProperty("url"));
-		// driver.get("https://d1uu7efqb688sd.cloudfront.net");
-		driver.get("http://192.168.0.1");
+		 driver.get("https://d1uu7efqb688sd.cloudfront.net");
+		//driver.get("http://192.168.0.1");
 	}
 
 	// docker
@@ -92,7 +92,7 @@ public class testBase {
 		driver = new RemoteWebDriver(new URL(completeUrl), dr);
 
 //		driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),dr);
-
+ 
 //    	Capabilities firefoxCapabilities = DesiredCapabilities.firefox();	
 //		driver = new RemoteWebDriver(new URL("http://192.168.99.100:4446/wd/hub"),firefoxCapabilities);
 	}
