@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.SpringSeven.qa.testcases.initialPageTest">
+      <class name="com.SpringSeven.qa.testcases.loginPageTest">
         <methods>
-          <include name="validateLoginLinkOnLogin"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="validateLoginWorksOne"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.SpringSeven.qa.testcases.initialPageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.loginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

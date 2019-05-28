@@ -12,7 +12,7 @@ services:
       - /dev/shm:/dev/shm
   firefox:
     image: selenium/node-firefox-debug
-    shm_size: '1gb'
+    shm_size: '1gb' 
     depends_on:
       - selenium-hub
     environment:
