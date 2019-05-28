@@ -15,4 +15,16 @@
           </classes>
     </test>
  
+    <test name="Spring 7 UI Set 2">
+        <classes>
+        	<class name="com.SpringSeven.qa.testcases.loginPageTest"></class>
+          </classes>
+    </test>
+
+    <test name="Spring 7 UI Set 3">
+        <classes>
+        	<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
+          </classes>
+    </test>
+
 </suite>

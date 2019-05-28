@@ -54,6 +54,7 @@ public class testBase {
 
 		if (System.getProperty("BROWSER") != null && System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
 			testBase.dockerf();
+			//dc-DesiredCapabilities.firefox();
 		} else {
 			testBase.dockerc();
 		}
@@ -108,23 +109,6 @@ public class testBase {
 		String completeUrl = "http://" + host + ":4444/wd/hub";
 
 		driver = new RemoteWebDriver(new URL(completeUrl), dr);
-
-
-//alternate
-//		String host = "localhost";
-//		DesiredCapabilities dr = DesiredCapabilities.chrome();
-//		if (System.getProperty("BROWSER") != null && 
-//		System.getProperty("BROWSER").equalsIgnoreCase(anotherString:"firefox")) 
-//		{
-//			dr = DesiredCapabilities.firefox();
-//		}
-//		if (System.getProperty("HUB_HOST") != null) 
-//		{
-//			host = System.getProperty("HUB_HOST");
-//		}
-//		String completeUrl = "http://" + host + ":4444/wd/hub";
-//
-//		driver = new RemoteWebDriver(new URL(completeUrl), dr);
 	}
 
 	// life saver but bad
