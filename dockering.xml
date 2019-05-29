@@ -14,12 +14,12 @@
     </test>
     <test name="Spring 7 UI 2">
         <classes>
-        	<class name="com.SpringSeven.qa.testcases.loginPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
           </classes>
     </test>
     <test name="Spring 7 UI 3">
         <classes>
-        	<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
           </classes>
     </test>
  </suite>

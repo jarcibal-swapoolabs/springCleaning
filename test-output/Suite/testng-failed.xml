@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
   <listeners>
     <listener class-name="com.springSeven.qa.ExtentReportListener.extentReportListener"/>
   </listeners>
-  <test thread-count="5" name="Spring 7 UI(failed)" parallel="tests">
+  <test thread-count="3" name="Spring 7 UI 2(failed)" parallel="tests">
     <classes>
-      <class name="com.SpringSeven.qa.testcases.homePageTest">
+      <class name="com.SpringSeven.qa.testcases.initialPageTest">
         <methods>
+          <include name="validateLoginLinkOnLogin"/>
+          <include name="validateCorrectPageForLogin"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="verifyHomepageHeader"/>
         </methods>
-      </class> <!-- com.SpringSeven.qa.testcases.homePageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.initialPageTest -->
+    </classes>
+  </test> <!-- Spring 7 UI 2(failed) -->
+  <test thread-count="3" name="Spring 7 UI(failed)" parallel="tests">
+    <classes>
+      <class name="com.SpringSeven.qa.testcases.initialPageTest">
+        <methods>
+          <include name="validateLoginLinkOnLogin"/>
+          <include name="validateCorrectPageForLogin"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.SpringSeven.qa.testcases.initialPageTest -->
     </classes>
   </test> <!-- Spring 7 UI(failed) -->
+  <test thread-count="3" name="Spring 7 UI 3(failed)" parallel="tests">
+    <classes>
+      <class name="com.SpringSeven.qa.testcases.initialPageTest">
+        <methods>
+          <include name="validateCorrectPageForLogin"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.SpringSeven.qa.testcases.initialPageTest -->
+    </classes>
+  </test> <!-- Spring 7 UI 3(failed) -->
 </suite> <!-- Failed suite [Suite] -->
