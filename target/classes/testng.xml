@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Spring7 Test Web Automation Test Suite">
+
+
+	<listeners>
+		<listener class-name="com.springSeven.qa.Analyzer.MyTransformer"/>
+		<listener class-name="com.springSeven.qa.ExtentReportListener.extentReportListener"/>
+	</listeners>
+
+
+
+	<test name="Spring7 Test Cases">
+		<classes>
+			<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.loginPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.homePageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.productsPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.enrollmentTreePageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.profilePageTest"></class>
+			
+			<class name="com.SpringSeven.qa.testcases.settingsPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.changeEmailAddressPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.changeMobileNumberPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.changePasswordPageTest"></class>
+			<class name="com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest"></class>
+
+			<class name="com.SpringSeven.qa.testcases.registrationPageTest"></class>
+			
+			
+		</classes>
+	</test>
+</suite>
