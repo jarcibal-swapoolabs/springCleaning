@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite"  parallel="tests" >
+<suite name="Suite"  parallel="classes" >
 
 	<listeners>
 		<listener class-name="com.springSeven.qa.ExtentReportListener.extentReportListener"/>
 	</listeners>
 
  
-    <test name="Spring 7 UI" verbose="2" time-out="20000">
+    <test name="Spring 7 UI" time-out="20000">
         <classes>
         	<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
-          </classes>
-    </test>
- 
-    <test name="Spring 7 UI Set 2">
-        <classes>
         	<class name="com.SpringSeven.qa.testcases.loginPageTest"></class>
-          </classes>
-    </test>
-
-    <test name="Spring 7 UI Set 3">
-        <classes>
         	<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
           </classes>
     </test>
-
 </suite>
