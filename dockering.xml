@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite"  parallel="classes" >
+<suite name="Suite"  parallel="tests" >
 
 	<listeners>
 		<listener class-name="com.springSeven.qa.ExtentReportListener.extentReportListener"/>
@@ -14,4 +14,4 @@
         	<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
           </classes>
     </test>
-</suite>
+ </suite>
