@@ -78,7 +78,7 @@ public class loginPageTest extends testBase{
 	@Test
 	public void validateLoginWorksOne() {
 		//homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		homePage = loginPage.login("clarence.layba@swapoolab.com","mksoft_password");
+		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
 		loadingWait(homePage.logoutLink);
 		Assert.assertTrue(homePage.logoutDisplayed());
 	}
