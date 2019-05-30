@@ -11,6 +11,7 @@
         <classes>
         	<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
         	<class name="com.SpringSeven.qa.testcases.loginPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
           </classes>
     </test>
  </suite>
