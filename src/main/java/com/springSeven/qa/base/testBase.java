@@ -11,8 +11,6 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -26,14 +24,14 @@ import com.springSeven.qa.util.webEventListener;
 
 public class testBase {
 
-	public static WebDriver driver;
+	public WebDriver driver;
 
-	public static Properties prop;
+	public Properties prop;
 
-	public static EventFiringWebDriver e_driver;
-	public static WebDriverEventListener eventListener;
+	public EventFiringWebDriver e_driver;
+	public WebDriverEventListener eventListener;
 
-	public static void initialization() throws MalformedURLException {
+	public void initialization() throws MalformedURLException {
 		// String browserName = prop.getProperty("browser");
 //		String browserName = "FF";
 //		
@@ -53,10 +51,31 @@ public class testBase {
 //		}
 
 		if (System.getProperty("BROWSER") != null && System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
-			testBase.dockerf();
+			DesiredCapabilities dr = null;
+			dr = DesiredCapabilities.firefox();
+			dr.setBrowserName("firefox");
+			dr.setPlatform(Platform.LINUX);
+			String host = "localhost";
+
+			if (System.getProperty("HUB_HOST") != null) {
+				host = System.getProperty("HUB_HOST");
+			}
+			String completeUrl = "http://" + host + ":4444/wd/hub";
+
+			driver = new RemoteWebDriver(new URL(completeUrl), dr);		
 			//dc-DesiredCapabilities.firefox();
 		} else {
-			testBase.dockerc();
+			DesiredCapabilities dr = null;
+			dr = DesiredCapabilities.chrome();
+			dr.setBrowserName("chrome");
+			dr.setPlatform(Platform.LINUX);
+			String host = "localhost";
+			if (System.getProperty("HUB_HOST") != null) {
+				host = System.getProperty("HUB_HOST");
+			}
+			String completeUrl = "http://" + host + ":4444/wd/hub";
+
+			driver = new RemoteWebDriver(new URL(completeUrl), dr);
 		}
 
 		e_driver = new EventFiringWebDriver(driver);
@@ -77,19 +96,8 @@ public class testBase {
 	}
 
 	// docker
-	public static void dockerf() throws MalformedURLException {
-		DesiredCapabilities dr = null;
-		dr = DesiredCapabilities.firefox();
-		dr.setBrowserName("firefox");
-		dr.setPlatform(Platform.LINUX);
-		String host = "localhost";
+	public void dockerf() throws MalformedURLException {
 
-		if (System.getProperty("HUB_HOST") != null) {
-			host = System.getProperty("HUB_HOST");
-		}
-		String completeUrl = "http://" + host + ":4444/wd/hub";
-
-		driver = new RemoteWebDriver(new URL(completeUrl), dr);
 
 //		driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),dr);
  
@@ -97,18 +105,7 @@ public class testBase {
 //		driver = new RemoteWebDriver(new URL("http://192.168.99.100:4446/wd/hub"),firefoxCapabilities);
 	}
 
-	public static void dockerc() throws MalformedURLException {
-		DesiredCapabilities dr = null;
-		dr = DesiredCapabilities.chrome();
-		dr.setBrowserName("chrome");
-		dr.setPlatform(Platform.LINUX);
-		String host = "localhost";
-		if (System.getProperty("HUB_HOST") != null) {
-			host = System.getProperty("HUB_HOST");
-		}
-		String completeUrl = "http://" + host + ":4444/wd/hub";
-
-		driver = new RemoteWebDriver(new URL(completeUrl), dr);
+	public void dockerc() throws MalformedURLException {
 	}
 
 	// life saver but bad
@@ -129,19 +126,19 @@ public class testBase {
 	}
 
 	// loading method
-	public static void loadingWait(WebElement element) {
+	public void loadingWait(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		wait.until(ExpectedConditions.visibilityOf(element)); // wait for loader to disappear
 	}
 
 	// clickable
-	public static void clickableWait(WebElement element) {
+	public void clickableWait(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		wait.until(ExpectedConditions.elementToBeClickable(element)); // wait for loader to disappear
 	}
 
 	// explicit wait which is better
-	public static void processing() {
+	public void processing() {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 15);
 			wait.until(
@@ -153,7 +150,7 @@ public class testBase {
 		}
 	}
 
-	public static void tryCatch(WebElement element1, WebElement element2) {
+	public void tryCatch(WebElement element1, WebElement element2) {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 15);
 			wait.until(ExpectedConditions.and(ExpectedConditions.visibilityOf(element1),
