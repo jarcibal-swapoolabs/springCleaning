@@ -6,6 +6,7 @@
       <class name="com.SpringSeven.qa.testcases.initialPageTest">
         <methods>
           <include name="validateLoginLinkOnLogin"/>
+          <include name="validateCorrectPageForLogin"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
