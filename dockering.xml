@@ -14,7 +14,7 @@
     </test>
     <test name="Spring 7 UI 2">
         <classes>
-        	<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.loginPageTest"></class>
           </classes>
     </test>
  </suite>
