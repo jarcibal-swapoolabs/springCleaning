@@ -37,28 +37,28 @@ public class testBase {
 		// String browserName = prop.getProperty("browser");
 		String browserName = "FF";
 		
-		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
-			driver = new ChromeDriver(); 
-		}
-		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", "/home/jarcibal/Downloads/geckodriver");	
-			driver = new FirefoxDriver(); 		
-		}
-		else if(browserName.equals("linuxFirefox")){
-		testBase.dockerf();
-		}		
-		else if(browserName.equals("linuxChrome")){
-		testBase.dockerc();
+//		if(browserName.equals("chrome")){
+//			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
+//			driver = new ChromeDriver(); 
+//		}
+//		else if(browserName.equals("FF")){
+//			System.setProperty("webdriver.gecko.driver", "/home/jarcibal/Downloads/geckodriver");	
+//			driver = new FirefoxDriver(); 		
+//		}
+//		else if(browserName.equals("linuxFirefox")){
+//		testBase.dockerf();
+//		}		
+//		else if(browserName.equals("linuxChrome")){
+//		testBase.dockerc();
+//		}
+
+		if (System.getProperty("BROWSER") != null && System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
+			testBase.dockerf();
+			//dc-DesiredCapabilities.firefox();
+		} else {
+			testBase.dockerc();
 		}
 
-//		if (System.getProperty("BROWSER") != null && System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
-//			testBase.dockerf();
-//			//dc-DesiredCapabilities.firefox();
-//		} else {
-//			testBase.dockerc();
-//		}
-//
 		e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with
 		// EventFiringWebDriver
