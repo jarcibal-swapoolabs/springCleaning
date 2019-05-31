@@ -78,14 +78,15 @@ public class loginPageTest extends testBase{
 	@Test
 	public void validateLoginWorksOne() {
 		//homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		//homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
 		loadingWait(homePage.logoutLink);
 		Assert.assertTrue(homePage.logoutDisplayed());
 	}
 	
 	@Test
 	public void validateLoginWorksTwo() {
-		homePage = loginPage.login("beth_logan","mksoft_password");
+		homePage = loginPage.login("jhesed","superstrong");
 		loadingWait(homePage.logoutLink);
 		Assert.assertTrue(homePage.logoutDisplayed());
 	}

@@ -36,7 +36,8 @@ public class homePageTest extends testBase{
 		initialPage = new initialPage();
 		loginPage = initialPage.loginClick();
 		loadingWait(loginPage.loginButton);
-		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
 		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 }
 	
@@ -45,6 +46,7 @@ public class homePageTest extends testBase{
 	public void verifyHomepageHeader() {
 		String header = homePage.getHeader();
 		Assert.assertEquals(header, "Welcome, beth_logan!");	
+		Assert.assertEquals(header, "Welcome, jhesed!");	
 	    }
 
 	@Test
@@ -54,17 +56,17 @@ public class homePageTest extends testBase{
 		Assert.assertTrue(displayed);		
 	}
 	
-	@Test
-	public void verifySwapooFooterIcon() {
-		String name = homePage.validateSwapooHomepage(homePage.swapooLinkFooter);
-		Assert.assertEquals(name, "Ricardo Dalisay");	
-	    }
-
-	@Test
-	public void verifySwapooHeaderIcon() {
-		String name = homePage.validateSwapooHomepage(homePage.swapooLinkHeader);
-		Assert.assertEquals(name, "Ricardo Dalisay");	
-	    }
+//	@Test
+//	public void verifySwapooFooterIcon() {
+//		String name = homePage.validateSwapooHomepage(homePage.swapooLinkFooter);
+//		Assert.assertEquals(name, "Ricardo Dalisay");	
+//	    }
+//
+//	@Test
+//	public void verifySwapooHeaderIcon() {
+//		String name = homePage.validateSwapooHomepage(homePage.swapooLinkHeader);
+//		Assert.assertEquals(name, "Ricardo Dalisay");	
+//	    }
 		
 	@AfterMethod
 	public void tearDown(){
