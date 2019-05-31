@@ -86,7 +86,7 @@ public class loginPageTest extends testBase{
 	
 	@Test
 	public void validateLoginWorksTwo() {
-		homePage = loginPage.login("jhesed","superstrong");
+		homePage = loginPage.login("jhesed","superstrongpassword");
 		loadingWait(homePage.logoutLink);
 		Assert.assertTrue(homePage.logoutDisplayed());
 	}
