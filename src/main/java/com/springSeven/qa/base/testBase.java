@@ -35,7 +35,7 @@ public class testBase {
 
 	public static void initialization() throws MalformedURLException {
 		// String browserName = prop.getProperty("browser");
-//		String browserName = "linuxFirefox";
+//		String browserName = "FF";
 //		
 //		if(browserName.equals("chrome")){
 //			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
@@ -72,8 +72,8 @@ public class testBase {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		// driver.get(prop.getProperty("url"));
-		driver.get("https://d1uu7efqb688sd.cloudfront.net");
-		//driver.get("http://192.168.0.1");
+		//driver.get("https://d1uu7efqb688sd.cloudfront.net");
+		driver.get("http://192.168.0.1");
 	}
 
 	// docker

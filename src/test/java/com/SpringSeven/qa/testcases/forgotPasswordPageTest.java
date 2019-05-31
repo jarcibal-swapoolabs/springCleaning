@@ -225,6 +225,14 @@ public class forgotPasswordPageTest extends testBase{
 	
 	@AfterMethod
 	public void tearDown(){
-		driver.quit();
+		try
+		{
+			driver.quit();
+			
+		}
+		catch(Exception e)
+		{
+			driver.quit();
+		}
 	}
 }

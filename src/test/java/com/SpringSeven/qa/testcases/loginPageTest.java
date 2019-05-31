@@ -156,7 +156,15 @@ public class loginPageTest extends testBase{
 	
 	@AfterMethod
 	public void tearDown(){
-		driver.quit();
+		try
+		{
+			driver.quit();
+			
+		}
+		catch(Exception e)
+		{
+			driver.quit();
+		}
 	}
 
 }  
