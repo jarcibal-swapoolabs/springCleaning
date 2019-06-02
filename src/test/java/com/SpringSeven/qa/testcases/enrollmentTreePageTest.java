@@ -36,7 +36,8 @@ public class enrollmentTreePageTest extends testBase{
 		initialPage = new initialPage();
 		loginPage = initialPage.loginClick();		
 		loadingWait(loginPage.loginButton);
-		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
 		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		enrollmentTreePage = homePage.clickOnEnrollmentLink();
 		loadingWait(enrollmentTreePage.enrollmentTreePageTitle);

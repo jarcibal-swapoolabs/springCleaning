@@ -13,6 +13,10 @@
         	<class name="com.SpringSeven.qa.testcases.loginPageTest"></class>
         	<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
         	<class name="com.SpringSeven.qa.testcases.homePageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.productsPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.enrollmentTreePageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.profilePageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.settingsPageTest"></class>
           </classes>
     </test>
  </suite>
