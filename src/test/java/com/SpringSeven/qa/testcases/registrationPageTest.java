@@ -25,7 +25,8 @@ public class registrationPageTest extends testBase {
 	public void setUp() throws MalformedURLException {
 		initialization();
 		registrationPage = new registrationPage();
-		driver.get("https://d1uu7efqb688sd.cloudfront.net/signup?id=4jxLxJU");
+//		driver.get("https://d1uu7efqb688sd.cloudfront.net/signup?id=4jxLxJU");
+		driver.get("http://192.168.0.1/signup?id=4jxLxJU");
 		processing();
 }
 
