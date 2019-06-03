@@ -45,7 +45,7 @@ public class homePageTest extends testBase{
 	@Test
 	public void verifyHomepageHeader() {
 		String header = homePage.getHeader();
-		Assert.assertEquals(header, "Welcome, beth_logan!");	
+//		Assert.assertEquals(header, "Welcome, beth_logan!");	
 		Assert.assertEquals(header, "Welcome, jhesed!");	
 	    }
 
