@@ -74,7 +74,7 @@ public class productsPageTest extends testBase{
 	@Test
 	public void validateProductsPageCorrectPassword(){
 		productsPage.standardProductButton.click();
-		productsPage.inputPassword("mksoft_password");
+		productsPage.inputPassword("superstrongpassword");
 		clickableWait(productsPage.productsConfirmPurchaseButton);
 		boolean displayed = productsPage.displayed(productsPage.productsConfirmPurchaseButton);
 		Assert.assertTrue(displayed);		
