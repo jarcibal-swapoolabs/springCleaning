@@ -109,6 +109,7 @@ public class forgotPasswordPage extends testBase{
 
 	// click
 	public void click(WebElement element) {
+		loadingWait(element);
 		element.click();
 	}
 
