@@ -130,7 +130,7 @@ public class forgotPasswordPageTest extends testBase{
 
 	@Test
 	public void validatePasswordBlankOne() {
-		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
 		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
 		forgotPasswordPage.inputOTP("111111");
 		forgotPasswordPage.inputPassword("","P@suwarudo01");
@@ -140,7 +140,7 @@ public class forgotPasswordPageTest extends testBase{
 
 	@Test
 	public void validatePasswordBlankTwo() {
-		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
 		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
 		forgotPasswordPage.inputOTP("111111");
 		forgotPasswordPage.inputPassword("","");
@@ -150,7 +150,7 @@ public class forgotPasswordPageTest extends testBase{
 
 	@Test
 	public void validatePasswordBlankThree() {
-		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
 		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
 		forgotPasswordPage.inputOTP("111111");
 		forgotPasswordPage.inputPassword("","P@suwarudo01");
@@ -161,7 +161,7 @@ public class forgotPasswordPageTest extends testBase{
 	
 	@Test
 	public void validateConfirmPasswordBlankOne() {
-		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
 		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
 		forgotPasswordPage.inputOTP("111111");
 		forgotPasswordPage.inputPassword("P@suwarudo01","");
@@ -171,7 +171,7 @@ public class forgotPasswordPageTest extends testBase{
 	
 	@Test
 	public void validateConfirmPasswordBlankTwo() {
-		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
 		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
 		forgotPasswordPage.inputOTP("111111");
 		forgotPasswordPage.inputPassword("","");

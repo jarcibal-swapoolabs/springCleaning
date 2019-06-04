@@ -55,8 +55,8 @@ public class registrationPageTest extends testBase {
 		
 		initialization();
 		registrationPage = new registrationPage();
-//		driver.get("https://d1uu7efqb688sd.cloudfront.net/signup?id=4jxLxJU");
-		driver.get("http://192.168.0.1/signup?id=ABCDEFG");
+		driver.get("https://d34doyrhrdwlg4.cloudfront.net/signup?id=xCX3Kdt");
+//		driver.get("http://192.168.0.1/signup?id=ABCDEFG");
 		processing();
 }
 
