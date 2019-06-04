@@ -8,20 +8,32 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.springSeven.qa.pages.homePage;
+import com.springSeven.qa.pages.profilePage;
 import com.springSeven.qa.base.testBase;
+import com.springSeven.qa.pages.forgotPasswordPage;
 import com.springSeven.qa.pages.initialPage;
+import com.springSeven.qa.pages.loginPage;
 import com.springSeven.qa.pages.registrationPage;
 import com.springSeven.qa.util.testUtil;
 
 public class registrationPageTest extends testBase {
 
-	public registrationPageTest() {
-		super();
-	}
-
+	initialPage initialPage;
+	loginPage loginPage;
+	forgotPasswordPage forgotPasswordPage;
 	registrationPage registrationPage;
 	String errorMessage;
 	String pwStrength;
+	testUtil testUtil;
+	homePage homePage;
+	profilePage profilePage;
+
+
+	
+	public registrationPageTest() {
+		super();
+	}
 
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {

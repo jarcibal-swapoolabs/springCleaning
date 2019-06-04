@@ -1,7 +1,6 @@
 package com.springSeven.qa.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -26,7 +25,10 @@ public class profilePage extends testBase{
 	@FindBy(id="SEND_REFERRAL_EMAIL_FORM_tempEmails")
 	public WebElement shareEmailTextbox;
 
-
+	@FindBy(xpath="//div[@class='floating-blocker']")
+	public WebElement signupLinkTextbox;
+	
+	
 	//button
 	@FindBy(id="clipboard-btn")
 	public WebElement copyButon;
@@ -70,8 +72,9 @@ public class profilePage extends testBase{
 
 	public void copyLink()
 	{
-		sendEmailButton.click();
-		//driver.get(Keys.CONTROL, 'v');
+		loadingWait(signupLinkTextbox);
+		String signupLink = signupLinkTextbox.getText();
+		driver.get(signupLink);
 	}
 
 	
