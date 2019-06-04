@@ -92,7 +92,6 @@ public class forgotPasswordPage extends testBase{
 
 	public void inputPassword(String password, String confirmPassword)
 	{
-		loadingWait(fpwPasswordTextbox);
 		fpwPasswordTextbox.sendKeys(password);
 		clickableWait(btnOtpContinue);
 		fpwConfirmPasswordTextbox.sendKeys(confirmPassword);
