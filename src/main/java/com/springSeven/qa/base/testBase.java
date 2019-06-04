@@ -35,8 +35,8 @@ public class testBase {
 
 	public static void initialization() throws MalformedURLException {
 		// String browserName = prop.getProperty("browser");
-//		String browserName = "FF";
-//		
+		String browserName = "FF";
+		
 //		if(browserName.equals("chrome")){
 //			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
 //			driver = new ChromeDriver(); 

@@ -114,7 +114,7 @@ public class forgotPasswordPageTest extends testBase{
 		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
 		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
 		forgotPasswordPage.inputOTP("111111");
-		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.fpwPasswordTextbox);
+		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.btnOtpContinue);
 		Assert.assertTrue(displayed);		
 	}
 

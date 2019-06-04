@@ -60,11 +60,11 @@ public class registrationPageTest extends testBase {
 		processing();
 }
 
-	@Test
-	public void validateRegistrationPageTitle(){
-		String header = registrationPage.getRegistrationPageTitle();
-		Assert.assertEquals(header, "Register Now!");
-	}
+//	@Test
+//	public void validateRegistrationPageTitle(){
+//		String header = registrationPage.getRegistrationPageTitle();
+//		Assert.assertEquals(header, "Register Now!");
+//	}
 
 //	@Test
 //	public void validateNoEmail() 
@@ -102,12 +102,12 @@ public class registrationPageTest extends testBase {
 //		Assert.assertEquals(errorMessage, "This email already exists");
 //	}	
 //	
-//	@Test
-//	public void validatePasswordMismatch() {
-//		registrationPage.proper("smileys010@gmail.com", "Ppass", "Pword");
-//		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorOne);
-//		Assert.assertEquals(errorMessage, "Passwords do not match");
-//	}
+	@Test
+	public void validatePasswordMismatch() {
+		registrationPage.proper("smileys010@gmail.com", "Ppass", "Pword");
+		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorOne);
+		Assert.assertEquals(errorMessage, "Passwords do not match");
+	}
 //
 //	@Test
 //	public void validatePasswordBlankOne() {

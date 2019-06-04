@@ -98,7 +98,7 @@ public class forgotPasswordPage extends testBase{
 		clickableWait(btnOtpContinue);
 		btnOtpContinue.click();
 	}
-
+	
 	// error messages
 	public String getError(WebElement element) {
 		loadingWait(element);
