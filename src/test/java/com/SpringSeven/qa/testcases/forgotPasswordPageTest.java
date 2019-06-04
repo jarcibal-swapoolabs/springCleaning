@@ -117,61 +117,67 @@ public class forgotPasswordPageTest extends testBase{
 		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.fpwPasswordTextbox);
 		Assert.assertTrue(displayed);		
 	}
-//
-//	@Test
-//	public void validatePasswordMismatch() {
-//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-//		forgotPasswordPage.inputOTP("111111");
-//		forgotPasswordPage.inputPassword("tinapay","lugaw");
-//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.confirmPasswordErrorOne);
-//		Assert.assertEquals(errorMessage, "Passwords do not match");
-//	}
-//
-//	@Test
-//	public void validatePasswordBlankOne() {
-//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-//		forgotPasswordPage.inputOTP("111111");
-//		forgotPasswordPage.inputPassword("","P@suwarudo01");
-//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.passwordErrorOne);
-//		Assert.assertEquals(errorMessage, "Please provide a password");
-//	}
-//
-//	@Test
-//	public void validatePasswordBlankTwo() {
-//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-//		forgotPasswordPage.inputOTP("111111");
-//		forgotPasswordPage.inputPassword("","");
-//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.passwordErrorOne);
-//		Assert.assertEquals(errorMessage, "Please provide a password");
-//	}
-//
-//	@Test
-//	public void validatePasswordBlankThree() {
-//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-//		forgotPasswordPage.inputOTP("111111");
-//		forgotPasswordPage.inputPassword("","P@suwarudo01");
-//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.confirmPasswordErrorOne);
-//		Assert.assertEquals(errorMessage, "Passwords do not match");
-//	}
-//
-//	
-//	@Test
-//	public void validateConfirmPasswordBlankOne() {
-//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-//		forgotPasswordPage.inputOTP("111111");
-//		forgotPasswordPage.inputPassword("P@suwarudo01","");
-//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.confirmPasswordErrorTwo);
-//		Assert.assertEquals(errorMessage, "Please confirm your password");
-//	}
-//	
-//	@Test
-//	public void validateConfirmPasswordBlankTwo() {
-//		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-//		forgotPasswordPage.inputOTP("111111");
-//		forgotPasswordPage.inputPassword("","");
-//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.confirmPasswordErrorTwo);
-//		Assert.assertEquals(errorMessage, "Please confirm your password");
-//	}
+
+	@Test
+	public void validatePasswordMismatch() {
+		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
+		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+		forgotPasswordPage.inputOTP("111111");
+		forgotPasswordPage.inputPassword("tinapay","lugaw");
+		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.confirmPasswordErrorOne);
+		Assert.assertEquals(errorMessage, "Passwords do not match");
+	}
+
+	@Test
+	public void validatePasswordBlankOne() {
+		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+		forgotPasswordPage.inputOTP("111111");
+		forgotPasswordPage.inputPassword("","P@suwarudo01");
+		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.passwordErrorOne);
+		Assert.assertEquals(errorMessage, "Please provide a password");
+	}
+
+	@Test
+	public void validatePasswordBlankTwo() {
+		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+		forgotPasswordPage.inputOTP("111111");
+		forgotPasswordPage.inputPassword("","");
+		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.passwordErrorOne);
+		Assert.assertEquals(errorMessage, "Please provide a password");
+	}
+
+	@Test
+	public void validatePasswordBlankThree() {
+		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+		forgotPasswordPage.inputOTP("111111");
+		forgotPasswordPage.inputPassword("","P@suwarudo01");
+		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.confirmPasswordErrorOne);
+		Assert.assertEquals(errorMessage, "Passwords do not match");
+	}
+
+	
+	@Test
+	public void validateConfirmPasswordBlankOne() {
+		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+		forgotPasswordPage.inputOTP("111111");
+		forgotPasswordPage.inputPassword("P@suwarudo01","");
+		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.confirmPasswordErrorTwo);
+		Assert.assertEquals(errorMessage, "Please confirm your password");
+	}
+	
+	@Test
+	public void validateConfirmPasswordBlankTwo() {
+		forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+		forgotPasswordPage.inputOTP("111111");
+		forgotPasswordPage.inputPassword("","");
+		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.confirmPasswordErrorTwo);
+		Assert.assertEquals(errorMessage, "Please confirm your password");
+	}
 //
 //
 //	@Test

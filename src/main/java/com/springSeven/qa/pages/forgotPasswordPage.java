@@ -115,6 +115,7 @@ public class forgotPasswordPage extends testBase{
 
 	//displayed
 	public boolean displayed(WebElement element) {
+		loadingWait(element);
 		return element.isDisplayed();
 	}
 
