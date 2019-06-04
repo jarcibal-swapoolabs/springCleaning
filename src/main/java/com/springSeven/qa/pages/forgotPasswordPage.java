@@ -94,7 +94,9 @@ public class forgotPasswordPage extends testBase{
 	{
 		loadingWait(fpwPasswordTextbox);
 		fpwPasswordTextbox.sendKeys(password);
+		clickableWait(btnOtpContinue);
 		fpwConfirmPasswordTextbox.sendKeys(confirmPassword);
+		clickableWait(btnOtpContinue);
 		btnOtpContinue.click();
 	}
 
