@@ -9,7 +9,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.springSeven.qa.base.testBase;
+import com.springSeven.qa.pages.initialPage;
 import com.springSeven.qa.pages.registrationPage;
+import com.springSeven.qa.util.testUtil;
 
 public class registrationPageTest extends testBase {
 
@@ -23,11 +25,26 @@ public class registrationPageTest extends testBase {
 
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
-		initialization();
-		registrationPage = new registrationPage();
+		initialization();		
+		testUtil = new testUtil();
+		initialPage = new initialPage();
+		loginPage = initialPage.loginClick();		
+		loadingWait(loginPage.loginButton);
+		
+		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
+		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
+		
+		homePage.clickOnAccountLink();
+		loadingWait(homePage.profileLink);
+		
+		profilePage = homePage.clickOnProfileLink();
+		loadingWait(profilePage.profilePageTitle);
+		profilePage.copyLink();
+		
+//		initialization();
+//		registrationPage = new registrationPage();
 //		driver.get("https://d1uu7efqb688sd.cloudfront.net/signup?id=4jxLxJU");
-		driver.get("http://192.168.0.1/signup?id=4jxLxJU");
-		processing();
+//		processing();
 }
 
 	@Test
