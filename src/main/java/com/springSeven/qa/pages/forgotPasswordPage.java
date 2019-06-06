@@ -27,11 +27,11 @@ public class forgotPasswordPage extends testBase{
 	public WebElement fpwOTPTextbox;
 
 
-	@FindBy(xpath="//input[@name='newPassword']")
+	@FindBy(xpath="//input[@id='FORGOT_PASSWORD_newPassword']")
 	public WebElement fpwPasswordTextbox;
 	
 	
-	@FindBy(xpath="//input[@name='confirmNewPassword']")
+	@FindBy(xpath="//input[@id='FORGOT_PASSWORD_confirmNewPassword']")
 	public WebElement fpwConfirmPasswordTextbox;
 
 	//button
