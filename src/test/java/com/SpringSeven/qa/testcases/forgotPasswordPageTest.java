@@ -117,24 +117,6 @@ public class forgotPasswordPageTest extends testBase{
 		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.btnOtpContinue);
 		Assert.assertTrue(displayed);		
 	}
-	
-	@Test
-	public void validateWorkingOT2P(){
-		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
-		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
-		forgotPasswordPage.inputOTP("111111");
-		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.fpwPasswordTextbox);
-		Assert.assertTrue(displayed);		
-	}
-
-	@Test
-	public void validateWorkingOT3P(){
-		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
-		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
-		forgotPasswordPage.inputOTP("111111");
-		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.fpwConfirmPasswordTextbox);
-		Assert.assertTrue(displayed);		
-	}
 
 	@Test
 	public void validatePasswordMismatch() {
