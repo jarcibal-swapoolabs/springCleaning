@@ -16,7 +16,7 @@ public class forgotPasswordPageTest extends testBase{
 	initialPage initialPage;
 	loginPage loginPage;
 	forgotPasswordPage forgotPasswordPage;
-
+	
 	public forgotPasswordPageTest(){
 		super();
 	}
