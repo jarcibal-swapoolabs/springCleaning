@@ -63,25 +63,6 @@ public class forgotPasswordPageTest extends testBase{
 	}
 
 	@Test
-	public void validateUsernameNotEMail(){
-		forgotPasswordPage.inputEmail("beth_logan");
-		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageEmail);
-		Assert.assertEquals(errorMessage, "Please provide a valid email address format");
-	}
-
-	
-	@Test
-	public void validateWorkingEmail(){
-		//forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
-		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
-		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
-		loadingWait(forgotPasswordPage.btnOtpResend);
-		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.btnOtpResend);
-		Assert.assertTrue(displayed);		
-	}
-
-	
-	@Test
 	public void validateBlankOTP(){
 		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
 		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
@@ -90,23 +71,43 @@ public class forgotPasswordPageTest extends testBase{
 		Assert.assertEquals(errorMessage, "Please provide a verification code");
 	}
 
-	@Test
-	public void validateInvalidOTPOne(){
-		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
-		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
-		forgotPasswordPage.inputOTP("abc!@#");
-		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
-		Assert.assertEquals(errorMessage, "Please provide a verification code");
-	}
-
-	@Test
-	public void validateInvalidOTPtWO(){
-		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
-		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
-		forgotPasswordPage.inputOTP("000000");
-		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
-		Assert.assertEquals(errorMessage, "Invalid verification code");
-	}
+//	@Test
+//	public void validateUsernameNotEMail(){
+//		forgotPasswordPage.inputEmail("beth_logan");
+//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageEmail);
+//		Assert.assertEquals(errorMessage, "Please provide a valid email address format");
+//	}
+//
+//	
+//	@Test
+//	public void validateWorkingEmail(){
+//		//forgotPasswordPage.inputEmail("jericho.arcibal@swapoolabs.com");
+//		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
+//		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+//		loadingWait(forgotPasswordPage.btnOtpResend);
+//		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.btnOtpResend);
+//		Assert.assertTrue(displayed);		
+//	}
+//
+//	
+//
+//	@Test
+//	public void validateInvalidOTPOne(){
+//		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
+//		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+//		forgotPasswordPage.inputOTP("abc!@#");
+//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
+//		Assert.assertEquals(errorMessage, "Please provide a verification code");
+//	}
+//
+//	@Test
+//	public void validateInvalidOTPtWO(){
+//		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
+//		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+//		forgotPasswordPage.inputOTP("000000");
+//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
+//		Assert.assertEquals(errorMessage, "Invalid verification code");
+//	}
 
 //start here
 //	@Test
