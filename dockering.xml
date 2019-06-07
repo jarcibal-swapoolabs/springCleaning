@@ -9,8 +9,13 @@
  
     <test name="Spring 7 UI">
         <classes>
+        	<class name="com.SpringSeven.qa.testcases.initialPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.loginPageTest"></class>
         	<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
         	<class name="com.SpringSeven.qa.testcases.registrationPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.homePageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.changeEmailAddressPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.changeMobileNumberPageTest"></class>
           </classes>
     </test>
  </suite>

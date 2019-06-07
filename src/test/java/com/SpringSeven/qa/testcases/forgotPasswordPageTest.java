@@ -109,15 +109,15 @@ public class forgotPasswordPageTest extends testBase{
 	}
 
 //start here
-	@Test
-	public void validateWorkingOTP(){
-		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
-		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
-		forgotPasswordPage.inputOTP("111111");
-		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.fpwPasswordTextbox);
-		Assert.assertTrue(displayed);		
-	}
-
+//	@Test
+//	public void validateWorkingOTP(){
+//		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
+//		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+//		forgotPasswordPage.inputOTP("111111");
+//		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.fpwPasswordTextbox);
+//		Assert.assertTrue(displayed);		
+//	}
+//
 //	@Test
 //	public void validatePasswordMismatch() {
 //		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
