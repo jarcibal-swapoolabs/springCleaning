@@ -1,30 +1,32 @@
-version: "3"
+version: "2"
 services:
-  selenium-hub:
+  selenium-hub:    
     image: selenium/hub
-    networks:
+    networks: 
       - spring7
+    privileged: true
   chrome:
     image: selenium/node-chrome-debug
-    networks:
+    networks: 
       - spring7
     privileged: true
     depends_on:
       - selenium-hub
     environment:
       - HUB_HOST=selenium-hub
-  firefox:
+  firefox:    
     image: selenium/node-firefox-debug
-    networks:
+    shm_size: '2gb'
+    networks: 
       - spring7
     privileged: true
     depends_on:
       - selenium-hub
     environment:
       - HUB_HOST=selenium-hub
-  uiTestFirefox:
+  uiTestFirefox:    
     image: smileys009/selenium-docker-linux
-	networks:
+    networks: 
       - spring7
     privileged: true
     depends_on:
@@ -38,7 +40,7 @@ services:
       - ./output/firefox:/usr/share/udemy/test-output
   uiTestChrome:
     image: smileys009/selenium-docker-linux
-	networks:
+    networks: 
       - spring7
     privileged: true
     depends_on:
@@ -49,7 +51,7 @@ services:
       - HUB_HOST=selenium-hub
       - MODULE=dockering.xml
     volumes:
-      - ./output/chrome:/usr/share/udemy/test-output      
+      - ./output/chrome:/usr/share/udemy/test-output
 networks:
   spring7:
     external: true
