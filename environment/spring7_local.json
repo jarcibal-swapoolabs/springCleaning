@@ -1,0 +1,366 @@
+{
+  "id": "a0d6678d-db1e-4887-98b8-5cfed5f96bce",
+  "name": "Local Integration - KMY",
+  "values": [
+    {
+      "key": "url",
+      "value": "http://0.0.0.0:5000",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "email",
+      "value": "jhesed.tacadena@swapoolabs.com",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "user_name",
+      "value": "jhesed",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "swapoo_url",
+      "value": "http://0.0.0.0:5001",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "verification_code",
+      "value": "111111",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "phone_code",
+      "value": "63",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "phone_number",
+      "value": "9776364662",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "password",
+      "value": "superstrongpassword",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "purchase_tx_id",
+      "value": "6d3270c5-9598-e801-6d6c-03733f2c851c",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "login_credential",
+      "value": "jhesed.tacadena@swapoolabs.com",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "swapoo_password",
+      "value": "superstrongpassword",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "package_code",
+      "value": "HZRUYX7P",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "default_2fa_code",
+      "value": "111111",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "edit_2fa_settings",
+      "value": "EDIT_2FA_SETTINGS",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "2fa_action_merchant_purchase",
+      "value": "PRODUCT_PURCHASE",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "referral_code",
+      "value": "FJmxqgx",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "uploader_url",
+      "value": "http://0.0.0.0:5002",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "swapoo_uploader_url",
+      "value": "http://0.0.0.0:5003",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "swapoo_process_id",
+      "value": "d96ae8c6-ed55-077e-561c-b1e1e1bfade8",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "merchant_tx_id",
+      "value": "da591e9d-53a2-17a1-0fbb-d8c93ffec0a6",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "merchant_tag",
+      "value": "MTX1.0",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "merchant_name",
+      "value": "kamekyo",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "email2",
+      "value": "user1tacadena@swapoolabs.com",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "sponsor_code",
+      "value": "ABCDEFG",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "phone_number2",
+      "value": "97763646611",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "user_name2",
+      "value": "jhesed2",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "country_code",
+      "value": "PH",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "region_code",
+      "value": "TEST",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "sponsor_email",
+      "value": "admin@swapoolabs.com",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "sponsor_password",
+      "value": "password",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "child_index_id",
+      "value": "1",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "child_account_id",
+      "value": 2,
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "sponsor_account_id",
+      "value": "9999",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "binary_referral_code",
+      "value": "HkhCmTb",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "recruit_email",
+      "value": "jv.santos@swapoolabs.com",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "recruit_password",
+      "value": "password",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "recruit_phone_code",
+      "value": "63",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "recruit_phone_number",
+      "value": "9178133292",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "recruit_user_name",
+      "value": "recruit",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "recruit_swapoo_password",
+      "value": "password",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "kamekyo_token",
+      "value": "dd77d4ba-1817-fe3d-d79a-f075eb47261e",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "swp_password",
+      "value": "superpasswordstrong",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "avatar_link",
+      "value": "http://someavatarlink.com/",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "swp_id",
+      "value": "1",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "swp_asset_wallet_id",
+      "value": "1",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "captcha_response",
+      "value": "test",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "token",
+      "value": "e8c67791-d9ab-91f9-5453-9e92d418049a",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "process_id",
+      "value": "85a21f66-67e2-f59b-cf6a-832d1ac9cf25",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "account_id",
+      "value": 1,
+      "enabled": true,
+      "type": "text"
+    },
+    {
+        "key": "day",
+        "value": "2019-01-01",
+        "description": "",
+        "enabled": true
+    },
+    {
+        "key": "year",
+        "value": "2019",
+        "type": "text",
+        "description": "",
+        "enabled": true
+    },
+    {
+        "key": "month",
+        "value": "1",
+        "type": "text",
+        "description": "",
+        "enabled": true
+    },
+    {
+        "key": "week",
+        "value": "1",
+        "type": "text",
+        "description": "",
+        "enabled": true
+    },
+    {
+        "key": "transaction_id",
+        "value": "abcdefgh",
+        "description": "",
+        "enabled": true
+    },
+    {
+        "key": "transaction_type",
+        "value": "BINARY",
+        "description": "",
+        "enabled": true
+    },
+    {
+        "key": "sp7_api_key",
+        "value": "SP7_API_KEY",
+        "description": "",
+        "enabled": true
+    },
+    {
+        "key": "sp7_api_signature",
+        "value": "c87ee78433b751da42eaa8da461e7ab52f2274ee4de1d1cd73991998b2690b99793f25a89b5c091d9b90fe9979f36b3de9aff25e9d689601dc1990967546b61d",
+        "description": "",
+        "enabled": true
+    },
+    {
+        "key": "nonce",
+        "value": "123456789",
+        "description": "",
+        "enabled": true
+    },
+    {
+        "key": "transaction_status",
+        "value": "COMPLETED",
+        "description": "",
+        "enabled": true
+    }
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2018-11-20T08:44:29.503Z",
+  "_postman_exported_using": "Postman/6.1.4"
+}
