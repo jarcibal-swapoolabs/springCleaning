@@ -37,29 +37,29 @@ public class registrationPageTest extends testBase {
 
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
-//		initialization();		
-//		testUtil = new testUtil();
-//		initialPage = new initialPage();
-//		loginPage = initialPage.loginClick();		
-//		loadingWait(loginPage.loginButton);
-//		
-//		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
-//		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
-//		
-//		homePage.clickOnAccountLink();
-//		loadingWait(homePage.profileLink);
-//		
-//		profilePage = homePage.clickOnProfileLink();
-//		loadingWait(profilePage.profilePageTitle);
-//		profilePage.copyLink();
-//		
-//		initialization();
-//		registrationPage = new registrationPage();
-//		driver.get("https://d34doyrhrdwlg4.cloudfront.net/signup?id=xCX3Kdt");
-//		driver.get("http://192.168.0.1/signup?id=ABCDEFG");
-//		processing();
-//}
-//
+		initialization();		
+		testUtil = new testUtil();
+		initialPage = new initialPage();
+		loginPage = initialPage.loginClick();		
+		loadingWait(loginPage.loginButton);
+		
+		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
+		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
+		
+		homePage.clickOnAccountLink();
+		loadingWait(homePage.profileLink);
+		
+		profilePage = homePage.clickOnProfileLink();
+		loadingWait(profilePage.profilePageTitle);
+		profilePage.copyLink();
+		
+		initialization();
+		registrationPage = new registrationPage();
+		driver.get("https://d34doyrhrdwlg4.cloudfront.net/signup?id=xCX3Kdt");
+		driver.get("http://192.168.0.1/signup?id=ABCDEFG");
+		processing();
+}
+
 //	@Test
 //	public void validateRegistrationPageTitle(){
 //		String header = registrationPage.getRegistrationPageTitle();
