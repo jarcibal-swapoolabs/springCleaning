@@ -52,14 +52,14 @@ public class registrationPageTest extends testBase {
 //		profilePage = homePage.clickOnProfileLink();
 //		loadingWait(profilePage.profilePageTitle);
 //		profilePage.copyLink();
-		
-		initialization();
-		registrationPage = new registrationPage();
-		driver.get("https://d34doyrhrdwlg4.cloudfront.net/signup?id=xCX3Kdt");
+//		
+//		initialization();
+//		registrationPage = new registrationPage();
+//		driver.get("https://d34doyrhrdwlg4.cloudfront.net/signup?id=xCX3Kdt");
 //		driver.get("http://192.168.0.1/signup?id=ABCDEFG");
-		processing();
-}
-
+//		processing();
+//}
+//
 //	@Test
 //	public void validateRegistrationPageTitle(){
 //		String header = registrationPage.getRegistrationPageTitle();
@@ -102,12 +102,12 @@ public class registrationPageTest extends testBase {
 //		Assert.assertEquals(errorMessage, "This email already exists");
 //	}	
 //	
-	@Test
-	public void validatePasswordMismatch() {
-		registrationPage.proper("smileys010@gmail.com", "Ppass", "Pword");
-		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorOne);
-		Assert.assertEquals(errorMessage, "Passwords do not match");
-	}
+//	@Test
+//	public void validatePasswordMismatch() {
+//		registrationPage.proper("smileys010@gmail.com", "Ppass", "Pword");
+//		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorOne);
+//		Assert.assertEquals(errorMessage, "Passwords do not match");
+//	}
 //
 //	@Test
 //	public void validatePasswordBlankOne() {
