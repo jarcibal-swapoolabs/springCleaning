@@ -102,6 +102,7 @@ public class productsPageTest extends testBase{
 	
 	@AfterMethod
 	public void tearDown(){
+		driver.close();
 		driver.quit();
 	}
 
