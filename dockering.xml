@@ -9,6 +9,9 @@
  
     <test name="Spring 7 UI">
         <classes>
+        	<class name="com.SpringSeven.qa.testcases.editProfilePageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.productsPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.profilePageTest"></class>
         	<class name="com.SpringSeven.qa.testcases.purchaseHistoryPageTest"></class>
         	<class name="com.SpringSeven.qa.testcases.settingsPageTest"></class>
         	<class name="com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest"></class>

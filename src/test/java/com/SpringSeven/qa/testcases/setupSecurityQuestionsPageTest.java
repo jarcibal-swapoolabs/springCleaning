@@ -73,7 +73,7 @@ public class setupSecurityQuestionsPageTest extends testBase {
 
 	@Test
 	public void validateCorrectCurrentPW() {
-		setupSecurityQuestionsPage.enterPW("mksoft_password");
+		setupSecurityQuestionsPage.enterPW("superstrongpassword");
 		loadingWait(setupSecurityQuestionsPage.submitButton);
 		boolean submitBtnDisplayed = setupSecurityQuestionsPage.getCorrectCurrentPW();
 		Assert.assertTrue(submitBtnDisplayed);
