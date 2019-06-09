@@ -38,8 +38,9 @@ public class editProfilePageTest extends testBase {
 
 		
 		
-		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-//		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
+//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+//		loadingWait(homePage.loadingElement);
+		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
 		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 
 		homePage.clickOnAccountLink();
