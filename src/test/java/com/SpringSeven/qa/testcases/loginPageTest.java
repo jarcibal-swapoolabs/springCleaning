@@ -69,7 +69,8 @@ public class loginPageTest extends testBase{
 
 	public void validateFailedLoginIncorrectPWTwo() 
 	{
-		loginPage.inputCredential("beth_logan","pass");
+		//loginPage.inputCredential("beth_logan","pass");
+		loginPage.inputCredential("jhesed","pass");
 		loadingWait(loginPage.loginFailedErrorMessage);
 		errorMessage = loginPage.getIncorrectCredentialsError();
 		Assert.assertEquals(errorMessage, "Please provide a valid email/username and password");
@@ -87,6 +88,7 @@ public class loginPageTest extends testBase{
 	@Test
 	public void validateLoginWorksTwo() {
 		homePage = loginPage.login("jhesed","superstrongpassword");
+		//homePage = loginPage.login("beth_logan","mksoft_password");
 		loadingWait(homePage.logoutLink);
 		Assert.assertTrue(homePage.logoutDisplayed());
 	}
@@ -115,6 +117,7 @@ public class loginPageTest extends testBase{
 	@Test
 	public void validateLoginErrorMessageBlankPasswordTwo(){
 		loginPage.inputCredential("jhesed.tacadena@swapoolabs.com","");
+		//loginPage.inputCredential("clarence.layba@swapoolabs.com","");
 		errorMessage = loginPage.getPasswordError();
 		Assert.assertEquals(errorMessage, "Please provide a password");
 	}
@@ -151,21 +154,13 @@ public class loginPageTest extends testBase{
 //		loginPage.updatePassword(password);	
 //		loginPage.loginClick();
 //		errorMessage = loginPage.getPasswordError();
-//		Assert.assertEquals(errorMessage, "Please provide a password");
+//		Assert.assertEquals(errorMessage, "Please provide a password");/
 //	}
 
 	
 	@AfterMethod
 	public void tearDown(){
-		try
-		{
-			driver.quit();
-			
-		}
-		catch(Exception e)
-		{
-			driver.quit();
-		}
-	}
+		driver.quit();
+}
 
 }  

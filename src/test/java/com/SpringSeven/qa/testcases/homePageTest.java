@@ -45,7 +45,7 @@ public class homePageTest extends testBase{
 	@Test
 	public void verifyHomepageHeader() {
 		String header = homePage.getHeader();
-//		Assert.assertEquals(header, "Welcome, beth_logan!");	
+		//Assert.assertEquals(header, "Welcome, beth_logan!");	
 		Assert.assertEquals(header, "Welcome, jhesed!");	
 	    }
 
@@ -56,17 +56,17 @@ public class homePageTest extends testBase{
 		Assert.assertTrue(displayed);		
 	}
 	
-//	@Test
-//	public void verifySwapooFooterIcon() {
-//		String name = homePage.validateSwapooHomepage(homePage.swapooLinkFooter);
-//		Assert.assertEquals(name, "Ricardo Dalisay");	
-//	    }
-//
-//	@Test
-//	public void verifySwapooHeaderIcon() {
-//		String name = homePage.validateSwapooHomepage(homePage.swapooLinkHeader);
-//		Assert.assertEquals(name, "Ricardo Dalisay");	
-//	    }
+	@Test
+	public void verifySwapooFooterIcon() {
+		String name = homePage.validateSwapooHomepage(homePage.swapooLinkFooter);
+		Assert.assertEquals(name, "carlo santos");	
+	    }
+
+	@Test
+	public void verifySwapooHeaderIcon() {
+		String name = homePage.validateSwapooHomepage(homePage.swapooLinkHeader);
+		Assert.assertEquals(name, "carlo santos");	
+	    }
 		
 	@AfterMethod
 	public void tearDown(){

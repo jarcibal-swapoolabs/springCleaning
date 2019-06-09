@@ -39,8 +39,8 @@ public class productsPageTest extends testBase{
 		initialPage = new initialPage();
 		loginPage = initialPage.loginClick();		
 		loadingWait(loginPage.loginButton);
-//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
+		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+//		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
 		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		productsPage = homePage.clickOnProductsLink();
 		clickableWait(productsPage.standardProductButton);
@@ -51,34 +51,35 @@ public class productsPageTest extends testBase{
 		header = productsPage.getProductPageTitle();
 		Assert.assertEquals(header, "Product Catalog");
 	}
-	
-	
-	@Test
-	public void validateProductsPageBlankPassword(){
-		productsPage.standardProductButton.click();
-		productsPage.inputPassword("");
-		errorMessage = productsPage.getIncorrectPasswordError();
-		Assert.assertEquals(errorMessage, "Please provide a password");
-		}
-
-
-	@Test
-	public void validateProductsPageIncorrectPassword(){
-		productsPage.standardProductButton.click();
-		productsPage.inputPassword("pass");
-		errorMessage = productsPage.getIncorrectPasswordError();
-		Assert.assertEquals(errorMessage, "Password is invalid");
-		}
-	
-	
-	@Test
-	public void validateProductsPageCorrectPassword(){
-		productsPage.standardProductButton.click();
-		productsPage.inputPassword("superstrongpassword");
-		clickableWait(productsPage.productsConfirmPurchaseButton);
-		boolean displayed = productsPage.displayed(productsPage.productsConfirmPurchaseButton);
-		Assert.assertTrue(displayed);		
-		}
+//	
+//	
+//	@Test
+//	public void validateProductsPageBlankPassword(){
+//		productsPage.standardProductButton.click();
+//		productsPage.inputPassword("");
+//		errorMessage = productsPage.getIncorrectPasswordError();
+//		Assert.assertEquals(errorMessage, "Please provide a password");
+//		}
+//
+//
+//	@Test
+//	public void validateProductsPageIncorrectPassword(){
+//		productsPage.standardProductButton.click();
+//		productsPage.inputPassword("pass");
+//		errorMessage = productsPage.getIncorrectPasswordError();
+//		Assert.assertEquals(errorMessage, "Password is invalid");
+//		}
+//	
+//	
+//	@Test
+//	public void validateProductsPageCorrectPassword(){
+//		productsPage.standardProductButton.click();
+//		//productsPage.inputPassword("superstrongpassword");
+//		productsPage.inputPassword("mksoft_password");
+//		clickableWait(productsPage.productsConfirmPurchaseButton);
+//		boolean displayed = productsPage.displayed(productsPage.productsConfirmPurchaseButton);
+//		Assert.assertTrue(displayed);		
+//		}
 
 //	
 //	@Test
