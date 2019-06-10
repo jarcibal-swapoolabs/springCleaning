@@ -36,7 +36,10 @@ public class changePasswordPageTest extends testBase {
 		loadingWait(loginPage.loginButton);
 
 		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
+		loadingWait(homePage.loadingElement);
+
+//		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
+//		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.settingsLink);
@@ -73,7 +76,8 @@ public class changePasswordPageTest extends testBase {
 
 	@Test
 	public void validateNoNewPW() {
-		changePasswordPage.enterPW("mksoft_password");
+//		changePasswordPage.enterPW("mksoft_password");
+		changePasswordPage.enterPW("superstrongpassword");
 		loadingWait(changePasswordPage.submitButton);
 		changePasswordPage.enterPW("","");
 		String errorMessage = changePasswordPage.getErrorNewPassword();
@@ -82,7 +86,8 @@ public class changePasswordPageTest extends testBase {
 
 	@Test
 	public void validateNoNewPWTwo(){
-		changePasswordPage.enterPW("mksoft_password");
+//		changePasswordPage.enterPW("mksoft_password");
+		changePasswordPage.enterPW("superstrongpassword");
 		loadingWait(changePasswordPage.submitButton);
 		changePasswordPage.enterPW("","password");
 		String errorMessage = changePasswordPage.getErrorNewPassword();
@@ -91,7 +96,8 @@ public class changePasswordPageTest extends testBase {
 
 	@Test
 	public void validateNoConfirmPW(){
-		changePasswordPage.enterPW("mksoft_password");
+//		changePasswordPage.enterPW("mksoft_password");
+		changePasswordPage.enterPW("superstrongpassword");
 		loadingWait(changePasswordPage.submitButton);
 		changePasswordPage.enterPW("","");
 		String errorMessage = changePasswordPage.getErrorConfirmPassword();
@@ -100,7 +106,8 @@ public class changePasswordPageTest extends testBase {
 	
 	@Test
 	public void validateNoConfirmPWTwo(){
-		changePasswordPage.enterPW("mksoft_password");
+//		changePasswordPage.enterPW("mksoft_password");
+		changePasswordPage.enterPW("superstrongpassword");
 		loadingWait(changePasswordPage.submitButton);
 		changePasswordPage.enterPW("password","");
 		String errorMessage = changePasswordPage.getErrorConfirmPassword();
@@ -109,7 +116,8 @@ public class changePasswordPageTest extends testBase {
 
 	@Test
 	public void validateNoNewPassword() {
-		changePasswordPage.enterPW("mksoft_password");
+//		changePasswordPage.enterPW("mksoft_password");
+		changePasswordPage.enterPW("superstrongpassword");
 		loadingWait(changePasswordPage.submitButton);
 		changePasswordPage.enterPW("", "password");
 		String errorMessage = changePasswordPage.getErrorNoNewPassword();
@@ -118,7 +126,8 @@ public class changePasswordPageTest extends testBase {
 
 	@Test
 	public void validateIncorrectNewCurrentPW() {
-		changePasswordPage.enterPW("mksoft_password");
+//		changePasswordPage.enterPW("mksoft_password");
+		changePasswordPage.enterPW("superstrongpassword");
 		clickableWait(changePasswordPage.submitButton);
 		changePasswordPage.enterPW("pass", "password");
 		loadingWait(changePasswordPage.confirmPasswordNotMatch);
@@ -129,7 +138,8 @@ public class changePasswordPageTest extends testBase {
 	
 	@Test
 	public void validatePWRankingBad(){
-		changePasswordPage.enterPW("mksoft_password");
+//		changePasswordPage.enterPW("mksoft_password");
+		changePasswordPage.enterPW("superstrongpassword");
 		loadingWait(changePasswordPage.submitButton);
 		changePasswordPage.enterPW("makati","");
 		loadingWait(changePasswordPage.newPasswordRanking);
@@ -139,7 +149,8 @@ public class changePasswordPageTest extends testBase {
 
 	@Test
 	public void validatePWRankingWorst(){
-		changePasswordPage.enterPW("mksoft_password");
+//		changePasswordPage.enterPW("mksoft_password");
+		changePasswordPage.enterPW("superstrongpassword");
 		loadingWait(changePasswordPage.submitButton);
 		changePasswordPage.enterPW("makatisoft","");
 		loadingWait(changePasswordPage.newPasswordRanking);
@@ -149,7 +160,8 @@ public class changePasswordPageTest extends testBase {
 
 	@Test
 	public void validatePWRankinGood(){
-	changePasswordPage.enterPW("mksoft_password");
+//		changePasswordPage.enterPW("mksoft_password");
+		changePasswordPage.enterPW("superstrongpassword");
 	loadingWait(changePasswordPage.submitButton);
 	changePasswordPage.enterPW("makatisoft0","");
 	loadingWait(changePasswordPage.newPasswordRanking);
@@ -159,7 +171,8 @@ public class changePasswordPageTest extends testBase {
 
 	@Test
 	public void validatePWRankinStrong(){
-		changePasswordPage.enterPW("mksoft_password");
+//		changePasswordPage.enterPW("mksoft_password");
+		changePasswordPage.enterPW("superstrongpassword");
 		loadingWait(changePasswordPage.submitButton);
 		changePasswordPage.enterPW("makatisoft02","");
 		loadingWait(changePasswordPage.newPasswordRanking);

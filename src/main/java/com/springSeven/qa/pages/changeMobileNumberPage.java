@@ -59,30 +59,35 @@ public class changeMobileNumberPage extends testBase {
 	//input
 	public void updatePasswordTextbox(String input) 
 	{
+		loadingWait(passwordTextbox);
 		passwordTextbox.sendKeys(input);
 		continueButton.click();
 	}
 
 	public void updateotpTextbox(String input) 
 	{
+		loadingWait(otpTextbox);
 		otpTextbox.sendKeys(input);
 		continueButton.click();
 	}
 
 	public void updateCountryCodeTextbox(String input) 
 	{
+		loadingWait(countryCodeTextbox);
 		countryCodeTextbox.sendKeys(input);
 		continueButton.click();
 	}
 
 	public void updateNewMobileTextbox(String input) 
 	{
+		loadingWait(newMobileTextbox);
 		newMobileTextbox.sendKeys(input);
 		continueButton.click();
 	}
 
 	public void updateotpNewTextbox(String input) 
 	{
+		loadingWait(otpNewTextbox);
 		otpNewTextbox.sendKeys(input);
 		continueButton.click();
 	}
@@ -101,6 +106,14 @@ public class changeMobileNumberPage extends testBase {
 	{
 		String getChangeMobilePageTitle = changeMobileNumberPageTitle.getText();
 		return getChangeMobilePageTitle;
+	}
+	
+	
+	//error messages
+	public String getError(WebElement element) {
+		loadingWait(element);
+		String getError = element.getText();
+		return getError;
 	}
 
 }

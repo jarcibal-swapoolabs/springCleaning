@@ -34,7 +34,7 @@ public class changeEmailAddressPage extends testBase{
 	WebElement otpNewTextbox;
 
 	//button
-	@FindBy(xpath="//span[contains(text(),'Continue')]")
+	@FindBy(xpath="//button[@class='btn primary waves-effect waves-light add-mar-left1 Button__button___3vjDD']")
 	WebElement continueButton;
 		
 	@FindBy(xpath="//button[text()='Resend']")
@@ -46,9 +46,13 @@ public class changeEmailAddressPage extends testBase{
 
 	//error
 	@FindBy(xpath="//div[@class='helper-text error-message']")
-	WebElement passwordErrorMessage;
+	public WebElement passwordErrorMessage;
 
 
+	@FindBy(xpath="//div[@class='helper-text error-message']")
+	public WebElement otpErrorMessage;
+
+	
 	//actions
 	public String getchangeEmailAddressPageTitle()
 	{
@@ -75,37 +79,37 @@ public class changeEmailAddressPage extends testBase{
 	//input
 	public void updatePasswordTextbox(String input) 
 	{
+		loadingWait(passwordTextbox);
 		passwordTextbox.sendKeys(input);
+		clickContinue();
 	}
 
 	public void updateotpTextbox(String input) 
 	{
+		loadingWait(otpTextbox);
 		otpTextbox.sendKeys(input);
+		clickContinue();
 	}
 
 	public void updateCountryCodeTextbox(String input) 
 	{
+		loadingWait(countryCodeTextbox);
 		countryCodeTextbox.sendKeys(input);
 	}
 
 	public void updateNewMobileTextbox(String input) 
 	{
+		loadingWait(newMobileTextbox);
 		newMobileTextbox.sendKeys(input);
 	}
 
 	public void updateotpNewTextbox(String input) 
 	{
+		loadingWait(otpNewTextbox);
 		otpNewTextbox.sendKeys(input);
 	}
 	
 	
-	//error messages
-
-	public String getPasswordTextboxError()
-	{
-		String getPasswordTextboxError = passwordErrorMessage.getText();
-		return getPasswordTextboxError;
-	}
 
 	//get title
 	public String getChangeEmailPageTitle()
@@ -113,5 +117,14 @@ public class changeEmailAddressPage extends testBase{
 		String getChangeEmailPageTitle = changeEmailAddressPageTitle.getText();
 		return getChangeEmailPageTitle;
 	}
+	
+	//error messages
+	public String getError(WebElement element) {
+		loadingWait(element);
+		String getError = element.getText();
+		return getError;
+	}
+
+	
 
 }

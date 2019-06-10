@@ -23,6 +23,7 @@ public class changeMobileNumberPageTest extends testBase
 	 settingsPage settingsPage;
 	 changeMobileNumberPage changeMobileNumberPage;
 	 testUtil testUtil;
+	 String error;
 	 
 	public changeMobileNumberPageTest(){
 		super();
@@ -38,8 +39,10 @@ public class changeMobileNumberPageTest extends testBase
 		loginPage = initialPage.loginClick();		
 		loadingWait(loginPage.loginButton);
 
-		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
 		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
+//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+//		loadingWait(homePage.loadingElement);
 		
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.settingsLink);
@@ -75,17 +78,44 @@ public class changeMobileNumberPageTest extends testBase
 	public void validateChangeMobileNumberIncorrectPassword(){
 		changeMobileNumberPage.updatePasswordTextbox("wrong");
 		loadingWait(changeMobileNumberPage.passwordErrorMessage);
-		String error = settingsPage.getErrorReportAccountPassword();
+		error = settingsPage.getErrorReportAccountPassword();
 		Assert.assertEquals(error, "Password is invalid");
 	}
 
 	@Test
 	public void validateChangeMobileNumberNoPassword(){
 		changeMobileNumberPage.updatePasswordTextbox("");
-		String error = settingsPage.getErrorReportAccountPassword();
+		error = settingsPage.getErrorReportAccountPassword();
 		Assert.assertEquals(error, "Please provide a password");
 	}
 
+	@Test
+	public void validateChangeMobileNumberBlankOTP(){
+//		changeEmailAddressPage.updatePasswordTextbox("mksoft_password");
+		changeMobileNumberPage.updatePasswordTextbox("superstrongpassword");
+		changeMobileNumberPage.updateotpTextbox("");
+		error = settingsPage.getErrorReportAccountPassword();
+		Assert.assertEquals(error, "Please provide a password");
+	}
+
+
+	@Test
+	public void validateChangeMobileNumberInvalidOTPOne(){
+//		changeEmailAddressPage.updatePasswordTextbox("mksoft_password");
+		changeMobileNumberPage.updatePasswordTextbox("superstrongpassword");
+		changeMobileNumberPage.updateotpTextbox("abc!@#");
+		error = settingsPage.getErrorReportAccountPassword();
+		Assert.assertEquals(error, "Please provide a verification code");
+	}
+
+	@Test
+	public void validateChangeMobileNumberInvalidOTPtWO(){
+//		changeEmailAddressPage.updatePasswordTextbox("mksoft_password");
+		changeMobileNumberPage.updatePasswordTextbox("superstrongpassword");
+		changeMobileNumberPage.updateotpTextbox("000000");
+		error = settingsPage.getErrorReportAccountPassword();
+		Assert.assertEquals(error, "Invalid verification code");
+	}
 	
 	@AfterMethod
 	public void tearDown(){

@@ -23,6 +23,7 @@ public class changeEmailAddressPageTest extends testBase
 	 settingsPage settingsPage;
 	 changeEmailAddressPage changeEmailAddressPage;
 	 testUtil testUtil;
+	 String errorMessage;
 	 
 	public changeEmailAddressPageTest(){
 		super();
@@ -38,8 +39,10 @@ public class changeEmailAddressPageTest extends testBase
 		loginPage = initialPage.loginClick();		
 		loadingWait(loginPage.loginButton);
 		
-		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
 		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
+//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+//		loadingWait(homePage.loadingElement);
 		
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.settingsLink);
@@ -51,23 +54,56 @@ public class changeEmailAddressPageTest extends testBase
 		loadingWait(changeEmailAddressPage.changeEmailAddressPageTitle);
 	}
 
-//	@Test
-//	public void validateChangeAvatarNewImage() {
-//		changeEmailAddressPage.updatePasswordTextbox("Makatisoft01!");
-//		changeEmailAddressPage.clickContinue();
-//		changeEmailAddressPage.updateotpTextbox("111111");
-//		changeEmailAddressPage.clickContinue();
-//		changeEmailAddressPage.updateNewMobileTextbox("9260445992");
-//		changeEmailAddressPage.clickContinue();
-//		changeEmailAddressPage.updateotpNewTextbox("111111");
-//		changeEmailAddressPage.clickSubmit();
-//	}
 
 	@Test
 	public void validateChangeEmailPageTitle() {
 		String header = changeEmailAddressPage.getChangeEmailPageTitle();
 		Assert.assertEquals(header, "Change Email Address");
 	}
+
+	@Test
+	public void validateChangeEmailBlankPassword(){
+		changeEmailAddressPage.updatePasswordTextbox("");
+		errorMessage = changeEmailAddressPage.getError(changeEmailAddressPage.passwordErrorMessage);
+		Assert.assertEquals(errorMessage, "Please provide a password");
+	}
+
+
+	@Test
+	public void validateChangeEmailInvalidPasswordOne(){
+		changeEmailAddressPage.updatePasswordTextbox("invalidpassword");
+		errorMessage = changeEmailAddressPage.getError(changeEmailAddressPage.passwordErrorMessage);
+		Assert.assertEquals(errorMessage, "Password is invalid");
+	}
+
+	@Test
+	public void validateChangeEmailBlankOTP(){
+//		changeEmailAddressPage.updatePasswordTextbox("mksoft_password");
+		changeEmailAddressPage.updatePasswordTextbox("superstrongpassword");
+		changeEmailAddressPage.updateotpTextbox("");
+		errorMessage = changeEmailAddressPage.getError(changeEmailAddressPage.otpErrorMessage);
+		Assert.assertEquals(errorMessage, "Please provide a verification code");
+	}
+
+
+	@Test
+	public void validateChangeEmailInvalidOTPOne(){
+//		changeEmailAddressPage.updatePasswordTextbox("mksoft_password");
+		changeEmailAddressPage.updatePasswordTextbox("superstrongpassword");
+		changeEmailAddressPage.updateotpTextbox("abc!@#");
+		errorMessage = changeEmailAddressPage.getError(changeEmailAddressPage.otpErrorMessage);
+		Assert.assertEquals(errorMessage, "Please provide a verification code");
+	}
+
+	@Test
+	public void validateChangeEmailInvalidOTPtWO(){
+//		changeEmailAddressPage.updatePasswordTextbox("mksoft_password");
+		changeEmailAddressPage.updatePasswordTextbox("superstrongpassword");
+		changeEmailAddressPage.updateotpTextbox("000000");
+		errorMessage = changeEmailAddressPage.getError(changeEmailAddressPage.otpErrorMessage);
+		Assert.assertEquals(errorMessage, "Invalid verification code");
+	}
+
 
 	@AfterMethod
 	public void tearDown(){

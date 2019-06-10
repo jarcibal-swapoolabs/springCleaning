@@ -20,18 +20,22 @@ public class settingsPage extends testBase{
 	@FindBy(id="ACCOUNT_PASSWORD_password")
 	WebElement reportPassword;
 
-	@FindBy(xpath="//a[contains(@href,'/settings/change-mobile-number')]")
+	@FindBy(xpath="//a[@href='/settings/change-mobile-number']")
 	WebElement changeMobileNumberLink;
 
-	@FindBy(xpath="//a[contains(@href,'/settings/change-email-address')]")
+	@FindBy(xpath="//a[@href='/settings/change-email-address']")
 	WebElement changeEmailLink;
 
-	@FindBy(xpath="//a[contains(@href,'/settings/change-account-password')]")
+	@FindBy(xpath="//a[@href='/settings/change-account-password']")
 	WebElement changePasswordLink;
 
 	@FindBy(xpath="//a[contains(@href,'settings/setup-security-questions')]")
 	WebElement setupSecurityQuestionsLink;
 
+	@FindBy(xpath="//a[@href='/settings/change-security-questions']")
+	WebElement changeSecurityQuestionsLink;
+
+	
 	//report prompt
 	@FindBy(xpath="//div[contains(@class,'modal modal-xs Modal__modal___3mKNW open')]")
 	WebElement reportModal;
