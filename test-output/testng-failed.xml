@@ -3,19 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest">
+      <class name="com.SpringSeven.qa.testcases.productsPageTest">
         <methods>
-          <include name="validateWorkingEmail"/>
-          <include name="validateNoEmail"/>
-          <include name="validateInvalidOTPtWO"/>
-          <include name="validateNonExistingEmail"/>
-          <include name="validateUsernameNotEMail"/>
           <include name="tearDown"/>
+          <include name="validateProductsPageCorrectPassword"/>
           <include name="setUp"/>
-          <include name="validateBlankOTP"/>
-          <include name="validateInvalidOTPOne"/>
         </methods>
-      </class> <!-- com.SpringSeven.qa.testcases.forgotPasswordPageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.productsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
