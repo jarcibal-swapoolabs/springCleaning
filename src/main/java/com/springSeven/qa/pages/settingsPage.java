@@ -38,7 +38,7 @@ public class settingsPage extends testBase{
 	
 
 	//link
-	@FindBy(xpath="//text()[.='My Account is Compromised']/ancestor::a[1]")
+	@FindBy(xpath="//a[contains(@href,'settings/report-compromised-account')]")
 	public WebElement reportAccountLink;
 
 	@FindBy(xpath="//span[text()='VERIFY']")

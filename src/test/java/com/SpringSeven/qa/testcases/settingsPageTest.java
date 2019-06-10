@@ -36,6 +36,7 @@ public class settingsPageTest extends testBase{
 		loadingWait(loginPage.loginButton);
 
 //		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+//		loadingWait(homePage.loadingElement);
 		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
 		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 
@@ -52,21 +53,20 @@ public class settingsPageTest extends testBase{
 		Assert.assertEquals(header, "SETTINGS");
 	}
 
-//	@Test
-//	public void validateReportAccountIncorrectPassword(){
-//		settingsPage.inputPassword("wrong");
-//		String error = settingsPage.getErrorReportAccountPassword();
-//		Assert.assertEquals(error, "Password is invalid");
-//	}
-//
-//	@Test
-//	public void validateReportAccountBlankPassword(){
-//		settingsPage.inputPassword("");
-//		String error = settingsPage.getErrorReportAccountPassword();
-//		Assert.assertEquals(error, "This field is required");
-//	}
+	@Test
+	public void validateReportAccountIncorrectPassword(){
+		settingsPage.inputPassword("wrong");
+		String error = settingsPage.getErrorReportAccountPassword();
+		Assert.assertEquals(error, "Password is invalid");
+	}
 
-	
+	@Test
+	public void validateReportAccountBlankPassword(){
+		settingsPage.inputPassword("");
+		String error = settingsPage.getErrorReportAccountPassword();
+		Assert.assertEquals(error, "This field is required");
+	}
+
 //	@Test
 //	public void validateReportAccountCorrectPassword() {
 //		settingsPage.inputPassword("mksoft_password");

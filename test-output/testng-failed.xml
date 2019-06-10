@@ -3,17 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.SpringSeven.qa.testcases.profilePageTest">
+      <class name="com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest">
         <methods>
-          <include name="setUp"/>
-          <include name="validateReferralLinkDuplicateEmail"/>
-          <include name="validateReferralLinkIncorrectFormat"/>
           <include name="tearDown"/>
-          <include name="validateReferralExistingEmail"/>
-          <include name="validateReferralLinkElevenEmail"/>
-          <include name="validateReferralOwnEmail"/>
+          <include name="validatesetupSecurityQuestionsPageTitle"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.SpringSeven.qa.testcases.profilePageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
