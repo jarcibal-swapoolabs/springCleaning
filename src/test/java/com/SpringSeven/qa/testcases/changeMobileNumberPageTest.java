@@ -95,7 +95,7 @@ public class changeMobileNumberPageTest extends testBase
 		changeMobileNumberPage.updatePasswordTextbox("superstrongpassword");
 		changeMobileNumberPage.updateotpTextbox("");
 		error = settingsPage.getErrorReportAccountPassword();
-		Assert.assertEquals(error, "Please provide a password");
+		Assert.assertEquals(error, "Please provide a verification code");
 	}
 
 
