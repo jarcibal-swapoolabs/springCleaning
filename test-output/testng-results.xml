@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32299" started-at="2019-06-12T14:20:45Z" finished-at="2019-06-12T14:21:17Z">
+  <suite name="Default suite" duration-ms="38222" started-at="2019-06-12T16:34:48Z" finished-at="2019-06-12T16:35:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32299" started-at="2019-06-12T14:20:45Z" finished-at="2019-06-12T14:21:17Z">
+    <test name="Default test" duration-ms="38222" started-at="2019-06-12T16:34:48Z" finished-at="2019-06-12T16:35:26Z">
       <class name="com.SpringSeven.qa.testcases.productsPageTest">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="32193" started-at="2019-06-12T14:20:45Z" finished-at="2019-06-12T14:21:17Z">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="38001" started-at="2019-06-12T16:34:48Z" finished-at="2019-06-12T16:35:26Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='btn btn-large roboto-medium primary waves-effect waves-light']' (tried for 15 second(s) with 500 milliseconds interval)]]>
@@ -16,7 +16,7 @@
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='btn btn-large roboto-medium primary waves-effect waves-light']' (tried for 15 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at com.springSeven.qa.base.testBase.clickableWait(testBase.java:139)
+at com.springSeven.qa.base.testBase.clickableWait(testBase.java:140)
 at com.SpringSeven.qa.testcases.productsPageTest.setUp(productsPageTest.java:47)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -51,8 +51,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'jarcibal-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.8.0-36-generic', java.version: '1.8.0_212'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190529212008, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 8945, moz:profile: /tmp/rust_mozprofile.bWRLBc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 693f6c9a-84a8-4b9d-a7a3-756cfeceaf70
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190529212008, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 11409, moz:profile: /tmp/rust_mozprofile.Bmr1br..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e6a52b2a-87b7-44ab-9ee3-d97280b6a663
 *** Element info: {Using=xpath, value=//a[@class='btn btn-large roboto-medium primary waves-effect waves-light']}
 at sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -90,7 +90,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="validateProductsPagePurchase()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="validateProductsPagePurchase" duration-ms="0" started-at="2019-06-12T14:21:17Z" finished-at="2019-06-12T14:21:17Z">
+        <test-method status="SKIP" signature="validateProductsPagePurchase()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="validateProductsPagePurchase" duration-ms="0" started-at="2019-06-12T16:35:26Z" finished-at="2019-06-12T16:35:26Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='btn btn-large roboto-medium primary waves-effect waves-light']' (tried for 15 second(s) with 500 milliseconds interval)]]>
@@ -99,7 +99,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@class='btn btn-large roboto-medium primary waves-effect waves-light']' (tried for 15 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at com.springSeven.qa.base.testBase.clickableWait(testBase.java:139)
+at com.springSeven.qa.base.testBase.clickableWait(testBase.java:140)
 at com.SpringSeven.qa.testcases.productsPageTest.setUp(productsPageTest.java:47)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -134,8 +134,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'jarcibal-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.8.0-36-generic', java.version: '1.8.0_212'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190529212008, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 8945, moz:profile: /tmp/rust_mozprofile.bWRLBc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 693f6c9a-84a8-4b9d-a7a3-756cfeceaf70
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190529212008, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 11409, moz:profile: /tmp/rust_mozprofile.Bmr1br..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.8.0-36-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e6a52b2a-87b7-44ab-9ee3-d97280b6a663
 *** Element info: {Using=xpath, value=//a[@class='btn btn-large roboto-medium primary waves-effect waves-light']}
 at sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -173,7 +173,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateProductsPagePurchase -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-06-12T14:21:17Z" finished-at="2019-06-12T14:21:17Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.productsPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-06-12T16:35:26Z" finished-at="2019-06-12T16:35:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

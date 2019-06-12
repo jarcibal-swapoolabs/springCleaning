@@ -52,24 +52,24 @@ public class productsPageTest extends testBase{
 		header = productsPage.getProductPageTitle();
 		Assert.assertEquals(header, "Product Catalog");
 	}
-	
-	
-	@Test
-	public void validateProductsPageBlankPassword(){
-		productsPage.standardProductButton.click();
-		productsPage.inputPassword("");
-		errorMessage = productsPage.getIncorrectPasswordError();
-		Assert.assertEquals(errorMessage, "Please provide a password");
-		}
-
-
-	@Test
-	public void validateProductsPageIncorrectPassword(){
-		productsPage.standardProductButton.click();
-		productsPage.inputPassword("pass");
-		errorMessage = productsPage.getIncorrectPasswordError();
-		Assert.assertEquals(errorMessage, "Password is invalid");
-		}
+//	
+//	
+//	@Test
+//	public void validateProductsPageBlankPassword(){
+//		productsPage.standardProductButton.click();
+//		productsPage.inputPassword("");
+//		errorMessage = productsPage.getIncorrectPasswordError();
+//		Assert.assertEquals(errorMessage, "Please provide a password");
+//		}
+//
+//
+//	@Test
+//	public void validateProductsPageIncorrectPassword(){
+//		productsPage.standardProductButton.click();
+//		productsPage.inputPassword("pass");
+//		errorMessage = productsPage.getIncorrectPasswordError();
+//		Assert.assertEquals(errorMessage, "Password is invalid");
+//		}
 	
 	
 //	

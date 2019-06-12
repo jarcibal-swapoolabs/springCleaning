@@ -1,5 +1,6 @@
 package com.SpringSeven.qa.testcases;
 
+import java.awt.AWTException;
 import java.net.MalformedURLException;
 
 import org.testng.Assert;
@@ -34,14 +35,11 @@ public class editProfilePageTest extends testBase {
 		initialPage = new initialPage();
 		loginPage = initialPage.loginClick();
 		loadingWait(loginPage.loginButton);
-		
-
-		
-		
-//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-//		loadingWait(homePage.loadingElement);
-		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
-		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
+				
+		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		loadingWait(homePage.loadingElement);
+//		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
+//		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.profileLink);
@@ -53,11 +51,11 @@ public class editProfilePageTest extends testBase {
 		loadingWait(editProfilePage.editProfilePageTitle);
 	}
 
-	@Test
-	public void validateEditProfilePageTitle() {
-		String header = editProfilePage.getEditProfilePageTitle();
-		Assert.assertEquals(header, "Edit Profile");
-	}
+//	@Test
+//	public void validateEditProfilePageTitle() {
+//		String header = editProfilePage.getEditProfilePageTitle();
+//		Assert.assertEquals(header, "Edit Profile");
+//	}
 
 //	//hard as fuck
 //	@Test
@@ -84,28 +82,27 @@ public class editProfilePageTest extends testBase {
 //}
 //
 //	
-//	@Test
-//	public void validateUpdateName() throws AWTException, InterruptedException{
-//		editProfilePage.updateFirstnameTextbox("a");
-//		editProfilePage.updateLastNameTextbox("a");
-//		loadingWait(editProfilePage.uploadIdDropDown);
-//		
-//		editProfilePage.uploadIdDropDown.click();
-//		loadingWait(editProfilePage.uploadIdDropDownPassport);
-//		editProfilePage.uploadIdDropDownPassport.click();
-//		
-//		editProfilePage.clickUploadIdFileInput();
-//		testUtil.uploadFile();
-//		loadingWait(editProfilePage.updateButton);
-//		editProfilePage.clickUpdate();
-//
-//		loadingWait(editProfilePage.okButton);
-//		editProfilePage.clickOK();
-//		loadingWait(profilePage.profilePageTitle);
-//
-//		String header = profilePage.getProfilePageTitle();
-//		Assert.assertEquals(header, "Profile");
-//	}
+	@Test
+	public void validateUpdateName() throws AWTException, InterruptedException{
+		editProfilePage.updateFirstnameTextbox("a");
+		editProfilePage.updateLastNameTextbox("a");
+		loadingWait(editProfilePage.uploadIdDropDown);
+		
+		editProfilePage.uploadIdDropDown.click();
+		loadingWait(editProfilePage.uploadIdDropDownPassport);
+		editProfilePage.uploadIdDropDownPassport.click();
+		
+		editProfilePage.clickUploadIdFileInput();
+		testUtil.uploadFile();
+		clickableWait(editProfilePage.updateButton);
+		editProfilePage.clickUpdate();
+
+		clickableWait(editProfilePage.okButton);
+		editProfilePage.clickOK();
+		loadingWait(profilePage.profilePageTitle);
+		String header = profilePage.getProfilePageTitle();
+		Assert.assertEquals(header, "Profile");
+	}
 //
 //	@Test
 //	public void validateUpdateBirthDate() throws AWTException, InterruptedException
