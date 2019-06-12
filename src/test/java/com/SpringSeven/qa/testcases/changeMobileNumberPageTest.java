@@ -54,17 +54,17 @@ public class changeMobileNumberPageTest extends testBase
 		loadingWait(changeMobileNumberPage.changeMobileNumberPageTitle);
 	}
 
-//	@Test
-//	public void validateChangeNumber() {
-//		changeMobileNumberPage.updatePasswordTextbox("Makatisoft01!");
-//		changeMobileNumberPage.clickContinue();
-//		changeMobileNumberPage.updateotpTextbox("111111");
-//		changeMobileNumberPage.clickContinue();
-//		changeMobileNumberPage.updateNewMobileTextbox("9260445992");
-//		changeMobileNumberPage.clickContinue();
-//		changeMobileNumberPage.updateotpNewTextbox("111111");
-//		changeMobileNumberPage.clickSubmit();
-//	}
+	@Test
+	public void validateChangeNumber() {
+		changeMobileNumberPage.updatePasswordTextbox("Makatisoft01!");
+		changeMobileNumberPage.clickContinue();
+		changeMobileNumberPage.updateotpTextbox("111111");
+		changeMobileNumberPage.clickContinue();
+		changeMobileNumberPage.updateNewMobileTextbox("9260445992");
+		changeMobileNumberPage.clickContinue();
+		changeMobileNumberPage.updateotpNewTextbox("111111");
+		changeMobileNumberPage.clickSubmit();
+	}
 
 
 	@Test
@@ -110,7 +110,7 @@ public class changeMobileNumberPageTest extends testBase
 
 	@Test
 	public void validateChangeMobileNumberInvalidOTPtWO(){
-//		changeEmailAddressPage.updatePasswordTextbox("mksoft_password");
+//		changeMobileNumberPage.updatePasswordTextbox("mksoft_password");
 		changeMobileNumberPage.updatePasswordTextbox("superstrongpassword");
 		changeMobileNumberPage.updateotpTextbox("123456");
 		error = settingsPage.getErrorReportAccountPassword();

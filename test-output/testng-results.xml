@@ -1,45 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="106362" started-at="2019-06-10T06:29:34Z" finished-at="2019-06-10T06:31:21Z">
+  <suite name="Default suite" duration-ms="26923" started-at="2019-06-12T12:44:01Z" finished-at="2019-06-12T12:44:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="106362" started-at="2019-06-10T06:29:34Z" finished-at="2019-06-10T06:31:21Z">
+    <test name="Default test" duration-ms="26923" started-at="2019-06-12T12:44:01Z" finished-at="2019-06-12T12:44:28Z">
       <class name="com.SpringSeven.qa.testcases.changeMobileNumberPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="36541" started-at="2019-06-10T06:29:35Z" finished-at="2019-06-10T06:30:11Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="21457" started-at="2019-06-12T12:44:01Z" finished-at="2019-06-12T12:44:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateChangeMobileNumberIncorrectPassword()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="validateChangeMobileNumberIncorrectPassword" duration-ms="3564" started-at="2019-06-10T06:30:11Z" finished-at="2019-06-10T06:30:15Z">
+        <test-method status="PASS" signature="validateChangeMobileNumberInvalidOTPtWO()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="validateChangeMobileNumberInvalidOTPtWO" duration-ms="3871" started-at="2019-06-12T12:44:23Z" finished-at="2019-06-12T12:44:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateChangeMobileNumberIncorrectPassword -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="2568" started-at="2019-06-10T06:30:15Z" finished-at="2019-06-10T06:30:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="30865" started-at="2019-06-10T06:30:17Z" finished-at="2019-06-10T06:30:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateChangeMobileNumberNoPassword()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="validateChangeMobileNumberNoPassword" duration-ms="1577" started-at="2019-06-10T06:30:48Z" finished-at="2019-06-10T06:30:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateChangeMobileNumberNoPassword -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1632" started-at="2019-06-10T06:30:50Z" finished-at="2019-06-10T06:30:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="setUp" is-config="true" duration-ms="27078" started-at="2019-06-10T06:30:51Z" finished-at="2019-06-10T06:31:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateChangeMobilePageTitle()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="validateChangeMobilePageTitle" duration-ms="103" started-at="2019-06-10T06:31:18Z" finished-at="2019-06-10T06:31:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateChangeMobilePageTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="2327" started-at="2019-06-10T06:31:19Z" finished-at="2019-06-10T06:31:21Z">
+        </test-method> <!-- validateChangeMobileNumberInvalidOTPtWO -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.changeMobileNumberPageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1541" started-at="2019-06-12T12:44:26Z" finished-at="2019-06-12T12:44:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

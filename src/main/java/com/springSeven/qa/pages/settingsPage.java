@@ -71,11 +71,13 @@ public class settingsPage extends testBase{
 
 	public void updateReportAccountTextbox(String input) 
 	{
+		loadingWait(reportPassword);
 		reportPassword.sendKeys(input);
 	}
 
 	public String getErrorReportAccountPassword()
 	{
+		loadingWait(reportPasswordError);
 		String getErrorReportAccountPassword = reportPasswordError.getText();
 		return getErrorReportAccountPassword;
 	}
@@ -83,6 +85,7 @@ public class settingsPage extends testBase{
 
 	public String getSettingsPageTitle()
 	{
+		loadingWait(settingsPageTitle);
 		String getSettingsPageTitle = settingsPageTitle.getText();
 		return getSettingsPageTitle;
 	}

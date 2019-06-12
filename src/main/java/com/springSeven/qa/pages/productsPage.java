@@ -68,11 +68,11 @@ public class productsPage extends testBase{
 	}
 
 	//purchase
-	public transactionDetailPage purchaseItem()
+	public transactionDetailPage purchaseItem(String password)
 	{
 		clickableWait(standardProductButton);
 		standardProductButton.click();
-		inputPassword("mksoft_password");
+		inputPassword(password);
 		clickableWait(productsConfirmPurchaseButton);
 		productsConfirmPurchaseButton.click();
 		return new transactionDetailPage();

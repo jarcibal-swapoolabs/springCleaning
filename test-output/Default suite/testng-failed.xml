@@ -5,10 +5,8 @@
     <classes>
       <class name="com.SpringSeven.qa.testcases.changeMobileNumberPageTest">
         <methods>
-          <include name="validateChangeMobileNumberIncorrectPassword"/>
-          <include name="validateChangeMobileNumberNoPassword"/>
           <include name="setUp"/>
-          <include name="validateChangeMobilePageTitle"/>
+          <include name="validateChangeMobileNumberInvalidOTPtWO"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.SpringSeven.qa.testcases.changeMobileNumberPageTest -->

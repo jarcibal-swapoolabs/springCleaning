@@ -18,7 +18,10 @@
         	<class name="com.SpringSeven.qa.testcases.purchaseHistoryPageTest"></class>
         	<class name="com.SpringSeven.qa.testcases.settingsPageTest"></class>
         	<class name="com.SpringSeven.qa.testcases.setupSecurityQuestionsPageTest"></class>
-
+			<class name="com.SpringSeven.qa.testcases.changePasswordPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.changeEmailAddressPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.changeMobileNumberPageTest"></class>
+        	<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
           </classes>
     </test>
  </suite>
