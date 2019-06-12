@@ -99,7 +99,7 @@ public class changeEmailAddressPageTest extends testBase
 	public void validateChangeEmailInvalidOTPtWO(){
 //		changeEmailAddressPage.updatePasswordTextbox("mksoft_password");
 		changeEmailAddressPage.updatePasswordTextbox("superstrongpassword");
-		changeEmailAddressPage.updateotpTextbox("000000");
+		changeEmailAddressPage.updateotpTextbox("000002");
 		errorMessage = changeEmailAddressPage.getError(changeEmailAddressPage.otpErrorMessage);
 		Assert.assertEquals(errorMessage, "Invalid verification code");
 	}

@@ -112,7 +112,7 @@ public class changeMobileNumberPageTest extends testBase
 	public void validateChangeMobileNumberInvalidOTPtWO(){
 //		changeEmailAddressPage.updatePasswordTextbox("mksoft_password");
 		changeMobileNumberPage.updatePasswordTextbox("superstrongpassword");
-		changeMobileNumberPage.updateotpTextbox("000000");
+		changeMobileNumberPage.updateotpTextbox("123456");
 		error = settingsPage.getErrorReportAccountPassword();
 		Assert.assertEquals(error, "Invalid verification code");
 	}

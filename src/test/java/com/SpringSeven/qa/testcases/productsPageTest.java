@@ -72,16 +72,6 @@ public class productsPageTest extends testBase{
 		}
 	
 	
-	@Test
-	public void validateProductsPageCorrectPassword(){
-		productsPage.standardProductButton.click();
-		productsPage.inputPassword("superstrongpassword");
-		//productsPage.inputPassword("mksoft_password");
-		clickableWait(productsPage.productsConfirmPurchaseButton);
-		boolean displayed = productsPage.displayed(productsPage.productsConfirmPurchaseButton);
-		Assert.assertTrue(displayed);		
-		}
-
 //	
 //	@Test
 //	public void validateProductsPageInsufficientBalance(){
@@ -93,13 +83,13 @@ public class productsPageTest extends testBase{
 //		}
 //
 //	
-//	@Test
-//	public void validateProductsPagePurchase(){
-//		transactionDetailPage = productsPage.purchaseItem();
-//		processing();
-//		header = transactionDetailPage.getTransactionDetailPageTitle();
-//		Assert.assertEquals(header, "done_allThank you, Ricardo Dalisay, for purchasing this product.");
-//		}
+	@Test
+	public void validateProductsPagePurchase(){
+		transactionDetailPage = productsPage.purchaseItem();
+		processing();
+		header = transactionDetailPage.getTransactionDetailPageTitle();
+		Assert.assertEquals(header, "done_allThank you, carlo santos, for purchasing this product.");
+		}
 
 	
 	@AfterMethod
