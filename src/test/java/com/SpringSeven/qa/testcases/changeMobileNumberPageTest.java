@@ -53,18 +53,18 @@ public class changeMobileNumberPageTest extends testBase
 		changeMobileNumberPage = settingsPage.clickOnChangeMobileNumberPageLink();
 		loadingWait(changeMobileNumberPage.changeMobileNumberPageTitle);
 	}
-
-	@Test
-	public void validateChangeNumber() {
-		changeMobileNumberPage.updatePasswordTextbox("Makatisoft01!");
-		changeMobileNumberPage.clickContinue();
-		changeMobileNumberPage.updateotpTextbox("111111");
-		changeMobileNumberPage.clickContinue();
-		changeMobileNumberPage.updateNewMobileTextbox("9260445992");
-		changeMobileNumberPage.clickContinue();
-		changeMobileNumberPage.updateotpNewTextbox("111111");
-		changeMobileNumberPage.clickSubmit();
-	}
+//
+//	@Test
+//	public void validateChangeNumber() {
+//		changeMobileNumberPage.updatePasswordTextbox("Makatisoft01!");
+//		changeMobileNumberPage.clickContinue();
+//		changeMobileNumberPage.updateotpTextbox("111111");
+//		changeMobileNumberPage.clickContinue();
+//		changeMobileNumberPage.updateNewMobileTextbox("9260445992");
+//		changeMobileNumberPage.clickContinue();
+//		changeMobileNumberPage.updateotpNewTextbox("111111");
+//		changeMobileNumberPage.clickSubmit();
+//	}
 
 
 	@Test
