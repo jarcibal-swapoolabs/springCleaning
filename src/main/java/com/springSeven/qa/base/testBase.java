@@ -52,12 +52,12 @@ public class testBase {
 //		testBase.dockerc();
 //		}
 
-//		if (System.getProperty("BROWSER") != null && System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
-//			testBase.dockerf();
-//			//dc-DesiredCapabilities.firefox();
-//		} else {
-//			testBase.dockerc();
-//		}
+		if (System.getProperty("BROWSER") != null && System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
+			testBase.dockerf();
+			//dc-DesiredCapabilities.firefox();
+		} else {
+			testBase.dockerc();
+		}
 
 		e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with
