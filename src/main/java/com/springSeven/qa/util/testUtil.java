@@ -20,6 +20,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.LocalFileDetector;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -45,6 +47,11 @@ public class testUtil extends testBase{
 	
 	//upload file
 	public void uploadFile() throws AWTException, InterruptedException {
+		if(driver instanceof RemoteWebDriver)
+		{
+			((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+		}
+		
 		String currentDir = System.getProperty("user.dir");
 		StringSelection ss = new StringSelection(currentDir + "/screenshot/screenshot.png");
 		System.out.println("direcotry is " + ss);
