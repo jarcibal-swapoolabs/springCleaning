@@ -83,13 +83,13 @@ public class productsPageTest extends testBase{
 //		}
 //
 //	
-	@Test
-	public void validateProductsPagePurchase(){
-		transactionDetailPage = productsPage.purchaseItem("superstrongpassword");
-		processing();
-		header = transactionDetailPage.getTransactionDetailPageTitle();
-		Assert.assertEquals(header, "done_allThank you, carlo santos, for purchasing this product.");
-		}
+//	@Test
+//	public void validateProductsPagePurchase(){
+//		transactionDetailPage = productsPage.purchaseItem("superstrongpassword");
+//		processing();
+//		header = transactionDetailPage.getTransactionDetailPageTitle();
+//		Assert.assertEquals(header, "done_allThank you, carlo santos, for purchasing this product.");
+//		}
 
 	
 	@AfterMethod

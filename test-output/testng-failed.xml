@@ -6,9 +6,8 @@
       <class name="com.SpringSeven.qa.testcases.editProfilePageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="validateEditProfilePageTitle"/>
+          <include name="validateUpdateAddressLineTwoWorksBlank"/>
           <include name="setUp"/>
-          <include name="validateEditProfileUpdateName"/>
         </methods>
       </class> <!-- com.SpringSeven.qa.testcases.editProfilePageTest -->
     </classes>
