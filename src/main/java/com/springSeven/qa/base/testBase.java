@@ -35,8 +35,8 @@ public class testBase {
 
 	public static void initialization() throws MalformedURLException {
 		// String browserName = prop.getProperty("browser");
-//		String browserName = "FF";
-//		
+		String browserName = "FF";
+		
 //		if(browserName.equals("chrome")){
 //			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
 //			driver = new ChromeDriver(); 
@@ -129,7 +129,7 @@ public class testBase {
 
 	// loading method
 	public static void loadingWait(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, 15);
+		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOf(element)); // wait for loader to disappear
 	}
 

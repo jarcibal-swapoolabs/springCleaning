@@ -33,8 +33,7 @@ public class productsPage extends testBase{
 	@FindBy(xpath="//span[contains(text(),'CANCEL')]")
 	public WebElement productsCancelButton;
 
-	@FindBy(xpath="//span[contains(text(),'CONFIRM')]")
-	//@FindBy(xpath="//button[@type='submit']")
+	@FindBy(xpath="//button[@type='submit']")
 	public WebElement productsConfirmPurchaseButton;
 
 	//error

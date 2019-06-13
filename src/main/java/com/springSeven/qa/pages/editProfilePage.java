@@ -74,10 +74,10 @@ public class editProfilePage extends testBase{
 
 	
 	//button
-	@FindBy(id="submitUpdateProfile")
+	@FindBy(xpath="//button[@id='submitUpdateProfile']")
 	public WebElement updateButton;
 
-	@FindBy(xpath="//span[text()='OK']")
+	@FindBy(xpath="//a[@href='/profile']")
 	public WebElement okButton;
 	
 	@FindBy(xpath="//i[text()='file_upload']")
@@ -210,6 +210,7 @@ public class editProfilePage extends testBase{
 	//click buttons
 	public void clickUpdate()
 	{
+		clickableWait(updateButton);
 		updateButton.click();
 	}
 
