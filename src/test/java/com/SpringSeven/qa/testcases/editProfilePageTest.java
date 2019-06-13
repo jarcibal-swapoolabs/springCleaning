@@ -1,7 +1,5 @@
 package com.SpringSeven.qa.testcases;
 
-import java.awt.AWTException;
-import java.io.IOException;
 import java.net.MalformedURLException;
 
 import org.testng.Assert;
@@ -37,10 +35,10 @@ public class editProfilePageTest extends testBase {
 		loginPage = initialPage.loginClick();
 		loadingWait(loginPage.loginButton);
 				
-//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-//		loadingWait(homePage.loadingElement);
-		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
-		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
+		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		loadingWait(homePage.loadingElement);
+//		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
+//		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.profileLink);
@@ -52,37 +50,13 @@ public class editProfilePageTest extends testBase {
 		loadingWait(editProfilePage.editProfilePageTitle);
 	}
 
-//	@Test
-//	public void validateEditProfilePageTitle() {
-//		String header = editProfilePage.getEditProfilePageTitle();
-//		Assert.assertEquals(header, "Edit Profile");
-//	}
+	@Test
+	public void validateEditProfilePageTitle() {
+		String header = editProfilePage.getEditProfilePageTitle();
+		Assert.assertEquals(header, "Edit Profile");
+	}
 
-//	//hard as fuck
-//	@Test
-//	public void validateChangeAvatarNewImage() {
-//		editProfilePage.clickchangeAvatar();
-//		editProfilePage.clickAvatarInput();
-//		editProfilePage.clickUpdateAvatar();
-//		editProfilePage.clickOK();
-//		String header = profilePage.getProfilePageTitle();
-//		Assert.assertEquals(header, "Profile");
-//	}
-//
-//
-//	@Test
-//	public void validateChangeAvatarDefault() {
-//		editProfilePage.clickchangeAvatar();
-//		testUtil.JSClick(editProfilePage.selectAvatarTab);
-//		loadingWait(editProfilePage.defaultAvatar);
-//		testUtil.JSClick(editProfilePage.defaultAvatar);
-//		loadingWait(editProfilePage.updateAvatarButton);
-//		editProfilePage.clickUpdateAvatar();		
-//		loadingWait(editProfilePage.editProfilePageTitle);
-//		Assert.assertTrue(editProfilePage.avatarIsDisplayed());
-//}
-//
-//	
+
 	@Test
 	public void validateEditProfileUpdateName() {
 		editProfilePage.updateTextbox(editProfilePage.firstnameTextbox,"Jheseds");
@@ -104,42 +78,41 @@ public class editProfilePageTest extends testBase {
 
 		String header = profilePage.getProfilePageTitle();
 		Assert.assertEquals(header, "Profile");
-		//String error = testUtil.getError(editProfilePage.addressLineOneTextbox);
 	}
 
-//	@Test
-//	public void validateUpdateBirthDate() throws AWTException, InterruptedException
-//	{
-//		//10/24/1985 is the original date
-//		editProfilePage.updateBirthdateTextbox("07/19/1990");
-//		editProfilePage.updateUploadIdDropDown("Driver's license");
-//		loadingWait(editProfilePage.uploadIdDropDown);
-//		
-//		editProfilePage.uploadIdDropDown.click();
-//		loadingWait(editProfilePage.uploadIdDropDownPassport);
-//		editProfilePage.uploadIdDropDownPassport.click();
-//		
-//		editProfilePage.clickUploadIdFileInput();
-//		testUtil.uploadFile();
-//
-//		editProfilePage.clickUpdate();
-//		editProfilePage.clickUpdate();
-//
-//		clickableWait(editProfilePage.okButton);
-//		editProfilePage.clickOK();
-//		loadingWait(profilePage.profilePageTitle);
-//		String header = profilePage.getProfilePageTitle();
-//		Assert.assertEquals(header, "Profile");		
-//	}
-//
-//	@Test
-//	public void validateUpdateAddressLineOneBlankError() {
-//		editProfilePage.updateAddressLineOne("");
-//		editProfilePage.clickUpdate();
-//		String error = editProfilePage.getErrorAddressoneTextbox();
-//		Assert.assertEquals(error, "Please enter your address");
-//
-//	}
+	@Test
+	public void validateUpdateBirthDate() 
+	{
+		//10/24/1985 is the original date
+		editProfilePage.updateTextbox(editProfilePage.birthDateTextbox,"07/19/1990");
+		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"Tacadenas");
+
+		editProfilePage.click(editProfilePage.uploadIdDropDown);
+		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
+		
+		testUtil.sendKeysUpload(editProfilePage.dropZone);
+		
+		editProfilePage.click(editProfilePage.updateButton);
+		editProfilePage.click(editProfilePage.updateButton);
+
+		editProfilePage.click(editProfilePage.okButton);
+
+		String header = profilePage.getProfilePageTitle();
+		Assert.assertEquals(header, "Profile");
+		
+		
+
+
+	}
+
+	@Test
+	public void validateUpdateAddressLineOneBlankError() {
+		editProfilePage.updateTextbox(editProfilePage.addressLineOneTextbox,"");
+		editProfilePage.click(editProfilePage.updateButton);
+		String error = testUtil.getError(editProfilePage.addressOneError);
+		Assert.assertEquals(error, "Please enter your address");
+
+	}
 //
 //	@Test
 //	public void validateUpdateAddressLineOneWorks() {
@@ -261,6 +234,32 @@ public class editProfilePageTest extends testBase {
 //		String header = profilePage.getProfilePageTitle();
 //		Assert.assertEquals(header, "Profile");
 //	}
+	
+//	//hard as fuck
+//	@Test
+//	public void validateChangeAvatarNewImage() {
+//		editProfilePage.clickchangeAvatar();
+//		editProfilePage.clickAvatarInput();
+//		editProfilePage.clickUpdateAvatar();
+//		editProfilePage.clickOK();
+//		String header = profilePage.getProfilePageTitle();
+//		Assert.assertEquals(header, "Profile");
+//	}
+//
+//
+//	@Test
+//	public void validateChangeAvatarDefault() {
+//		editProfilePage.clickchangeAvatar();
+//		testUtil.JSClick(editProfilePage.selectAvatarTab);
+//		loadingWait(editProfilePage.defaultAvatar);
+//		testUtil.JSClick(editProfilePage.defaultAvatar);
+//		loadingWait(editProfilePage.updateAvatarButton);
+//		editProfilePage.clickUpdateAvatar();		
+//		loadingWait(editProfilePage.editProfilePageTitle);
+//		Assert.assertTrue(editProfilePage.avatarIsDisplayed());
+//}
+//
+//	
 
 	@AfterMethod
 	public void tearDown() {

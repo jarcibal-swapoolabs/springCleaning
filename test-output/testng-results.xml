@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="65184" started-at="2019-06-13T07:56:06Z" finished-at="2019-06-13T07:57:11Z">
+  <suite name="Default suite" duration-ms="174796" started-at="2019-06-13T09:40:10Z" finished-at="2019-06-13T09:43:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="65184" started-at="2019-06-13T07:56:06Z" finished-at="2019-06-13T07:57:11Z">
+    <test name="Default test" duration-ms="174796" started-at="2019-06-13T09:40:10Z" finished-at="2019-06-13T09:43:05Z">
       <class name="com.SpringSeven.qa.testcases.editProfilePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="setUp" is-config="true" duration-ms="55590" started-at="2019-06-13T07:56:06Z" finished-at="2019-06-13T07:57:02Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="setUp" is-config="true" duration-ms="49135" started-at="2019-06-13T09:40:10Z" finished-at="2019-06-13T09:41:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateUpdateName()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="validateUpdateName" duration-ms="5388" started-at="2019-06-13T07:57:02Z" finished-at="2019-06-13T07:57:07Z">
+        <test-method status="PASS" signature="validateEditProfilePageTitle()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="validateEditProfilePageTitle" duration-ms="48" started-at="2019-06-13T09:41:00Z" finished-at="2019-06-13T09:41:00Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateUpdateName -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="4147" started-at="2019-06-13T07:57:07Z" finished-at="2019-06-13T07:57:11Z">
+        </test-method> <!-- validateEditProfilePageTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1455" started-at="2019-06-13T09:41:00Z" finished-at="2019-06-13T09:41:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="setUp" is-config="true" duration-ms="27141" started-at="2019-06-13T09:41:01Z" finished-at="2019-06-13T09:41:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateEditProfileUpdateName()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="validateEditProfileUpdateName" duration-ms="6434" started-at="2019-06-13T09:41:28Z" finished-at="2019-06-13T09:41:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateEditProfileUpdateName -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="8798" started-at="2019-06-13T09:41:35Z" finished-at="2019-06-13T09:41:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="setUp" is-config="true" duration-ms="37814" started-at="2019-06-13T09:41:43Z" finished-at="2019-06-13T09:42:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateUpdateAddressLineOneBlankError()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="validateUpdateAddressLineOneBlankError" duration-ms="1446" started-at="2019-06-13T09:42:21Z" finished-at="2019-06-13T09:42:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateUpdateAddressLineOneBlankError -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1794" started-at="2019-06-13T09:42:23Z" finished-at="2019-06-13T09:42:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="setUp" is-config="true" duration-ms="30899" started-at="2019-06-13T09:42:25Z" finished-at="2019-06-13T09:42:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateUpdateBirthDate()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="validateUpdateBirthDate" duration-ms="7838" started-at="2019-06-13T09:42:55Z" finished-at="2019-06-13T09:43:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateUpdateBirthDate -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.SpringSeven.qa.testcases.editProfilePageTest@5bcab519]" name="tearDown" is-config="true" duration-ms="1888" started-at="2019-06-13T09:43:03Z" finished-at="2019-06-13T09:43:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
