@@ -1,5 +1,6 @@
 package com.springSeven.qa.pages;
 
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -65,19 +66,22 @@ public class editProfilePage extends testBase{
 	@FindBy(xpath="//div[@class='Select-menu-outer']")
 	public WebElement uploadIdDropDownPassport;
 
-	
+	//working
 	@FindBy(xpath="//div[@class='component-dropzone center-align']")
 	public WebElement uploadIdFileInput;
 	
 	@FindBy(xpath="//div[@class='component-dropzone center-align']//div")
 	public WebElement uploadAvatarInput;
 
+	@FindBy(xpath="//input[@type='file']")
+	public WebElement dropZone;
 	
 	//button
 	@FindBy(xpath="//button[@id='submitUpdateProfile']")
 	public WebElement updateButton;
 
 	@FindBy(xpath="//a[@href='/profile']")
+	//@FindBy(xpath="//a[@href='modal-close waves-effect waves-green btn-flat active']")
 	public WebElement okButton;
 	
 	@FindBy(xpath="//i[text()='file_upload']")
@@ -117,72 +121,19 @@ public class editProfilePage extends testBase{
 	}
 	
 	//input textbox
-	public void updateFirstnameTextbox(String input) 
+	public void updateTextbox(WebElement element, String input) 
 	{
-		firstnameTextbox.sendKeys(input);
-	}
-	
-	public void updateMiddleNameTextbox(String input) 
-	{
-		middleNameTextbox.sendKeys(input);
-	}
-	
-	public void updateLastNameTextbox(String input) 
-	{
-		lastNameTextbox.sendKeys(input);
+		element.clear();
+		element.sendKeys(input);
 	}
 
-	public void updateAddressLineOne(String input) 
-	{
-		addressLineOneTextbox.sendKeys(input);
-	}
-
-	public void updateAddressLineTwo(String input) 
-	{
-		addressLineTwoTextbox.sendKeys(input);
-	}
 	
-	public void updateCountryDropdown(String input) 
+	public void updateTextbox(WebElement element1, WebElement element2,String input) 
 	{
-		countryDropDown.sendKeys(input);
-	}
-
-	public void updateRegionDropdown(String input) 
-	{
-		regionDropDown.sendKeys(input);
-	}
-
-	public void updateRegionTextbox(String input) 
-	{
-		regionTextbox.sendKeys(input);
-	}
-	
-	public void updateCityDropdown(String input) 
-	{
-		cityDropDown.sendKeys(input);
-	}
-
-	public void updateCityTextbox(String input) 
-	{
-		cityTextbox.sendKeys(input);
-	}
-	
-	public void updateZipTextbox(String input) 
-	{
-		zipCodeTextbox.sendKeys(input);
-	}
-	
-	public void updateUploadIdDropDown(String input) 
-	{
-		uploadIdDropDown.sendKeys(input);
-	}
-	
-	//clear and provide input
-	public void updateBirthdateTextbox(String input) 
-	{
-		birthDateTextbox.clear();
-		birthDateTextbox.sendKeys(input);
-		
+		element1.clear();
+		element1.sendKeys(input);
+		element2.clear();
+		element2.sendKeys(input);
 	}
 
 	
@@ -208,51 +159,16 @@ public class editProfilePage extends testBase{
 
 	
 	//click buttons
-	public void clickUpdate()
+	public void click(WebElement element)
 	{
-		clickableWait(updateButton);
-		updateButton.click();
+		clickableWait(element);
+		element.click();
 	}
 
-	public void clickOK()
-	{
-		okButton.click();
-	}
-	
-	public void clickUploadIdFileInput()
-	{
-		uploadIdFileInput.click();
-	}
-	
-	public void clickAvatarInput()
-	{
-		uploadAvatarInput.click();
-	}
-
-	public void clickchangeAvatar()
-	{
-		changeAvatarButton.click();
-	}
-	
-	public void clickUpdateAvatar()
-	{
-		updateAvatarButton.click();
-	}
-	
-	public void clickAvatarTab()
-	{
-		selectAvatarTab.click();
-	}
-
-	public void clickDefaultAvatar()
-	{
-		defaultAvatar.click();
-	}
 	
 	//displayed
 	public boolean avatarIsDisplayed() {
 		return EditprofileAvatar.isDisplayed();
 	}
-
 
 }

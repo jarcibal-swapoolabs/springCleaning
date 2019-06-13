@@ -5,10 +5,12 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Base64;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -27,37 +29,35 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.springSeven.qa.base.testBase;
 
-public class testUtil extends testBase{
+public class testUtil extends testBase {
 	public static long PAGE_LOAD_TIMEOUT = 60;
 	public static long IMPLICIT_WAIT = 60;
-	public static String TESTDATA_SHEET_PATH = "C:\\Users\\jarcibal\\eclipse-workspace\\springSevenWebsite\\src\\main\\java\\com\\springSeven\\qa\\testdata\\springSevenWebsiteData.xlsx";	
-	
+	public static String TESTDATA_SHEET_PATH = "C:\\Users\\jarcibal\\eclipse-workspace\\springSevenWebsite\\src\\main\\java\\com\\springSeven\\qa\\testdata\\springSevenWebsiteData.xlsx";
 	static Workbook book;
 	static Sheet sheet;
-	
-	
-	//switch frame
+
+	// switch frame
 	public void switchToFrame() {
-		//driver.switchTo().frame("a-qws0ssavx4eg");		
-		//driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[title='recaptcha challenge']")));
+		// driver.switchTo().frame("a-qws0ssavx4eg");
+		// driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[title='recaptcha
+		// challenge']")));
 		driver.switchTo().frame(driver.findElement(By.xpath("/html/body/div[4]/div[2]/iframe")));
-		//driver.switchTo().frame(1);
-		//driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		// driver.switchTo().frame(1);
+		// driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 	}
-	
-	//upload file
+
+	// upload file
 	public void uploadFile() throws AWTException, InterruptedException {
-		if(driver instanceof RemoteWebDriver)
-		{
+		if (driver instanceof RemoteWebDriver) {
 			((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 		}
-		
+
 		String currentDir = System.getProperty("user.dir");
 		StringSelection ss = new StringSelection(currentDir + "/screenshot/screenshot.png");
 		System.out.println("direcotry is " + ss);
 		System.out.println("direcotry is " + currentDir);
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-		
+
 		// Ctrl + v
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -68,8 +68,8 @@ public class testUtil extends testBase{
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
-	
-	//excel
+
+	// excel
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
 		try {
@@ -96,38 +96,56 @@ public class testUtil extends testBase{
 		}
 		return data;
 	}
-	
-	//screenshot
+
+	// screenshot
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
 		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
 	}
 
-	
-	//JS Scroll
-	public void JSScroll(){
-	{
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+	// JS Scroll
+	public void JSScroll() {
+		{
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
 //		executor.executeScript("windows.scrollTo(0,document.body.scrollHeight)");
-		executor.executeScript("window.scrollBy(0,200)");}
-	}
-	
-	//JS click
-	public void JSClick(WebElement click){
-	{
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
-		executor.executeScript("arguments[0].click();", click);
-	}
-	}
-	
-	//wait
-	public void waitload(){
-	{
-		new WebDriverWait(driver, 20).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//p[contains(text(),'Page is loading')]")));
+			executor.executeScript("window.scrollBy(0,200)");
+		}
 	}
 
-	
+	// JS click
+	public void JSClick(WebElement click) {
+		{
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			executor.executeScript("arguments[0].click();", click);
+		}
+	}
+
+	// wait
+	public void waitload() {
+		{
+			new WebDriverWait(driver, 20).until(ExpectedConditions
+					.invisibilityOfElementLocated(By.xpath("//p[contains(text(),'Page is loading')]")));
+		}
+	}
+
+	// upload via sendkey
+	public void sendKeysUpload(WebElement element) {
+		{
+			if (driver instanceof RemoteWebDriver) {
+				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+			}
+
+			String currentDir = System.getProperty("user.dir");
+			String sss = currentDir + "/screenshot/screenshot.png";
+			element.sendKeys(sss);
+		}
+	}
+
+	//get error
+	public String getError(WebElement element) {
+		String getError = element.getText();
+		return getError;
 	}
 
 }

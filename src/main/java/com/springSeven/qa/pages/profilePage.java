@@ -51,6 +51,7 @@ public class profilePage extends testBase{
 	//action
 	public String getProfilePageTitle()
 	{
+		loadingWait(profilePageTitle);
 		String getProfilePageTitle = profilePageTitle.getText();
 		return getProfilePageTitle;
 	}
