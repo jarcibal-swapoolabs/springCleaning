@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Base64;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -19,9 +20,11 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -137,7 +140,10 @@ public class testUtil extends testBase {
 			}
 
 			String currentDir = System.getProperty("user.dir");
-			String sss = currentDir + "/screenshot/screenshot.png";
+//			String sss = currentDir + "/screenshot/screenshot.png";
+			String sss = currentDir + "screenshot.png";
+			//String sss = "/home/jarcibal/Downloads/SampleJPGImage_100kbmb.jpg";
+	
 			element.sendKeys(sss);
 		}
 	}
@@ -146,6 +152,20 @@ public class testUtil extends testBase {
 	public String getError(WebElement element) {
 		String getError = element.getText();
 		return getError;
+	}
+	
+	//download file
+	public void dlfile()
+	{
+		driver.navigate().to("https://sample-videos.com/download-sample-jpg-image.php");		 
+//		WebElement picOne = driver.findElement(By.xpath("//a[@href='img/Sample-jpg-image-100kb.jpg']"));
+//		WebElement picTwo = driver.findElement(By.xpath("//a[@href='img/Sample-jpg-image-10mb.jpg']"));
+		WebElement picOne = driver.findElement(By.xpath("//a[@data='1']"));
+		WebElement picTwo = driver.findElement(By.xpath("//a[@data='2']"));
+
+//		Actions actions = new Actions(driver);
+//		actions.keyDown(Keys.LEFT_CONTROL)
+//		.click(pico)
 	}
 
 }

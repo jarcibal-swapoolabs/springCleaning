@@ -93,6 +93,20 @@ public class editProfilePage extends testBase{
 
 	
 	//error
+	@FindBy(xpath="//div[text()='Please provide a username']")
+	public WebElement usernameError;
+
+	
+	@FindBy(xpath="//div[text()='Please enter your first name']")
+	public WebElement firstnameError;
+
+	
+	@FindBy(xpath="//div[text()='Please enter your last name']")
+	public WebElement lastNameError;
+
+	@FindBy(xpath="//div[text()='Please enter your birthdate']")
+	public WebElement birthdateError;
+
 	@FindBy(xpath="//div[text()='Please select your region']")
 	public WebElement regionDropdownError;
 	
