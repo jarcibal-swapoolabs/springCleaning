@@ -140,9 +140,9 @@ public class testUtil extends testBase {
 	// upload via sendkey
 	public void sendKeysUpload(WebElement element) {
 		{
-			if (driver instanceof RemoteWebDriver) {
-				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
-			}
+//			if (driver instanceof RemoteWebDriver) {
+//				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+//			}
 
 			//String sss = "/home/seluser/Downloads/50kb.jpg";
 			String sss = "/home/jarcibal/Downloads/50kb.jpg";
