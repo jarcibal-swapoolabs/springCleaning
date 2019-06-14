@@ -14,8 +14,6 @@ services:
       - selenium-hub
     environment:
       - HUB_HOST=selenium-hub
-    volumes:
-      - /usr/share/udemy/:/usr/share/udemy/
   firefox:    
     image: selenium/node-firefox-debug
     shm_size: '2gb'
@@ -26,8 +24,6 @@ services:
       - selenium-hub
     environment:
       - HUB_HOST=selenium-hub
-    volumes:
-      - /usr/share/udemy/:/usr/share/udemy/
   uiTestFirefox:    
     image: smileys009/selenium-docker-linux
     networks: 

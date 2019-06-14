@@ -144,7 +144,8 @@ public class testUtil extends testBase {
 				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 			}
 
-			String sss = "/home/seluser/Downloads/50kb.jpg";
+			//String sss = "/home/seluser/Downloads/50kb.jpg";
+			String sss = "home/jarcibal/Downloads/50kb.jpg";
 			element.sendKeys(sss);
 		}
 	}
@@ -159,9 +160,9 @@ public class testUtil extends testBase {
 	public void dlfile() 
 	{
 		String fromFile50kb = "https://sample-videos.com/img/Sample-jpg-image-50kb.jpg";
-        String toFile50kb = "/home/seluser/Downloads/50kb.jpg";
+        String toFile50kb = "/home/jarcibal/Downloads/50kb.jpg";
 		String fromFile10mb = "https://sample-videos.com/img/Sample-jpg-image-10mb.jpg";
-        String toFile10mb = "/home/seluser/Downloads/10mb.jpg";
+        String toFile10mb = "/home/jarcibal/Downloads/10mb.jpg";
 
         try {
 
