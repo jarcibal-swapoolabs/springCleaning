@@ -140,12 +140,15 @@ public class testUtil extends testBase {
 	// upload via sendkey
 	public void sendKeysUpload(WebElement element) {
 		{
+			String currentDir = System.getProperty("user.dir");
+			String toFile = (currentDir + "/screenshot/screenshot.jpg");
 			if (driver instanceof RemoteWebDriver) {
 				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 			}
 			//String sss = "/home/qa/Downloads/50kb.jpg";
 			String sss = "/home/seluser/Downloads/50kb.jpg";
-			element.sendKeys(sss);
+//			element.sendKeys(sss);
+			element.sendKeys(toFile);
 		}
 	}
 
@@ -158,12 +161,15 @@ public class testUtil extends testBase {
 	//download file
 	public void dlfile() 
 	{
+		String currentDir = System.getProperty("user.dir");
+		String toFile = (currentDir + "/screenshot/screenshot.jpg");
 		String fromFile50kb = "https://sample-videos.com/img/Sample-jpg-image-50kb.jpg";
-		String toFile50kb = "/home/seluser/Downloads/50kb.jpg";
+//		String toFile50kb = "/home/seluser/Downloads/50kb.jpg";
         try {
 
             //connectionTimeout, readTimeout = 10 seconds
-            FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile50kb), 20000, 20000);
+//            FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile50kb), 20000, 20000);
+            FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile), 20000, 20000);
             System.out.println("pic dled");
         } catch (IOException e) {
             e.printStackTrace();
