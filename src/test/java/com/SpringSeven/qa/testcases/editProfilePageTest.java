@@ -35,10 +35,10 @@ public class editProfilePageTest extends testBase {
 		loginPage = initialPage.loginClick();
 		loadingWait(loginPage.loginButton);
 				
-		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-		loadingWait(homePage.loadingElement);
-//		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
-//		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
+//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+//		loadingWait(homePage.loadingElement);
+		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
+		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.profileLink);
@@ -291,7 +291,7 @@ public class editProfilePageTest extends testBase {
 //		loadingWait(editProfilePage.updateAvatarButton);
 //		editProfilePage.clickUpdateAvatar();		
 //		loadingWait(editProfilePage.editProfilePageTitle);
-//		Assert.assertTrue(editProfilePage.avatarIsDisplayed());
+//		Assert.assertTrue(editProfilePage.avatarIsDisrplayed());
 //}
 //
 //	
