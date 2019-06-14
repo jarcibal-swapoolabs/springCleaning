@@ -145,7 +145,7 @@ public class testUtil extends testBase {
 			}
 
 			//String sss = "/home/seluser/Downloads/50kb.jpg";
-			String sss = "home/jarcibal/Downloads/50kb.jpg";
+			String sss = "/home/jarcibal/Downloads/50kb.jpg";
 			element.sendKeys(sss);
 		}
 	}
@@ -161,14 +161,11 @@ public class testUtil extends testBase {
 	{
 		String fromFile50kb = "https://sample-videos.com/img/Sample-jpg-image-50kb.jpg";
         String toFile50kb = "/home/jarcibal/Downloads/50kb.jpg";
-		String fromFile10mb = "https://sample-videos.com/img/Sample-jpg-image-10mb.jpg";
-        String toFile10mb = "/home/jarcibal/Downloads/10mb.jpg";
 
         try {
 
             //connectionTimeout, readTimeout = 10 seconds
-            FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile50kb), 10000, 10000);
-            FileUtils.copyURLToFile(new URL(fromFile10mb), new File(toFile10mb), 10000, 10000);
+            FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile50kb), 20000, 20000);
 
         } catch (IOException e) {
             e.printStackTrace();
