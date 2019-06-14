@@ -141,7 +141,7 @@ public class testUtil extends testBase {
 
 			String currentDir = System.getProperty("user.dir");
 //			String sss = currentDir + "/screenshot/screenshot.png";
-			String sss = currentDir + "screenshot.png";
+			String sss = currentDir + "/screenshot.png";
 			//String sss = "/home/jarcibal/Downloads/SampleJPGImage_100kbmb.jpg";
 	
 			element.sendKeys(sss);
