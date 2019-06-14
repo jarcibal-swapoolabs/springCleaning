@@ -9,7 +9,12 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
 import java.util.Base64;
 import java.util.List;
 
@@ -139,11 +144,7 @@ public class testUtil extends testBase {
 				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 			}
 
-			String currentDir = System.getProperty("user.dir");
-//			String sss = currentDir + "/screenshot/screenshot.png";
-			String sss = currentDir + "/screenshot.png";
-			//String sss = "/home/jarcibal/Downloads/SampleJPGImage_100kbmb.jpg";
-	
+			String sss = "/home/seluser/Downloads/50kb.jpg";
 			element.sendKeys(sss);
 		}
 	}
@@ -155,17 +156,23 @@ public class testUtil extends testBase {
 	}
 	
 	//download file
-	public void dlfile()
+	public void dlfile() 
 	{
-		driver.navigate().to("https://sample-videos.com/download-sample-jpg-image.php");		 
-//		WebElement picOne = driver.findElement(By.xpath("//a[@href='img/Sample-jpg-image-100kb.jpg']"));
-//		WebElement picTwo = driver.findElement(By.xpath("//a[@href='img/Sample-jpg-image-10mb.jpg']"));
-		WebElement picOne = driver.findElement(By.xpath("//a[@data='1']"));
-		WebElement picTwo = driver.findElement(By.xpath("//a[@data='2']"));
+		String fromFile50kb = "https://sample-videos.com/img/Sample-jpg-image-50kb.jpg";
+        String toFile50kb = "/home/seluser/Downloads/50kb.jpg";
+		String fromFile10mb = "https://sample-videos.com/img/Sample-jpg-image-10mb.jpg";
+        String toFile10mb = "/home/seluser/Downloads/10mb.jpg";
 
-//		Actions actions = new Actions(driver);
-//		actions.keyDown(Keys.LEFT_CONTROL)
-//		.click(pico)
+        try {
+
+            //connectionTimeout, readTimeout = 10 seconds
+            FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile50kb), 10000, 10000);
+            FileUtils.copyURLToFile(new URL(fromFile10mb), new File(toFile10mb), 10000, 10000);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+		
 	}
 
 }

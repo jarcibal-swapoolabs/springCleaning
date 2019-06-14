@@ -35,10 +35,10 @@ public class editProfilePageTest extends testBase {
 		loginPage = initialPage.loginClick();
 		loadingWait(loginPage.loginButton);
 				
-//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-//		loadingWait(homePage.loadingElement);
-		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
-		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
+		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+		loadingWait(homePage.loadingElement);
+//		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
+//		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.profileLink);
@@ -57,15 +57,9 @@ public class editProfilePageTest extends testBase {
 //		Assert.assertEquals(header, "Edit Profile");
 //	}
 
-
-//	@Test
-//	public void validateEditProfilePageTitle() 
-//	{
-//		testUtil.dlfile();
-//	}
-
 	@Test
 	public void validateEditProfileUpdateName() {
+		testUtil.dlfile();
 		editProfilePage.updateTextbox(editProfilePage.firstnameTextbox,"Jheseds");
 		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"Tacadenas");
 
