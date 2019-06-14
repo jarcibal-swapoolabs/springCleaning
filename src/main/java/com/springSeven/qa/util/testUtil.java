@@ -158,8 +158,7 @@ public class testUtil extends testBase {
 	public void dlfile() 
 	{
 		String fromFile50kb = "https://sample-videos.com/img/Sample-jpg-image-50kb.jpg";
-        String toFile50kb = "/home/seluser/Downloads/picsUpload/50kb.jpg";
-
+		String toFile50kb = "/home/seluser/Downloads/picsUpload/50kb.jpg";
         try {
 
             //connectionTimeout, readTimeout = 10 seconds

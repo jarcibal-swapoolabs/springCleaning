@@ -14,6 +14,8 @@ services:
       - selenium-hub
     environment:
       - HUB_HOST=selenium-hub
+    volumes:
+      - /home/seluser/Downloads/picsUpload/:/home/seluser/Downloads/picsUpload/
   firefox:    
     image: selenium/node-firefox-debug
     shm_size: '2gb'
@@ -24,6 +26,8 @@ services:
       - selenium-hub
     environment:
       - HUB_HOST=selenium-hub
+    volumes:
+      - /home/seluser/Downloads/picsUpload/:/home/seluser/Downloads/picsUpload/
   uiTestFirefox:    
     image: smileys009/selenium-docker-linux
     networks: 
