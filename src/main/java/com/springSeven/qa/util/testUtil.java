@@ -143,10 +143,7 @@ public class testUtil extends testBase {
 			if (driver instanceof RemoteWebDriver) {
 				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 			}
-//			String sss = "/home/seluser/Downloads/picsUpload/50kb.jpg";
-//			String sss = "./pics/50kb.jpg";
-			String sss = "screenshot.png";
-			element.sendKeys(sss);
+			String sss = "/home/qa/Downloads/50kb.jpg";
 			element.sendKeys(sss);
 		}
 	}
@@ -161,7 +158,7 @@ public class testUtil extends testBase {
 	public void dlfile() 
 	{
 		String fromFile50kb = "https://sample-videos.com/img/Sample-jpg-image-50kb.jpg";
-		String toFile50kb = "/home/seluser/Downloads/picsUpload/50kb.jpg";
+		String toFile50kb = "/home/seluser/Downloads/50kb.jpg";
         try {
 
             //connectionTimeout, readTimeout = 10 seconds
