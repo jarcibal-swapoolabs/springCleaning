@@ -145,7 +145,7 @@ public class testUtil extends testBase {
 //			}
 
 			//String sss = "/home/seluser/Downloads/50kb.jpg";
-			String sss = "/home/jarcibal/Downloads/picsUpload/50kb.jpg";
+			String sss = "/home/seluser/Downloads/picsUpload/50kb.jpg";
 			element.sendKeys(sss);
 		}
 	}
