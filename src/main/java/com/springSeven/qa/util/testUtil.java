@@ -143,7 +143,8 @@ public class testUtil extends testBase {
 			if (driver instanceof RemoteWebDriver) {
 				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 			}
-			String sss = "/home/seluser/Downloads/picsUpload/50kb.jpg";
+//			String sss = "/home/seluser/Downloads/picsUpload/50kb.jpg";
+			String sss = "./pics/50kb.jpg";
 			element.sendKeys(sss);
 		}
 	}
