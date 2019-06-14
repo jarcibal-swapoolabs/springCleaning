@@ -160,13 +160,13 @@ public class testUtil extends testBase {
 	public void dlfile() 
 	{
 		String fromFile50kb = "https://sample-videos.com/img/Sample-jpg-image-50kb.jpg";
-        String toFile50kb = "/home/jarcibal/Downloads/picsUpload/50kb.jpg";
+        String toFile50kb = "/home/seluser/Downloads/picsUpload/50kb.jpg";
 
         try {
 
             //connectionTimeout, readTimeout = 10 seconds
             FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile50kb), 20000, 20000);
-
+            System.out.println("pic dled");
         } catch (IOException e) {
             e.printStackTrace();
         }
