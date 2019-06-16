@@ -149,6 +149,7 @@ public class testUtil extends testBase {
 			String sss = "/home/seluser/Downloads/50kb.jpg";
 //			element.sendKeys(sss);
 			element.sendKeys(toFile);
+			System.out.println("crap" + toFile);
 		}
 	}
 
@@ -170,7 +171,7 @@ public class testUtil extends testBase {
             //connectionTimeout, readTimeout = 10 seconds
 //            FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile50kb), 20000, 20000);
             FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile), 20000, 20000);
-            System.out.println("pic dled");
+            System.out.println("pic dled" + toFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
