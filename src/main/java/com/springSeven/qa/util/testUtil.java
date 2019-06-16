@@ -209,7 +209,7 @@ public class testUtil extends testBase {
 		    +"/"+ filename;
 		    File file = detector.getLocalFile(path);
 		    ((RemoteWebElement) element).setFileDetector(detector);
-		    System.out.println(path);
+		    System.out.println("ang picture ay nakuha sa" + path);
 		    element.sendKeys(file.getAbsolutePath());
 	        }
 	        catch (Exception e)
