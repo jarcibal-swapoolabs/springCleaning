@@ -143,9 +143,6 @@ public class testUtil extends testBase {
 		{
 			String currentDir = System.getProperty("user.dir");
 			String toFile = (currentDir + '/' + "screenshot.png");
-			if (driver instanceof RemoteWebDriver) {
-				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
-			}
 //			String sss = "/home/qa/Downloads/50kb.jpg";
 //			String sss = "/home/seluser/Downloads/50kb.jpg";
 //			element.sendKeys(sss);
@@ -197,21 +194,6 @@ public class testUtil extends testBase {
 	        }
 
 	    }
-
-	 public void upload2nd(WebElement element)
-	 {
-		 	//try this
-		 	((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
-			String filename = "screenshot.png";
-		    LocalFileDetector detector = new LocalFileDetector();
-		    //String path = new File("src/test/resources/testdata/").getAbsolutePath() 
-		    String path = new File("usr/shr/udemy/").getAbsolutePath() 
-		    +"/"+ filename;
-		    File file = detector.getLocalFile(path);
-		    ((RemoteWebElement) element).setFileDetector(detector);
-		    System.out.println("ang picture ay nakuha sa" + path);
-		    element.sendKeys(file.getAbsolutePath());
-	 }
 
 
 }
