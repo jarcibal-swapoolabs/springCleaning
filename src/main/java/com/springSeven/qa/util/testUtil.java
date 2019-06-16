@@ -141,14 +141,17 @@ public class testUtil extends testBase {
 	public void sendKeysUpload(WebElement element) {
 		{
 			String currentDir = System.getProperty("user.dir");
-			String toFile = (currentDir + "/screenshot/screenshot.jpg");
-//			if (driver instanceof RemoteWebDriver) {
-//				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
-//			}
-			//String sss = "/home/qa/Downloads/50kb.jpg";
-			String sss = "/home/seluser/Downloads/50kb.jpg";
+			String toFile = (currentDir + "/screenshots.jpg");
+			if (driver instanceof RemoteWebDriver) {
+				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+			}
+//			String sss = "/home/qa/Downloads/50kb.jpg";
+//			String sss = "/home/seluser/Downloads/50kb.jpg";
 //			element.sendKeys(sss);
-			System.out.println("crap" + toFile);
+			System.out.println("current directory is: " + currentDir);
+			System.out.println("file is uploaded from: " + toFile);
+	        File curDir = new File(".");
+	        getAllFiles(curDir);
 			element.sendKeys(toFile);
 		}
 	}
@@ -163,7 +166,7 @@ public class testUtil extends testBase {
 	public void dlfile() 
 	{
 		String currentDir = System.getProperty("user.dir");
-		String toFile = (currentDir + "/screenshot/screenshot.jpg");
+		String toFile = (currentDir + "/screenshots.jpg");
 		String fromFile50kb = "https://sample-videos.com/img/Sample-jpg-image-50kb.jpg";
 //		String toFile50kb = "/home/seluser/Downloads/50kb.jpg";
         try {
@@ -177,5 +180,18 @@ public class testUtil extends testBase {
         }
 		
 	}
+	
+	//view all files
+	 private static void getAllFiles(File curDir) {
 
+	        File[] filesList = curDir.listFiles();
+	        for(File f : filesList){
+	            if(f.isDirectory())
+	                System.out.println(f.getName());
+	            if(f.isFile()){
+	                System.out.println(f.getName());
+	            }
+	        }
+
+	    }
 }
