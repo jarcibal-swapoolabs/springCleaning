@@ -201,8 +201,6 @@ public class testUtil extends testBase {
 	 public void upload2nd(WebElement element)
 	 {
 		 String filename = "screenshot.png";
-		 try
-	        {
 		    LocalFileDetector detector = new LocalFileDetector();
 		    //String path = new File("src/test/resources/testdata/").getAbsolutePath() 
 		    String path = new File("usr/shr/udemy/").getAbsolutePath() 
@@ -211,10 +209,6 @@ public class testUtil extends testBase {
 		    ((RemoteWebElement) element).setFileDetector(detector);
 		    System.out.println("ang picture ay nakuha sa" + path);
 		    element.sendKeys(file.getAbsolutePath());
-	        }
-	        catch (Exception e)
-	        {
-	        }
 	 }
 
 
