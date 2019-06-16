@@ -141,7 +141,7 @@ public class testUtil extends testBase {
 	public void sendKeysUpload(WebElement element) {
 		{
 			String currentDir = System.getProperty("user.dir");
-			String toFile = (currentDir + "/screenshots.jpg");
+			String toFile = (currentDir + "/screenshot.jpg");
 			if (driver instanceof RemoteWebDriver) {
 				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 			}
