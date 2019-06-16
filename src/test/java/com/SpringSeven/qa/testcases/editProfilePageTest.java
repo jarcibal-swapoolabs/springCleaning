@@ -66,7 +66,7 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 		
-		testUtil.upload2nd(editProfilePage.dropZone);
+		testUtil.sendKeysUpload(editProfilePage.dropZone);
 //		testUtil.sendKeysUpload(editProfilePage.dropZone);
 //		upload image via robot
 //		editProfilePage.clickUploadIdFileInput();
