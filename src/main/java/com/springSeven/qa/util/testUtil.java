@@ -148,8 +148,8 @@ public class testUtil extends testBase {
 			//String sss = "/home/qa/Downloads/50kb.jpg";
 			String sss = "/home/seluser/Downloads/50kb.jpg";
 //			element.sendKeys(sss);
-			element.sendKeys(toFile);
 			System.out.println("crap" + toFile);
+			element.sendKeys(toFile);
 		}
 	}
 
