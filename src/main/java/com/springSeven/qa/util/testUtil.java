@@ -32,6 +32,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -150,9 +151,11 @@ public class testUtil extends testBase {
 //			element.sendKeys(sss);
 			System.out.println("current directory is: " + currentDir);
 			System.out.println("file is uploaded from: " + toFile);
-	        File curDir = new File(".");
+
+			File curDir = new File(".");
 	        getAllFiles(curDir);
-			element.sendKeys(toFile);
+
+	        element.sendKeys(toFile);
 		}
 	}
 
@@ -194,4 +197,27 @@ public class testUtil extends testBase {
 	        }
 
 	    }
+
+	 public void upload2nd(WebElement element)
+	 {
+		 String filename = "screenshot.png";
+		 try
+	        {
+		    LocalFileDetector detector = new LocalFileDetector();
+		    //String path = new File("src/test/resources/testdata/").getAbsolutePath() 
+		    String path = new File("usr/shr/udemy/").getAbsolutePath() 
+		    +"/"+ filename;
+		    File file = detector.getLocalFile(path);
+		    ((RemoteWebElement) element).setFileDetector(detector);
+		    System.out.println(path);
+		    element.sendKeys(file.getAbsolutePath());
+	        }
+	        catch (Exception e)
+	        {
+	        }
+	 }
+
+
 }
+
+
