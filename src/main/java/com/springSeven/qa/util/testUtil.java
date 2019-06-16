@@ -142,9 +142,9 @@ public class testUtil extends testBase {
 		{
 			String currentDir = System.getProperty("user.dir");
 			String toFile = (currentDir + "/screenshot/screenshot.jpg");
-			if (driver instanceof RemoteWebDriver) {
-				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
-			}
+//			if (driver instanceof RemoteWebDriver) {
+//				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+//			}
 			//String sss = "/home/qa/Downloads/50kb.jpg";
 			String sss = "/home/seluser/Downloads/50kb.jpg";
 //			element.sendKeys(sss);
