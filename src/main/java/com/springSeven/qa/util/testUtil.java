@@ -200,6 +200,9 @@ public class testUtil extends testBase {
 
 	 public void upload2nd(WebElement element)
 	 {
+			if (driver instanceof RemoteWebDriver) {
+				((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+			}
 		 String filename = "screenshot.png";
 		    LocalFileDetector detector = new LocalFileDetector();
 		    //String path = new File("src/test/resources/testdata/").getAbsolutePath() 
