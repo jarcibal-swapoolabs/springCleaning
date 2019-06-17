@@ -200,15 +200,14 @@ public class testUtil extends testBase {
 
 	 public void uploadTrial(WebElement element)
 	 {
-			((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
-		 	String fileName = "screenshot.png";
-		 	LocalFileDetector detector = new LocalFileDetector();
-		    String path = new File("/usr/share/udemy").getAbsolutePath() 
-		    +"/"+ fileName;
-		    File file = detector.getLocalFile(path);
-		    ((RemoteWebElement) element).setFileDetector(detector);
-		    element.sendKeys(file.getAbsolutePath());
-	 }
+			String currentDir = System.getProperty("user.dir");
+			String toFile = (currentDir + '/' + "screenshot.png");
+			System.out.println("current directory is: " + currentDir);
+			System.out.println("file is uploaded from: " + toFile);
+			
+			((RemoteWebElement) element).setFileDetector(new LocalFileDetector());
+	        element.sendKeys(toFile);	
+	        }
 }
 
 
