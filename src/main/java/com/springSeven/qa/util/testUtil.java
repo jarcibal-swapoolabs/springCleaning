@@ -222,8 +222,8 @@ public class testUtil extends testBase {
 		 
 			String currentDir = System.getProperty("user.dir");
 			String toFile = (currentDir + '/' + "screenshot.png");
-			((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 		    WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
+			driver.setFileDetector(new LocalFileDetector());
 	        element.sendKeys(toFile);
 	 
 	 }
