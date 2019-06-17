@@ -211,7 +211,7 @@ public class testUtil extends testBase {
 		    WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
 		    String fileName = "screenshot.png";
 		    LocalFileDetector detector = new LocalFileDetector();
-		    String path = new File("src/test/resources/testdata/").getAbsolutePath() 
+		    String path = new File("/usr/shr/udemy/").getAbsolutePath() 
 		    +"/"+ fileName;
 		    File file = detector.getLocalFile(path);
 		    ((RemoteWebElement) element).setFileDetector(detector);
