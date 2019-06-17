@@ -75,8 +75,6 @@ public class editProfilePageTest extends testBase {
 
 		editProfilePage.click(editProfilePage.updateButton);
 		System.out.println("update profile 1");
-		editProfilePage.click(editProfilePage.updateButton);
-		System.out.println("update profile 2");
 
 		editProfilePage.click(editProfilePage.okButton);
 		System.out.println("ok button");
@@ -138,7 +136,7 @@ public class editProfilePageTest extends testBase {
 
 	@Test
 	public void validateEditProfileUpdateAddressLineTwoWorksBlank() {
-		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"");
+		//editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"");
 		editProfilePage.click(editProfilePage.updateButton);
 		String header = profilePage.getProfilePageTitle();
 		Assert.assertEquals(header, "Profile");
