@@ -67,15 +67,19 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 		
 		testUtil.uploadTrial();
-//		testUtil.sendKeysUpload(editProfilePage.dropZone);
+		System.out.println("image uploaded");
+		//		testUtil.sendKeysUpload(editProfilePage.dropZone);
 //		upload image via robot
 //		editProfilePage.clickUploadIdFileInput();
 //		testUtil.uploadFile();
 
 		editProfilePage.click(editProfilePage.updateButton);
+		System.out.println("update profile 1");
 		editProfilePage.click(editProfilePage.updateButton);
+		System.out.println("update profile 2");
 
 		editProfilePage.click(editProfilePage.okButton);
+		System.out.println("ok button");
 
 		String header = profilePage.getProfilePageTitle();
 		Assert.assertEquals(header, "Profile");
