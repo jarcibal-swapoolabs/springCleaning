@@ -123,54 +123,54 @@ public class editProfilePageTest extends testBase {
 //		String header = profilePage.getProfilePageTitle();
 //		Assert.assertEquals(header, "Profile");
 //	}
-//	@Test
-//	public void validateEditProfileAddressLineOneBlankError() {
-//		editProfilePage.updateTextbox(editProfilePage.addressLineOneTextbox,"");
-//		editProfilePage.click(editProfilePage.updateButton);
-//		String error = testUtil.getError(editProfilePage.addressOneError);
-//		Assert.assertEquals(error, "Please enter your address");
-//	}
-//
-//
-//	@Test
-//	public void validateEditProfileUpdateAddressLineTwoWorksBlank() {
-//		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"");
-//		editProfilePage.click(editProfilePage.updateButton);
-//		String header = profilePage.getProfilePageTitle();
-//		Assert.assertEquals(header, "Profile");
-//	}
-//	
-//	@Test
-//	public void validateEditProfileUsernameBlankError() {
-//		editProfilePage.updateTextbox(editProfilePage.usernameTextbox,"");
-//		editProfilePage.click(editProfilePage.updateButton);
-//		String error = testUtil.getError(editProfilePage.usernameError);
-//		Assert.assertEquals(error, "Please provide a username");
-//	}
-//	
-//	@Test
-//	public void validateEditProfileFirstNameBlankError() {
-//		editProfilePage.updateTextbox(editProfilePage.firstnameTextbox,"");
-//		editProfilePage.click(editProfilePage.updateButton);
-//		String error = testUtil.getError(editProfilePage.firstnameError);
-//		Assert.assertEquals(error, "Please enter your first name");
-//	}
-//
-//	@Test
-//	public void validateEditProfileLastNameBlankError() {
-//		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"");
-//		editProfilePage.click(editProfilePage.updateButton);
-//		String error = testUtil.getError(editProfilePage.lastNameError);
-//		Assert.assertEquals(error, "Please enter your last name");
-//	}
-//
-//	@Test
-//	public void validateEditProfileBdayBlankError() {
-//		editProfilePage.updateTextbox(editProfilePage.birthDateTextbox,"");
-//		editProfilePage.click(editProfilePage.updateButton);
-//		String error = testUtil.getError(editProfilePage.birthdateError);
-//		Assert.assertEquals(error, "Please enter your birthdate");
-//	}
+	@Test
+	public void validateEditProfileAddressLineOneBlankError() {
+		editProfilePage.updateTextbox(editProfilePage.addressLineOneTextbox,"");
+		editProfilePage.click(editProfilePage.updateButton);
+		String error = testUtil.getError(editProfilePage.addressOneError);
+		Assert.assertEquals(error, "Please enter your address");
+	}
+
+
+	@Test
+	public void validateEditProfileUpdateAddressLineTwoWorksBlank() {
+		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"");
+		editProfilePage.click(editProfilePage.updateButton);
+		String header = profilePage.getProfilePageTitle();
+		Assert.assertEquals(header, "Profile");
+	}
+	
+	@Test
+	public void validateEditProfileUsernameBlankError() {
+		editProfilePage.updateTextbox(editProfilePage.usernameTextbox,"");
+		editProfilePage.click(editProfilePage.updateButton);
+		String error = testUtil.getError(editProfilePage.usernameError);
+		Assert.assertEquals(error, "Please provide a username");
+	}
+	
+	@Test
+	public void validateEditProfileFirstNameBlankError() {
+		editProfilePage.updateTextbox(editProfilePage.firstnameTextbox,"");
+		editProfilePage.click(editProfilePage.updateButton);
+		String error = testUtil.getError(editProfilePage.firstnameError);
+		Assert.assertEquals(error, "Please enter your first name");
+	}
+
+	@Test
+	public void validateEditProfileLastNameBlankError() {
+		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"");
+		editProfilePage.click(editProfilePage.updateButton);
+		String error = testUtil.getError(editProfilePage.lastNameError);
+		Assert.assertEquals(error, "Please enter your last name");
+	}
+
+	@Test
+	public void validateEditProfileBdayBlankError() {
+		editProfilePage.updateTextbox(editProfilePage.birthDateTextbox,"");
+		editProfilePage.click(editProfilePage.updateButton);
+		String error = testUtil.getError(editProfilePage.birthdateError);
+		Assert.assertEquals(error, "Please enter your birthdate");
+	}
 
 	
 	//stop here
