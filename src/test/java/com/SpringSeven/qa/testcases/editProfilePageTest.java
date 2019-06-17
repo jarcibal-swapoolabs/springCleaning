@@ -75,34 +75,37 @@ public class editProfilePageTest extends testBase {
 
 		editProfilePage.click(editProfilePage.updateButton);
 		System.out.println("update profile 1");
+		editProfilePage.click(editProfilePage.updateButton);
+		System.out.println("update profile 2");
 
+		
+		System.out.println("ok button loading");
 		editProfilePage.click(editProfilePage.okButton);
-		System.out.println("ok button");
+		System.out.println("ok button clicked");
 
 		String header = profilePage.getProfilePageTitle();
 		Assert.assertEquals(header, "Profile");
 	}
 //
-//	@Test
-//	public void validateUpdateBirthDate() 
-//	{
-//		//10/24/1985 is the original date
-//		editProfilePage.updateTextbox(editProfilePage.birthDateTextbox,"07/19/1990");
-//		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"Tacadenas");
-//
-//		editProfilePage.click(editProfilePage.uploadIdDropDown);
-//		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
-//		
-//		testUtil.sendKeysUpload(editProfilePage.dropZone);
-//		
-//		editProfilePage.click(editProfilePage.updateButton);
-//		editProfilePage.click(editProfilePage.updateButton);
-//
-//		editProfilePage.click(editProfilePage.okButton);
-//
-//		String header = profilePage.getProfilePageTitle();
-//		Assert.assertEquals(header, "Profile");
-//	}
+	@Test
+	public void validateUpdateBirthDate() 
+	{
+		//10/24/1985 is the original date
+		editProfilePage.updateTextbox(editProfilePage.birthDateTextbox,"07/19/1990");
+		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"Tacadenas");
+
+		editProfilePage.click(editProfilePage.uploadIdDropDown);
+		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
+		
+		testUtil.uploadTrial();
+		
+		editProfilePage.click(editProfilePage.updateButton);
+
+		editProfilePage.click(editProfilePage.okButton);
+
+		String header = profilePage.getProfilePageTitle();
+		Assert.assertEquals(header, "Profile");
+	}
 //
 //	@Test
 //	public void validateUpdateAddressLineOneWorks() {
