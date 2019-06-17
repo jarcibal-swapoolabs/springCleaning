@@ -208,13 +208,14 @@ public class testUtil extends testBase {
 //			((RemoteWebElement) element).setFileDetector(new LocalFileDetector());
 //	        element.sendKeys(toFile);	
 
+			((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 		    WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
 		    String fileName = "screenshot.png";
 		    LocalFileDetector detector = new LocalFileDetector();
 		    String path = new File("/usr/shr/udemy/").getAbsolutePath() 
 		    +"/"+ fileName;
 		    File file = detector.getLocalFile(path);
-		    ((RemoteWebElement) element).setFileDetector(detector);
+//		    ((RemoteWebElement) element).setFileDetector(detector);
 		    element.sendKeys(file.getAbsolutePath());
 	 
 	 }
