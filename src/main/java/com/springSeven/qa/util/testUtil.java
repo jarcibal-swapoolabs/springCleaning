@@ -198,16 +198,26 @@ public class testUtil extends testBase {
 
 	    }
 
-	 public void uploadTrial(WebElement element)
+	 public void uploadTrial()
 	 {
-			String currentDir = System.getProperty("user.dir");
-			String toFile = (currentDir + '/' + "screenshot.png");
-			System.out.println("current directory is: " + currentDir);
-			System.out.println("file is uploaded from: " + toFile);
-			
-			((RemoteWebElement) element).setFileDetector(new LocalFileDetector());
-	        element.sendKeys(toFile);	
-	        }
+//			String currentDir = System.getProperty("user.dir");
+//			String toFile = (currentDir + '/' + "screenshot.png");
+//			System.out.println("current directory is: " + currentDir);
+//			System.out.println("file is uploaded from: " + toFile);
+//			
+//			((RemoteWebElement) element).setFileDetector(new LocalFileDetector());
+//	        element.sendKeys(toFile);	
+
+		    WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
+		    String fileName = "screenshot.png";
+		    LocalFileDetector detector = new LocalFileDetector();
+		    String path = new File("src/test/resources/testdata/").getAbsolutePath() 
+		    +"/"+ fileName;
+		    File file = detector.getLocalFile(path);
+		    ((RemoteWebElement) element).setFileDetector(detector);
+		    element.sendKeys(file.getAbsolutePath());
+	 
+	 }
 }
 
 
