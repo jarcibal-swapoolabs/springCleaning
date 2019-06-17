@@ -225,6 +225,7 @@ public class testUtil extends testBase {
 		    WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
 			driver.setFileDetector(new LocalFileDetector());
 	        element.sendKeys(toFile);
+	        System.out.println("file uploaded to " + toFile);
 	 
 	 }
 }
