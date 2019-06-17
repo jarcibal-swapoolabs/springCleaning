@@ -91,7 +91,7 @@ public class testBase {
 		String completeUrl = "http://" + host + ":4444/wd/hub";
 
 		driver = new RemoteWebDriver(new URL(completeUrl), dr);
-		driver.setFileDetector(new LocalFileDetector());
+        driver.setFileDetector(new LocalFileDetector());
 
 //		driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),dr);
 //    	Capabilities firefoxCapabilities = DesiredCapabilities.firefox();	
@@ -110,8 +110,8 @@ public class testBase {
 		String completeUrl = "http://" + host + ":4444/wd/hub";
 
 		driver = new RemoteWebDriver(new URL(completeUrl), dr);
-		driver.setFileDetector(new LocalFileDetector());
-	}
+        driver.setFileDetector(new LocalFileDetector());
+        }
 
 	// life saver but bad
 	public void waitForPageLoaded() {
