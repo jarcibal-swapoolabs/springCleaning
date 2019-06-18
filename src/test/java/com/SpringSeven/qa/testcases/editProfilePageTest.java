@@ -2,6 +2,7 @@ package com.SpringSeven.qa.testcases;
 
 import java.net.MalformedURLException;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -67,26 +68,26 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 		
 		testUtil.uploadTrial();
-		//		testUtil.sendKeysUpload(editProfilePage.dropZone);
-//		upload image via robot
-//		editProfilePage.clickUploadIdFileInput();
-//		testUtil.uploadFile();
 
-		editProfilePage.click(editProfilePage.updateButton);
+		String header = driver.findElement((By.xpath("//input[@type='file']"))).getText();
+		System.out.println(header + "ang header ay");
+		Assert.assertEquals(header, "screenshot.png (image/png)");
 		//stuck here
-
-		String errorGen = testUtil.getError(editProfilePage.errorGen);
-		System.out.println(errorGen + "fuck off");
-		editProfilePage.click(editProfilePage.updateButton);
-		System.out.println("update profile 2");
-
 		
-		System.out.println("ok button loading");
-		editProfilePage.click(editProfilePage.okButton);
-		System.out.println("ok button clicked");
-
-		String header = profilePage.getProfilePageTitle();
-		Assert.assertEquals(header, "Profile");
+		
+//		editProfilePage.click(editProfilePage.updateButton);
+//		String errorGen = testUtil.getError(editProfilePage.errorGen);
+//		System.out.println(errorGen + "fuck off");
+//		editProfilePage.click(editProfilePage.updateButton);
+//		System.out.println("update profile 2");
+//
+//		
+//		System.out.println("ok button loading");
+//		editProfilePage.click(editProfilePage.okButton);
+//		System.out.println("ok button clicked");
+//
+//		String header = profilePage.getProfilePageTitle();
+//		Assert.assertEquals(header, "Profile");
 	}
 //
 	@Test
@@ -108,28 +109,28 @@ public class editProfilePageTest extends testBase {
 		String header = profilePage.getProfilePageTitle();
 		Assert.assertEquals(header, "Profile");
 	}
-//
-//	@Test
-//	public void validateUpdateAddressLineOneWorks() {
-//		//Brgy Malaking itlog old data
-//		editProfilePage.updateTextbox(editProfilePage.addressLineOneTextbox,"Brgy Malaking itlog");
-//		editProfilePage.click(editProfilePage.updateButton);
-//		editProfilePage.click(editProfilePage.okButton);
-//
-//		String header = profilePage.getProfilePageTitle();
-//		Assert.assertEquals(header, "Profile");
-//	}
 
-//	@Test
-//	public void validateUpdateAddressLineTwoWorks() {
-//		//blank old data
-//		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"Pasayeno");
-//		editProfilePage.click(editProfilePage.updateButton);
-//		editProfilePage.click(editProfilePage.okButton);
-//
-//		String header = profilePage.getProfilePageTitle();
-//		Assert.assertEquals(header, "Profile");
-//	}
+	@Test
+	public void validateUpdateAddressLineOneWorks() {
+		//Brgy Malaking itlog old data
+		editProfilePage.updateTextbox(editProfilePage.addressLineOneTextbox,"Brgy Malaking itlog");
+		editProfilePage.click(editProfilePage.updateButton);
+		editProfilePage.click(editProfilePage.okButton);
+
+		String header = profilePage.getProfilePageTitle();
+		Assert.assertEquals(header, "Profile");
+	}
+
+	@Test
+	public void validateUpdateAddressLineTwoWorks() {
+		//blank old data
+		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"Pasayeno");
+		editProfilePage.click(editProfilePage.updateButton);
+		editProfilePage.click(editProfilePage.okButton);
+
+		String header = profilePage.getProfilePageTitle();
+		Assert.assertEquals(header, "Profile");
+	}
 	@Test
 	public void validateEditProfileAddressLineOneBlankError() {
 		editProfilePage.updateTextbox(editProfilePage.addressLineOneTextbox,"");
@@ -141,7 +142,7 @@ public class editProfilePageTest extends testBase {
 
 	@Test
 	public void validateEditProfileUpdateAddressLineTwoWorksBlank() {
-		//editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"");
+		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"");
 		editProfilePage.click(editProfilePage.updateButton);
 		String header = profilePage.getProfilePageTitle();
 		Assert.assertEquals(header, "Profile");
