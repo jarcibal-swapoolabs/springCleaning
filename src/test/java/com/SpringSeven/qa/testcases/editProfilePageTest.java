@@ -95,7 +95,7 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 			
-		testUtil.uploadTrial("10mb.jpg");
+		testUtil.uploadTrial("tenmb.jpg");
 
 		//stuck here		
 		editProfilePage.click(editProfilePage.updateButton);

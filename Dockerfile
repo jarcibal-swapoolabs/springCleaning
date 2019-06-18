@@ -22,7 +22,7 @@ ADD dockering2.xml				dockering2.xml
 ADD healthcheck.sh				healthcheck.sh
 ADD screenshot/screenshot.png   screenshot.png				
 ADD healthcheck.sh				healthcheck.sh
-ADD 10mb.jpg					10mb.jpg
+ADD tenmb.jpg					tenmb.jpg
 
 # BROWSER
 # HUB_HOST
