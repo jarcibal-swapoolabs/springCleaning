@@ -69,7 +69,6 @@ public class editProfilePageTest extends testBase {
 		
 		testUtil.uploadTrial();
 
-		String header = driver.findElement((By.xpath("//div[@class='component-dropzone center-align']"))).getText();
 		//stuck here		
 		editProfilePage.click(editProfilePage.updateButton);
 		String errorGen = testUtil.getError(editProfilePage.errorGen);
