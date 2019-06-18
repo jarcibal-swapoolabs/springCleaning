@@ -70,24 +70,20 @@ public class editProfilePageTest extends testBase {
 		testUtil.uploadTrial();
 
 		String header = driver.findElement((By.xpath("//div[@class='component-dropzone center-align']"))).getText();
-		System.out.println(header + "ang header ay");
-		Assert.assertEquals(header, "screenshot.png (image/png)");
-		//stuck here
+		//stuck here		
+		editProfilePage.click(editProfilePage.updateButton);
+		String errorGen = testUtil.getError(editProfilePage.errorGen);
+		System.out.println(errorGen + "fuck off");
+		editProfilePage.click(editProfilePage.updateButton);
+		System.out.println("update profile 2");
 
 		
-//		editProfilePage.click(editProfilePage.updateButton);
-//		String errorGen = testUtil.getError(editProfilePage.errorGen);
-//		System.out.println(errorGen + "fuck off");
-//		editProfilePage.click(editProfilePage.updateButton);
-//		System.out.println("update profile 2");
-//
-//		
-//		System.out.println("ok button loading");
-//		editProfilePage.click(editProfilePage.okButton);
-//		System.out.println("ok button clicked");
-//
-//		String header = profilePage.getProfilePageTitle();
-//		Assert.assertEquals(header, "Profile");
+		System.out.println("ok button loading");
+		editProfilePage.click(editProfilePage.okButton);
+		System.out.println("ok button clicked");
+
+		String header = profilePage.getProfilePageTitle();
+		Assert.assertEquals(header, "Profile");
 	}
 //
 	@Test
@@ -102,6 +98,7 @@ public class editProfilePageTest extends testBase {
 		
 		testUtil.uploadTrial();
 		
+		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.updateButton);
 
 		editProfilePage.click(editProfilePage.okButton);
