@@ -58,50 +58,49 @@ public class editProfilePageTest extends testBase {
 //		Assert.assertEquals(header, "Edit Profile");
 //	}
 
-//	@Test
-//	public void validateEditProfileUpdateName() {
-//		testUtil.dlfile();
-//		editProfilePage.updateTextbox(editProfilePage.firstnameTextbox,"Jheseds");
-//		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"Tacadenas");
-//
-//		editProfilePage.click(editProfilePage.uploadIdDropDown);
-//		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
-//		
-////		testUtil.uploadTrial();
-//		testUtil.uploadTrial("screenshot.png");
-//
-//		//stuck here		
-//		editProfilePage.click(editProfilePage.updateButton);
-//		String errorGen = testUtil.getError(editProfilePage.errorGen);
-//		System.out.println(errorGen + "fuck off");
-//		editProfilePage.click(editProfilePage.updateButton);
-//		System.out.println("update profile 2");
-//
-//		
-//		System.out.println("ok button loading");
-//		editProfilePage.click(editProfilePage.okButton);
-//		System.out.println("ok button clicked");
-//
-//		String header = profilePage.getProfilePageTitle();
-//		Assert.assertEquals(header, "Profile");
-//	}
-	
-	
 	@Test
-	public void tenMBupload() {
+	public void validateEditProfileUpdateName() {
+		testUtil.dlfile();
 		editProfilePage.updateTextbox(editProfilePage.firstnameTextbox,"Jheseds");
 		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"Tacadenas");
 
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
-			
-		testUtil.uploadTrial("tenmb.jpg");
+		
+//		testUtil.uploadTrial();
+		testUtil.uploadTrial("screenshot.png");
 
 		//stuck here		
 		editProfilePage.click(editProfilePage.updateButton);
-		String errorGen = testUtil.getError(editProfilePage.errorGen);
-		Assert.assertEquals(errorGen, "Please choose an image no greater than 5MB");
+		System.out.println("update profile 1");
+		editProfilePage.click(editProfilePage.updateButton);
+		System.out.println("update profile 2");
+
+		
+		System.out.println("ok button loading");
+		editProfilePage.click(editProfilePage.okButton);
+		System.out.println("ok button clicked");
+
+		String header = profilePage.getProfilePageTitle();
+		Assert.assertEquals(header, "Profile");
 	}
+	
+	
+//	@Test
+//	public void tenMBupload() {
+//		editProfilePage.updateTextbox(editProfilePage.firstnameTextbox,"Jheseds");
+//		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"Tacadenas");
+//
+//		editProfilePage.click(editProfilePage.uploadIdDropDown);
+//		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
+//			
+//		testUtil.uploadTrial("tenmb.jpg");
+//
+//		//stuck here		
+//		editProfilePage.click(editProfilePage.updateButton);
+//		String errorGen = testUtil.getError(editProfilePage.errorGen);
+//		Assert.assertEquals(errorGen, "Please choose an image no greater than 5MB");
+//	}
 //
 //	@Test
 //	public void validateUpdateBirthDate() 
