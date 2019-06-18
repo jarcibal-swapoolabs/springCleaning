@@ -36,8 +36,8 @@ public class testBase {
 
 	public static void initialization() throws MalformedURLException {
 		// String browserName = prop.getProperty("browser");
-//		String browserName = "FF";
-//		
+		String browserName = "FF";
+		
 //		if(browserName.equals("chrome")){
 //			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
 //			driver = new ChromeDriver(); 
@@ -95,7 +95,6 @@ public class testBase {
 		String completeUrl = "http://" + host + ":4444/wd/hub";
 
 		driver = new RemoteWebDriver(new URL(completeUrl), dr);
-        driver.setFileDetector(new LocalFileDetector());
 
 //		driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),dr);
 //    	Capabilities firefoxCapabilities = DesiredCapabilities.firefox();	
@@ -114,7 +113,6 @@ public class testBase {
 		String completeUrl = "http://" + host + ":4444/wd/hub";
 
 		driver = new RemoteWebDriver(new URL(completeUrl), dr);
-        driver.setFileDetector(new LocalFileDetector());
         }
 
 	// life saver but bad
