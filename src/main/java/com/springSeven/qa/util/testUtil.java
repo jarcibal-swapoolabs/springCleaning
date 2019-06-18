@@ -224,7 +224,6 @@ public class testUtil extends testBase {
 //			String toFile = (currentDir + '/' + "screenshot.png");
 			String toFile = (currentDir + '/' + fileName);
 		    WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
-			driver.setFileDetector(new LocalFileDetector());
 	        element.sendKeys(toFile);
 	        System.out.println("file uploaded to " + toFile);
 	 
