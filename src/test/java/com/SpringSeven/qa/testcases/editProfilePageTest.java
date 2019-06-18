@@ -67,14 +67,16 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 		
 		testUtil.uploadTrial();
-		System.out.println("image uploaded");
 		//		testUtil.sendKeysUpload(editProfilePage.dropZone);
 //		upload image via robot
 //		editProfilePage.clickUploadIdFileInput();
 //		testUtil.uploadFile();
 
 		editProfilePage.click(editProfilePage.updateButton);
-		System.out.println("update profile 1");
+		//stuck here
+
+		String errorGen = testUtil.getError(editProfilePage.errorGen);
+		System.out.println(errorGen + "fuck off");
 		editProfilePage.click(editProfilePage.updateButton);
 		System.out.println("update profile 2");
 

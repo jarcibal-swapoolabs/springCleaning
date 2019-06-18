@@ -93,6 +93,10 @@ public class editProfilePage extends testBase{
 
 	
 	//error
+	@FindBy(xpath="//div[@class='helper-text error-message']")
+	public WebElement errorGen;
+
+	
 	@FindBy(xpath="//div[text()='Please provide a username']")
 	public WebElement usernameError;
 
