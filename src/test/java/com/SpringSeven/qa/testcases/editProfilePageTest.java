@@ -67,7 +67,8 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 		
-		testUtil.uploadTrial();
+//		testUtil.uploadTrial();
+		testUtil.uploadTrial("screenshot.png");
 
 		//stuck here		
 		editProfilePage.click(editProfilePage.updateButton);
@@ -84,6 +85,24 @@ public class editProfilePageTest extends testBase {
 		String header = profilePage.getProfilePageTitle();
 		Assert.assertEquals(header, "Profile");
 	}
+	
+	
+	@Test
+	public void tenMBupload() {
+		editProfilePage.updateTextbox(editProfilePage.firstnameTextbox,"Jheseds");
+		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"Tacadenas");
+
+		editProfilePage.click(editProfilePage.uploadIdDropDown);
+		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
+			
+		testUtil.uploadTrial("10mb.jpg");
+
+		//stuck here		
+		editProfilePage.click(editProfilePage.updateButton);
+		String errorGen = testUtil.getError(editProfilePage.errorGen);
+		System.out.println(errorGen + "fuck off");
+		Assert.assertEquals(errorGen, "FILEUPLOAD TEST 1");
+	}
 //
 	@Test
 	public void validateUpdateBirthDate() 
@@ -95,7 +114,8 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 		
-		testUtil.uploadTrial();
+		//testUtil.uploadTrial();
+		testUtil.uploadTrial("screenshot/screenshot.png");
 		
 		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.updateButton);

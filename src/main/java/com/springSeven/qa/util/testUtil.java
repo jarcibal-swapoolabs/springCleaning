@@ -198,7 +198,7 @@ public class testUtil extends testBase {
 
 	    }
 
-	 public void uploadTrial()
+	 public void uploadTrial(String fileName)
 	 {
 //			String currentDir = System.getProperty("user.dir");
 //			String toFile = (currentDir + '/' + "screenshot.png");
@@ -221,7 +221,8 @@ public class testUtil extends testBase {
 		 
 		 
 			String currentDir = System.getProperty("user.dir");
-			String toFile = (currentDir + '/' + "screenshot.png");
+//			String toFile = (currentDir + '/' + "screenshot.png");
+			String toFile = (currentDir + '/' + fileName);
 		    WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
 			driver.setFileDetector(new LocalFileDetector());
 	        element.sendKeys(toFile);
