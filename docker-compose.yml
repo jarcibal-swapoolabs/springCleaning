@@ -29,7 +29,7 @@ services:
     volumes:
       - /home/qa/Downloads:/home/seluser/Downloads/picsUpload/
   uiTestFirefox:    
-    image: smileys009/selenium-docker-linux
+    image: 480157969386.dkr.ecr.ap-southeast-1.amazonaws.com/seleniumtest-spring7:latest
     networks: 
       - spring7
     privileged: true
@@ -43,7 +43,7 @@ services:
     volumes:
       - ./output/firefox:/usr/share/udemy/test-output
   uiTestChrome:
-    image: smileys009/selenium-docker-linux
+    image: 480157969386.dkr.ecr.ap-southeast-1.amazonaws.com/seleniumtest-spring7:latest
     networks: 
       - spring7
     privileged: true
