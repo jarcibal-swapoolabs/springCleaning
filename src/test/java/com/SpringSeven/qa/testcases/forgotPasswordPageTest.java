@@ -83,17 +83,17 @@ public class forgotPasswordPageTest extends testBase{
 
 	
 
-	@Test
-	public void validateBlankOTP(){
-		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
-		//forgotPasswordPage.inputEmail("clarence.layba@swapoolabs.com");
-		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
-		forgotPasswordPage.inputOTP("");
-		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
-		Assert.assertEquals(errorMessage, "Please provide a verification code");
-	}
-
-//removed because of multiple try OTP
+	//removed because of multiple try OTP
+//	@Test
+//	public void validateBlankOTP(){
+//		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
+//		//forgotPasswordPage.inputEmail("clarence.layba@swapoolabs.com");
+//		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+//		forgotPasswordPage.inputOTP("");
+//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.fpwErrorMessageOtp);
+//		Assert.assertEquals(errorMessage, "Please provide a verification code");
+//	}
+//
 //	@Test
 //	public void validateInvalidOTPOne(){
 //		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
