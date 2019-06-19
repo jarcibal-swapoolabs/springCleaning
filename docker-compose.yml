@@ -42,7 +42,7 @@ services:
       - MODULE=dockering.xml
     volumes:
       - ./output/firefox:/usr/share/udemy/test-output
-      - ./output/firefox/screenshot:/usr/share/udemy/screenshots
+      - ./output/firefox:/usr/share/udemy/screenshots
   uiTestChrome:
     image: smileys009/selenium-docker-linux
     networks: 
@@ -57,7 +57,7 @@ services:
       - MODULE=dockering.xml
     volumes:
       - ./output/chrome:/usr/share/udemy/test-output
-      - ./output/chrome/screenshot:/usr/share/udemy/screenshots
+      - ./output/chrome:/usr/share/udemy/screenshots
 networks:
   spring7:
     external: true
