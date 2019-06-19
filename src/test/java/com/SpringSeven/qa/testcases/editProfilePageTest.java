@@ -73,8 +73,6 @@ public class editProfilePageTest extends testBase {
 		//stuck here		
 		editProfilePage.click(editProfilePage.updateButton);
 		System.out.println("update profile 1");
-		editProfilePage.click(editProfilePage.updateButton);
-		System.out.println("update profile 2");
 
 		
 		System.out.println("ok button loading");
