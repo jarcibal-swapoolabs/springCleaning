@@ -65,19 +65,10 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 		
-//		testUtil.uploadTrial();
-		testUtil.uploadTrial("screenshot.png");
-
-		//stuck here		
+		testUtil.uploadImage(editProfilePage.dropZone,"screenshot.png");
 		editProfilePage.click(editProfilePage.updateButton);
-		System.out.println("update profile 1");
 		editProfilePage.click(editProfilePage.updateButton);
-		System.out.println("update profile 2");
-
-		
-		System.out.println("ok button loading");
 		editProfilePage.click(editProfilePage.okButton);
-		System.out.println("ok button clicked");
 
 		String header = profilePage.getProfilePageTitle();
 		Assert.assertEquals(header, "Profile");
@@ -92,9 +83,8 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 			
-		testUtil.uploadTrial("tenmb.jpg");
+		testUtil.uploadImage(editProfilePage.dropZone,"tenmb.png");
 
-		//stuck here		
 		editProfilePage.click(editProfilePage.updateButton);
 		String errorGen = testUtil.getError(editProfilePage.errorGen);
 		Assert.assertEquals(errorGen, "Please choose an image no greater than 5MB");
@@ -105,12 +95,10 @@ public class editProfilePageTest extends testBase {
 	{
 		//10/24/1985 is the original date
 		editProfilePage.updateTextbox(editProfilePage.birthDateTextbox,"07/19/1990");
-		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"Tacadenas");
-
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 		
-		testUtil.uploadTrial("screenshot.png");
+		testUtil.uploadImage(editProfilePage.dropZone,"screenshot.png");
 		
 		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.updateButton);
@@ -126,6 +114,7 @@ public class editProfilePageTest extends testBase {
 		//Brgy Malaking itlog old data
 		editProfilePage.updateTextbox(editProfilePage.addressLineOneTextbox,"Brgy Malaking itlog");
 		editProfilePage.click(editProfilePage.updateButton);
+		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.okButton);
 
 		String header = profilePage.getProfilePageTitle();
@@ -136,6 +125,7 @@ public class editProfilePageTest extends testBase {
 	public void validateUpdateAddressLineTwoWorks() {
 		//blank old data
 		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"Pasayeno");
+		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.okButton);
 
@@ -154,6 +144,7 @@ public class editProfilePageTest extends testBase {
 	@Test
 	public void validateEditProfileUpdateAddressLineTwoWorksBlank() {
 		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"");
+		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.updateButton);
 		String header = profilePage.getProfilePageTitle();
 		Assert.assertEquals(header, "Profile");

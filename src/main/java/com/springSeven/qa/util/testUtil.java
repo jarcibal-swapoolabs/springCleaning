@@ -198,32 +198,12 @@ public class testUtil extends testBase {
 
 	    }
 
-	 public void uploadTrial(String fileName)
+	 public void uploadImage(WebElement element, String fileName)
 	 {
-//			String currentDir = System.getProperty("user.dir");
-//			String toFile = (currentDir + '/' + "screenshot.png");
-//			System.out.println("current directory is: " + currentDir);
-//			System.out.println("file is uploaded from: " + toFile);
-//			
-//			((RemoteWebElement) element).setFileDetector(new LocalFileDetector());
-//	        element.sendKeys(toFile);	
-
-//			((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
-//		    WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
-//		    String fileName = "screenshot.png";
-//		    LocalFileDetector detector = new LocalFileDetector();
-//		    String path = new File("/usr/shr/udemy/").getAbsolutePath() 
-//		    +"/"+ fileName;
-//		    File file = detector.getLocalFile(path);
-////		    ((RemoteWebElement) element).setFileDetector(detector);
-//		    element.sendKeys(file.getAbsolutePath());
-		 
-		 
-		 
+ 
 			String currentDir = System.getProperty("user.dir");
-//			String toFile = (currentDir + '/' + "screenshot.png");
 			String toFile = (currentDir + '/' + fileName);
-		    WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
+		    //WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
 	        element.sendKeys(toFile);
 	        System.out.println("file uploaded to " + toFile);
 	 
