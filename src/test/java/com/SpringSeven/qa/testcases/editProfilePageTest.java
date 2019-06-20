@@ -83,7 +83,7 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 			
-		testUtil.uploadImage(editProfilePage.dropZone,"tenmb.png");
+		testUtil.uploadImage(editProfilePage.dropZone,"tenmb.jpg");
 
 		editProfilePage.click(editProfilePage.updateButton);
 		String errorGen = testUtil.getError(editProfilePage.errorGen);
@@ -114,7 +114,6 @@ public class editProfilePageTest extends testBase {
 		//Brgy Malaking itlog old data
 		editProfilePage.updateTextbox(editProfilePage.addressLineOneTextbox,"Brgy Malaking itlog");
 		editProfilePage.click(editProfilePage.updateButton);
-		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.okButton);
 
 		String header = profilePage.getProfilePageTitle();
@@ -125,7 +124,6 @@ public class editProfilePageTest extends testBase {
 	public void validateUpdateAddressLineTwoWorks() {
 		//blank old data
 		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"Pasayeno");
-		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.okButton);
 
@@ -144,7 +142,6 @@ public class editProfilePageTest extends testBase {
 	@Test
 	public void validateEditProfileUpdateAddressLineTwoWorksBlank() {
 		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"");
-		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.updateButton);
 		String header = profilePage.getProfilePageTitle();
 		Assert.assertEquals(header, "Profile");
