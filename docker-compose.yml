@@ -16,7 +16,7 @@ services:
       - HUB_HOST=selenium-hub
     volumes:
       - /home/qa/Downloads:/home/seluser/Downloads/picsUpload/
-      - "dev/shm:/dev/shm"
+      - /dev/shm:/dev/shm
   firefox:    
     image: selenium/node-firefox-debug
     shm_size: '2gb'
@@ -29,7 +29,7 @@ services:
       - HUB_HOST=selenium-hub
     volumes:
       - /home/qa/Downloads:/home/seluser/Downloads/picsUpload/
-      - "dev/shm:/dev/shm"
+      - /dev/shm:/dev/shm
   uiTestFirefox:    
     image: smileys009/selenium-docker-linux
     networks: 
