@@ -305,7 +305,13 @@ public class editProfilePageTest extends testBase {
 
 	@AfterMethod
 	public void tearDown() {
+		try
+		{
+			
+		}
+		finally
+		{
 		driver.quit();
 	}
-
+	}
 }
