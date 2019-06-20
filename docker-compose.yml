@@ -7,7 +7,6 @@ services:
     privileged: true
   chrome:
     image: selenium/node-chrome-debug
-    shm_size: '1gb'
     networks: 
       - spring7
     privileged: true
