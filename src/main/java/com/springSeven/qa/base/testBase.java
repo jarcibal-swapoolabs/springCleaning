@@ -60,13 +60,13 @@ public class testBase {
 		}
 
 		//commented out monday june 17
-		e_driver = new EventFiringWebDriver(driver);
-		// Now create object of EventListerHandler to register it with
-		// EventFiringWebDriver
-		eventListener = new webEventListener();
-		e_driver.register(eventListener);
-		//driver = e_driver;
-		driver = e_driver;
+//		e_driver = new EventFiringWebDriver(driver);
+//		// Now create object of EventListerHandler to register it with
+//		// EventFiringWebDriver
+//		eventListener = new webEventListener();
+//		e_driver.register(eventListener);
+//		//driver = e_driver;
+//		driver = e_driver;
 
 		// driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 		// driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

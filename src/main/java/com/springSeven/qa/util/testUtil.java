@@ -205,8 +205,8 @@ public class testUtil extends testBase {
 			String toFile = (currentDir + '/' + fileName);
 		    //WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
 			//cast error using code below
-			//((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
-			driver.setFileDetector(new LocalFileDetector());
+			((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+			//driver.setFileDetector(new LocalFileDetector());
 			element.sendKeys(toFile);
 	        System.out.println("file uploaded to " + toFile);
 	 
