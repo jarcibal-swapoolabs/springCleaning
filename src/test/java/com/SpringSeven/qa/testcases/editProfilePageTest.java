@@ -83,7 +83,7 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 			
-		editProfile.uploadImage(editProfilePage.dropZone,"tenmb.jpg");
+		editProfilePage.uploadImage(editProfilePage.dropZone,"tenmb.jpg");
 
 		editProfilePage.click(editProfilePage.updateButton);
 		String errorGen = testUtil.getError(editProfilePage.errorGen);
