@@ -200,14 +200,10 @@ public class testUtil extends testBase {
 
 	 public void uploadImage(WebElement element, String fileName)
 	 {
- 
 			String currentDir = System.getProperty("user.dir");
 			String toFile = (currentDir + '/' + fileName);
 		    //WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
-			if(driver instanceof RemoteWebDriver)
-			{
 			((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
-			}
 			element.sendKeys(toFile);
 	        System.out.println("file uploaded to " + toFile);
 	 

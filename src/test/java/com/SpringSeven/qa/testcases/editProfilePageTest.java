@@ -65,7 +65,7 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 		
-		editProfilePage.uploadImage(editProfilePage.dropZone,"screenshot.png");
+		testUtil.uploadImage(editProfilePage.dropZone,"screenshot.png");
 		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.updateButton);
 		editProfilePage.click(editProfilePage.okButton);
@@ -83,7 +83,7 @@ public class editProfilePageTest extends testBase {
 		editProfilePage.click(editProfilePage.uploadIdDropDown);
 		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
 			
-		editProfilePage.uploadImage(editProfilePage.dropZone,"tenmb.jpg");
+		testUtil.uploadImage(editProfilePage.dropZone,"tenmb.jpg");
 
 		editProfilePage.click(editProfilePage.updateButton);
 		String errorGen = testUtil.getError(editProfilePage.errorGen);
