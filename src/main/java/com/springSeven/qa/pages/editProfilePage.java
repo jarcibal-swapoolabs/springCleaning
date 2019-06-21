@@ -201,7 +201,7 @@ public class editProfilePage extends testBase{
 			{
 			((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 			}
-			element.sendKeys(toFile);
+			dropZone.sendKeys(toFile);
 	        System.out.println("file uploaded to " + toFile);
 	 
 	 }
