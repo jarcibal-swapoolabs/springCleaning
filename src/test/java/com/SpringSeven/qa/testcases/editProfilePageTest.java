@@ -110,26 +110,26 @@ public class editProfilePageTest extends testBase {
 //	}
 //
 //	@Test
-	public void validateUpdateAddressLineOneWorks() {
-		//Brgy Malaking itlog old data
-		editProfilePage.updateTextbox(editProfilePage.addressLineOneTextbox,"Brgy Malaking itlog");
-		editProfilePage.click(editProfilePage.updateButton);
-		editProfilePage.click(editProfilePage.okButton);
-
-		String header = profilePage.getProfilePageTitle();
-		Assert.assertEquals(header, "Profile");
-	}
-
-	@Test
-	public void validateUpdateAddressLineTwoWorks() {
-		//blank old data
-		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"Pasayeno");
-		editProfilePage.click(editProfilePage.updateButton);
-		editProfilePage.click(editProfilePage.okButton);
-
-		String header = profilePage.getProfilePageTitle();
-		Assert.assertEquals(header, "Profile");
-	}
+//	public void validateUpdateAddressLineOneWorks() {
+//		//Brgy Malaking itlog old data
+//		editProfilePage.updateTextbox(editProfilePage.addressLineOneTextbox,"Brgy Malaking itlog");
+//		editProfilePage.click(editProfilePage.updateButton);
+//		editProfilePage.click(editProfilePage.okButton);
+//
+//		String header = profilePage.getProfilePageTitle();
+//		Assert.assertEquals(header, "Profile");
+//	}
+//
+//	@Test
+//	public void validateUpdateAddressLineTwoWorks() {
+//		//blank old data
+//		editProfilePage.updateTextbox(editProfilePage.addressLineTwoTextbox,"Pasayeno");
+//		editProfilePage.click(editProfilePage.updateButton);
+//		editProfilePage.click(editProfilePage.okButton);
+//
+//		String header = profilePage.getProfilePageTitle();
+//		Assert.assertEquals(header, "Profile");
+//	}
 //	@Test
 //	public void validateEditProfileAddressLineOneBlankError() {
 //		editProfilePage.updateTextbox(editProfilePage.addressLineOneTextbox,"");
