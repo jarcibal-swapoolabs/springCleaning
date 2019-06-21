@@ -53,14 +53,14 @@ public class testBase {
 //		testBase.dockerc();
 //		}
 
-		//commented out monday june 17
-		e_driver = new EventFiringWebDriver(driver);
-		// Now create object of EventListerHandler to register it with
-		// EventFiringWebDriver
-		eventListener = new webEventListener();
-		e_driver.register(eventListener);
-		//driver = e_driver;
-		driver = e_driver;
+//		//commented out monday june 17
+//		e_driver = new EventFiringWebDriver(driver);
+//		// Now create object of EventListerHandler to register it with
+//		// EventFiringWebDriver
+//		eventListener = new webEventListener();
+//		e_driver.register(eventListener);
+//		//driver = e_driver;
+//		driver = e_driver;
 
 		
 		if (System.getProperty("BROWSER") != null && System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
