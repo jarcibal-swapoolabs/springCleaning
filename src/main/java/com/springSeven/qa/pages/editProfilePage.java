@@ -2,6 +2,8 @@ package com.springSeven.qa.pages;
 
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.LocalFileDetector;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -189,4 +191,18 @@ public class editProfilePage extends testBase{
 		return EditprofileAvatar.isDisplayed();
 	}
 
+	
+	 public void uploadImage(WebElement element, String fileName)
+	 {
+			String currentDir = System.getProperty("user.dir");
+			String toFile = (currentDir + '/' + fileName);
+		    //WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
+			if(driver instanceof RemoteWebDriver)
+			{
+			((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+			}
+			element.sendKeys(toFile);
+	        System.out.println("file uploaded to " + toFile);
+	 
+	 }
 }
