@@ -57,22 +57,22 @@ public class editProfilePageTest extends testBase {
 //		Assert.assertEquals(header, "Edit Profile");
 //	}
 //
-//	@Test
-//	public void validateEditProfileUpdateName() {
-//		editProfilePage.updateTextbox(editProfilePage.firstnameTextbox,"Jheseds");
-//		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"Tacadenas");
-//
-//		editProfilePage.click(editProfilePage.uploadIdDropDown);
-//		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
-//		
-//		testUtil.uploadImage(editProfilePage.dropZone,"screenshot.png");
-//		editProfilePage.click(editProfilePage.updateButton);
-//		editProfilePage.click(editProfilePage.updateButton);
-//		editProfilePage.click(editProfilePage.okButton);
-//
-//		String header = profilePage.getProfilePageTitle();
-//		Assert.assertEquals(header, "Profile");
-//	}
+	@Test
+	public void validateEditProfileUpdateName() {
+		editProfilePage.updateTextbox(editProfilePage.firstnameTextbox,"Jheseds");
+		editProfilePage.updateTextbox(editProfilePage.lastNameTextbox,"Tacadenas");
+
+		editProfilePage.click(editProfilePage.uploadIdDropDown);
+		editProfilePage.click(editProfilePage.uploadIdDropDownPassport);
+		
+		testUtil.uploadImage(editProfilePage.dropZone,"screenshot.png");
+		editProfilePage.click(editProfilePage.updateButton);
+		editProfilePage.click(editProfilePage.updateButton);
+		editProfilePage.click(editProfilePage.okButton);
+
+		String header = profilePage.getProfilePageTitle();
+		Assert.assertEquals(header, "Profile");
+	}
 //	
 //	
 	@Test

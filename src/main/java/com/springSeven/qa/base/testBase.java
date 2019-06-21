@@ -27,8 +27,8 @@ import com.springSeven.qa.util.webEventListener;
 
 public class testBase {
 
-	//public static WebDriver driver;
-	public static RemoteWebDriver driver;
+	public static WebDriver driver;
+	//public static RemoteWebDriver driver;
 	public static Properties prop;
 
 	public static EventFiringWebDriver e_driver;
@@ -55,7 +55,6 @@ public class testBase {
 
 		if (System.getProperty("BROWSER") != null && System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
 			testBase.dockerf();
-			//dc-DesiredCapabilities.firefox();
 		} else {
 			testBase.dockerc();
 		}
@@ -94,7 +93,8 @@ public class testBase {
 		String completeUrl = "http://" + host + ":4444/wd/hub";
 
 		driver = new RemoteWebDriver(new URL(completeUrl), dr);
-		driver.setFileDetector(new LocalFileDetector());
+
+		//driver.setFileDetector(new LocalFileDetector());
 
 //		driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),dr);
 //    	Capabilities firefoxCapabilities = DesiredCapabilities.firefox();	
@@ -113,7 +113,7 @@ public class testBase {
 		String completeUrl = "http://" + host + ":4444/wd/hub";
 
 		driver = new RemoteWebDriver(new URL(completeUrl), dr);
-		driver.setFileDetector(new LocalFileDetector());
+		//driver.setFileDetector(new LocalFileDetector());
 
         }
 
