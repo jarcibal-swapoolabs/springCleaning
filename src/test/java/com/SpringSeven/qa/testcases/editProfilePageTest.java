@@ -37,11 +37,11 @@ public class editProfilePageTest extends testBase {
 
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
-		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./test-output/dockering1.xml");
-		extent = new ExtentReports();
-		extent.attachReporter(reporter);
-		logger=extent.createTest("Edit Profile Page Test");
-		
+//		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./test-output/dockering1.xml");
+//		extent = new ExtentReports();
+//		extent.attachReporter(reporter);
+//		logger=extent.createTest("Edit Profile Page Test");
+//		
 		initialization();		
 		testUtil = new testUtil();
 		initialPage = new initialPage();
@@ -324,13 +324,13 @@ public class editProfilePageTest extends testBase {
 		}
 		finally
 		{
-			if(result.getStatus()==ITestResult.FAILURE)
-			{
-				String temp = null; 
-				//= testUtil.takeScreenshotAtEndOfTest();
-				logger.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
-			}
-			extent.flush();
+//			if(result.getStatus()==ITestResult.FAILURE)
+//			{
+//				String temp = null; 
+//				//= testUtil.takeScreenshotAtEndOfTest();
+//				logger.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+//			}
+//			extent.flush();
 			driver.quit();
 	}
 	}
