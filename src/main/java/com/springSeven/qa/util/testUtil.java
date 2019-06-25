@@ -15,7 +15,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
+import java.text.SimpleDateFormat;
 import java.util.Base64;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -28,8 +30,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -110,8 +114,25 @@ public class testUtil extends testBase {
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
-		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
+		System.out.println(currentDir + "located ako sa");
+		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshot/" + System.currentTimeMillis() + ".png"));
 	}
+
+	//screenshot 2
+	public static void getScreenshot(){
+
+		try
+		{			
+			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			String currentDir = System.getProperty("user.dir");
+			FileHandler.copy(scrFile, new File(currentDir + "/test-output/" + System.currentTimeMillis() + ".png"));
+		}
+		catch(IOException e)
+		{
+		e.printStackTrace();
+		}
+	}
+
 
 	// JS Scroll
 	public void JSScroll() {
@@ -138,77 +159,52 @@ public class testUtil extends testBase {
 		}
 	}
 
-	// upload via sendkey
-	public void sendKeysUpload(WebElement element) {
-		{
-			//((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
-			//above code doesnt work try this next
-			
-			String currentDir = System.getProperty("user.dir");
-			String toFile = (currentDir + '/' + "screenshot.png");
-//			String sss = "/home/qa/Downloads/50kb.jpg";
-//			String sss = "/home/seluser/Downloads/50kb.jpg";
-//			element.sendKeys(sss);
-			System.out.println("current directory is: " + currentDir);
-			System.out.println("file is uploaded from: " + toFile);
-
-			File curDir = new File(".");
-	        getAllFiles(curDir);
-
-	        element.sendKeys(toFile);
-		}
-	}
-
-	//get error
+	// get error
 	public String getError(WebElement element) {
 		String getError = element.getText();
 		return getError;
 	}
-	
-	//download file
-	public void dlfile() 
-	{
+
+	// download file
+	public void dlfile() {
 		String currentDir = System.getProperty("user.dir");
 		String toFile = (currentDir + "/screenshots.jpg");
 		String fromFile50kb = "https://sample-videos.com/img/Sample-jpg-image-50kb.jpg";
 //		String toFile50kb = "/home/seluser/Downloads/50kb.jpg";
-        try {
+		try {
 
-            //connectionTimeout, readTimeout = 10 seconds
+			// connectionTimeout, readTimeout = 10 seconds
 //            FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile50kb), 20000, 20000);
-            FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile), 20000, 20000);
-            System.out.println("pic dled" + toFile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-		
+			FileUtils.copyURLToFile(new URL(fromFile50kb), new File(toFile), 20000, 20000);
+			System.out.println("pic dled" + toFile);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 	}
-	
-	//view all files
-	 private static void getAllFiles(File curDir) {
 
-	        File[] filesList = curDir.listFiles();
-	        for(File f : filesList){
-	            if(f.isDirectory())
-	                System.out.println(f.getName());
-	            if(f.isFile()){
-	                System.out.println(f.getName());
-	            }
-	        }
+	// view all files
+	private static void getAllFiles(File curDir) {
 
-	    }
+		File[] filesList = curDir.listFiles();
+		for (File f : filesList) {
+			if (f.isDirectory())
+				System.out.println(f.getName());
+			if (f.isFile()) {
+				System.out.println(f.getName());
+			}
+		}
 
-	 public void uploadImage(WebElement element, String fileName)
-	 {
-			String currentDir = System.getProperty("user.dir");
-			String toFile = (currentDir + '/' + fileName);
-		    //WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
-			//((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
-			//driver.setFileDetector(new LocalFileDetector());
-			element.sendKeys(toFile);
-	        System.out.println("file uploaded to " + toFile);
-	 
-	 }
+	}
+
+	public void uploadImage(WebElement element, String fileName) {
+		String currentDir = System.getProperty("user.dir");
+		String toFile = (currentDir + '/' + fileName);
+		// WebElement element = driver.findElement((By.xpath("//input[@type='file']")));
+		 ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+		// driver.setFileDetector(new LocalFileDetector());
+		element.sendKeys(toFile);
+		System.out.println("file uploaded to " + toFile);
+
+	}
 }
-
-

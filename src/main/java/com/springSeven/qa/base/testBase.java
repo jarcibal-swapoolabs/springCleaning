@@ -11,10 +11,8 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WrapsDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -24,12 +22,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import com.springSeven.qa.util.webEventListener;
-
 public class testBase {
 
-	//public static WebDriver driver;
-	public static RemoteWebDriver driver;
+	public static WebDriver driver;
+	//public static RemoteWebDriver driver;
 	public static Properties prop;
 
 	public static EventFiringWebDriver e_driver;
@@ -62,14 +58,14 @@ public class testBase {
 		}
 
 		//commented out monday june 17
-		e_driver = new EventFiringWebDriver(driver);
+		//e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with
 		// EventFiringWebDriver
-		eventListener = new webEventListener();
-		e_driver.register(eventListener);
+		//eventListener = new webEventListener();
+		//e_driver.register(eventListener);
 		//driver = e_driver;
 		//driver = e_driver;
-		((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+		//((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 
 
 		// driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
@@ -115,7 +111,6 @@ public class testBase {
 
 		driver = new RemoteWebDriver(new URL(completeUrl), dr);
 		//driver.setFileDetector(new LocalFileDetector());
-
         }
 
 	// life saver but bad
@@ -169,5 +164,10 @@ public class testBase {
 		}
 		element2.click();
 	}
-
+	
+	public WebDriver getDriver()
+	{
+		return driver;
+	}
+		
 }

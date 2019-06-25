@@ -7,7 +7,7 @@ services:
     privileged: true
   chrome:
     image: selenium/node-chrome-debug
-    shm_size: 4G
+    shm_size: 2G
     networks: 
       - spring7
     privileged: true
@@ -19,7 +19,7 @@ services:
       - /dev/shm:/dev/shm
   firefox:    
     image: selenium/node-firefox-debug
-    shm_size: 4G
+    shm_size: 2G
     networks: 
       - spring7
     privileged: true
