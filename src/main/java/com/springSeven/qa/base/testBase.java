@@ -28,8 +28,8 @@ import com.springSeven.qa.util.webEventListener;
 
 public class testBase {
 
-	public static WebDriver driver;
-	//public static RemoteWebDriver driver;
+	//public static WebDriver driver;
+	public static RemoteWebDriver driver;
 	public static Properties prop;
 
 	public static EventFiringWebDriver e_driver;
@@ -68,7 +68,7 @@ public class testBase {
 		eventListener = new webEventListener();
 		e_driver.register(eventListener);
 		//driver = e_driver;
-		driver = e_driver;
+		//driver = e_driver;
 		((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 
 
