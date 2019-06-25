@@ -35,9 +35,6 @@ public class testBase {
 	public static EventFiringWebDriver e_driver;
 	public static WebDriverEventListener eventListener;
 
-	// If you really, really need a RemoteWebDriver instance here, you can do this
-	public static RemoteWebDriver remoteDriver = (RemoteWebDriver)driver;
-
 	public static void initialization() throws MalformedURLException {
 		// String browserName = prop.getProperty("browser");
 //		String browserName = "FF";
@@ -72,7 +69,7 @@ public class testBase {
 		e_driver.register(eventListener);
 		//driver = e_driver;
 		driver = e_driver;
-		remoteDriver.setFileDetector(new LocalFileDetector());
+		((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 
 
 		// driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
