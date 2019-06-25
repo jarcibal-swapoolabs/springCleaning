@@ -1,8 +1,10 @@
 package com.SpringSeven.qa.testcases;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -11,6 +13,10 @@ import com.springSeven.qa.pages.homePage;
 import com.springSeven.qa.pages.initialPage;
 import com.springSeven.qa.pages.loginPage;
 import com.springSeven.qa.pages.profilePage;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.springSeven.qa.base.testBase;
 import com.springSeven.qa.pages.editProfilePage;
 import com.springSeven.qa.util.testUtil;
@@ -22,13 +28,20 @@ public class editProfilePageTest extends testBase {
 	profilePage profilePage;
 	editProfilePage editProfilePage;
 	testUtil testUtil;
-
+	ExtentReports extent;
+	ExtentTest logger;
+	
 	public editProfilePageTest() {
 		super();
 	}
 
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./test-output/dockering1.xml");
+		extent = new ExtentReports();
+		extent.attachReporter(reporter);
+		logger=extent.createTest("Edit Profile Page Test");
+		
 		initialization();		
 		testUtil = new testUtil();
 		initialPage = new initialPage();
@@ -304,14 +317,21 @@ public class editProfilePageTest extends testBase {
 //	
 
 	@AfterMethod
-	public void tearDown() {
+	public void tearDown(ITestResult result) throws IOException {
 		try
 		{
 			
 		}
 		finally
 		{
-		driver.quit();
+			if(result.getStatus()==ITestResult.FAILURE)
+			{
+				String temp = null; 
+				//= testUtil.takeScreenshotAtEndOfTest();
+				logger.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+			}
+			extent.flush();
+			driver.quit();
 	}
 	}
 }

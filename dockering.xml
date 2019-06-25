@@ -10,7 +10,6 @@
     <test name="Spring 7 UI">
         <classes>
           	<class name="com.SpringSeven.qa.testcases.editProfilePageTest"></class>
-          	<class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest"></class>
 		</classes>
     </test>
  </suite>

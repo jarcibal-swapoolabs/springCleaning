@@ -53,21 +53,21 @@ public class testBase {
 //		testBase.dockerc();
 //		}
 
-//		//commented out monday june 17
-//		e_driver = new EventFiringWebDriver(driver);
-//		// Now create object of EventListerHandler to register it with
-//		// EventFiringWebDriver
-//		eventListener = new webEventListener();
-//		e_driver.register(eventListener);
-//		//driver = e_driver;
-//		driver = e_driver;
-
 		
 		if (System.getProperty("BROWSER") != null && System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
 			testBase.dockerf();
 		} else {
 			testBase.dockerc();
 		}
+
+		//commented out monday june 17
+		e_driver = new EventFiringWebDriver(driver);
+		// Now create object of EventListerHandler to register it with
+		// EventFiringWebDriver
+		eventListener = new webEventListener();
+		e_driver.register(eventListener);
+		//driver = e_driver;
+		driver = e_driver;
 
 
 		// driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
@@ -95,8 +95,6 @@ public class testBase {
 		String completeUrl = "http://" + host + ":4444/wd/hub";
 
 		driver = new RemoteWebDriver(new URL(completeUrl), dr);
-
-		//driver.setFileDetector(new LocalFileDetector());
 //		driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),dr);
 //    	Capabilities firefoxCapabilities = DesiredCapabilities.firefox();	
 //		driver = new RemoteWebDriver(new URL("http://192.168.99.100:4446/wd/hub"),firefoxCapabilities);
