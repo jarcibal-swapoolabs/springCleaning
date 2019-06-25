@@ -11,6 +11,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WrapsDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -28,11 +29,17 @@ import com.springSeven.qa.util.webEventListener;
 public class testBase {
 
 	//public static WebDriver driver;
-	public static RemoteWebDriver driver;
+	//public static RemoteWebDriver driver;
 	public static Properties prop;
 
 	public static EventFiringWebDriver e_driver;
 	public static WebDriverEventListener eventListener;
+	
+	public static WrapsDriver wrapperAccess = (WrapsDriver)e_driver;
+	public static WebDriver driver = wrapperAccess.getWrappedDriver();
+
+	// If you really, really need a RemoteWebDriver instance here, you can do this
+	RemoteWebDriver remoteDriver = (RemoteWebDriver)driver;
 
 	public static void initialization() throws MalformedURLException {
 		// String browserName = prop.getProperty("browser");
