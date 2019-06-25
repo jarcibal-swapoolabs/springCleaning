@@ -27,8 +27,8 @@ import com.springSeven.qa.util.webEventListener;
 
 public class testBase {
 
-	public static WebDriver driver;
-	//public static RemoteWebDriver driver;
+	//public static WebDriver driver;
+	public static RemoteWebDriver driver;
 	public static Properties prop;
 
 	public static EventFiringWebDriver e_driver;
