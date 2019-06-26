@@ -123,16 +123,16 @@ public class forgotPasswordPageTest extends testBase{
 		boolean displayed = forgotPasswordPage.displayed(forgotPasswordPage.fpwPasswordTextbox);
 		Assert.assertTrue(displayed);		
 	}
-//
-//	@Test
-//	public void validatePasswordMismatch() {
-//		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
-//		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
-//		forgotPasswordPage.inputOTP("111111");
-//		forgotPasswordPage.inputPassword("tinapay","lugaw");
-//		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.confirmPasswordErrorOne);
-//		Assert.assertEquals(errorMessage, "Passwords do not match");
-//	}
+
+	@Test
+	public void validatePasswordMismatch() {
+		forgotPasswordPage.inputEmail("jhesed.tacadena@swapoolabs.com");
+		forgotPasswordPage.click(forgotPasswordPage.btnOtpContinue);
+		forgotPasswordPage.inputOTP("111111");
+		forgotPasswordPage.inputPassword("tinapay","lugaw");
+		String errorMessage = forgotPasswordPage.getError(forgotPasswordPage.confirmPasswordErrorOne);
+		Assert.assertEquals(errorMessage, "Passwords do not match");
+	}
 //
 //	@Test
 //	public void validatePasswordBlankOne() {
