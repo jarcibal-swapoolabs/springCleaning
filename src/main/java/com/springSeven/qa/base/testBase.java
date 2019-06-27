@@ -76,7 +76,8 @@ public class testBase {
 		
 		// driver.get(prop.getProperty("url"));
 		//driver.get("https://d1awi7hdbupx9v.cloudfront.net");
-		driver.get("http://192.168.0.1");
+		String porto = "http://192.168.0.1";
+		driver.get(porto);
 	}
 
 	// docker
