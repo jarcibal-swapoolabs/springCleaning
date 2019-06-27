@@ -25,8 +25,8 @@ public class profilePage extends testBase{
 	@FindBy(id="SEND_REFERRAL_EMAIL_FORM_tempEmails")
 	public WebElement shareEmailTextbox;
 
-	//@FindBy(xpath="//div[@class='floating-blocker__1_1QQ']")
-	@FindBy(xpath="//div[@class='share-link-text__2LAAf']")
+	@FindBy(xpath="//div[@class='floating-blocker__1_1QQ']")
+	//@FindBy(xpath="//div[@class='share-link-text__2LAAf']")
 	public WebElement signupLinkTextbox;
 	
 	
