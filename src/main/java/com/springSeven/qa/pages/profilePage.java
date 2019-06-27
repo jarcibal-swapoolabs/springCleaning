@@ -81,7 +81,7 @@ public class profilePage extends testBase{
 	public void copyLink()
 	{
 //		loadingWait(signupLinkTextbox);
-		Stringg shota = signupLinkTextbox3.getText();
+		String shota = signupLinkTextbox3.getText();
 		String signupLink = signupLinkTextbox.getText();
 		//String signupLink = copyButon.getAttribute("value");
 		System.out.println("shota" + shota);
