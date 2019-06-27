@@ -45,7 +45,7 @@ public class registrationPageTest extends testBase {
 		
 //		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
 //		loadingWait(homePage.loadingElement);
-		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
+		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","!SuperStr0ngPassword!");
 		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		
 		homePage.clickOnAccountLink();
