@@ -25,7 +25,8 @@ public class profilePage extends testBase{
 	@FindBy(id="SEND_REFERRAL_EMAIL_FORM_tempEmails")
 	public WebElement shareEmailTextbox;
 
-	@FindBy(xpath="//div[@class='floating-blocker']")
+	//@FindBy(xpath="//div[@class='floating-blocker']")
+	@FindBy(xpath="//div[@class='share-link-text__2LAAf']")
 	public WebElement signupLinkTextbox;
 	
 	
@@ -74,8 +75,8 @@ public class profilePage extends testBase{
 	public void copyLink()
 	{
 		loadingWait(profilePageTitle);
-		//String signupLink = signupLinkTextbox.getText();
-		String signupLink = copyButon.getAttribute("value");
+		String signupLink = signupLinkTextbox.getText();
+		//String signupLink = copyButon.getAttribute("value");
 		System.out.println("ang link ng signup ay " + signupLink);
 		driver.get(signupLink);
 	}
