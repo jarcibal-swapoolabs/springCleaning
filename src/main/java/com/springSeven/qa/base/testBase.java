@@ -22,6 +22,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.springSeven.qa.util.webEventListener;
+
 public class testBase {
 
 	public static WebDriver driver;
@@ -58,12 +60,12 @@ public class testBase {
 		}
 
 		//commented out monday june 17
-		//e_driver = new EventFiringWebDriver(driver);
-		// Now create object of EventListerHandler to register it with
-		// EventFiringWebDriver
-		//eventListener = new webEventListener();
-		//e_driver.register(eventListener);
-		//driver = e_driver;
+		e_driver = new EventFiringWebDriver(driver);
+//		 Now create object of EventListerHandler to register it with
+//		 EventFiringWebDriver
+		eventListener = new webEventListener();
+		e_driver.register(eventListener);
+		driver = e_driver;
 		//driver = e_driver;
 		//((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 
