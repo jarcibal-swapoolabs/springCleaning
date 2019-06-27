@@ -75,7 +75,7 @@ public class profilePage extends testBase{
 	{
 		loadingWait(signupLinkTextbox);
 		String signupLink = signupLinkTextbox.getText();
-		System.out.println("ang link ng signup ay " + signUpLink);
+		System.out.println("ang link ng signup ay " + signupLink);
 		driver.get(signupLink);
 	}
 
