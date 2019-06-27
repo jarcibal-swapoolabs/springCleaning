@@ -43,10 +43,10 @@ public class registrationPageTest extends testBase {
 		loginPage = initialPage.loginClick();		
 		loadingWait(loginPage.loginButton);
 		
-		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-		loadingWait(homePage.loadingElement);
-//		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
-//		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
+//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
+//		loadingWait(homePage.loadingElement);
+		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","superstrongpassword");
+		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		
 		homePage.clickOnAccountLink();
 		loadingWait(homePage.profileLink);
@@ -68,14 +68,14 @@ public class registrationPageTest extends testBase {
 		Assert.assertEquals(header, "Register Now!");
 	}
 
-//	@Test
-//	public void validateNoEmail() 
-//	{
-//		registrationPage.click(registrationPage.emailTextbox);
-//		registrationPage.click(registrationPage.registerButton);
-//		errorMessage = registrationPage.getError(registrationPage.emailErrorTwo);
-//		Assert.assertEquals(errorMessage, "Please provide an email address");
-//	}
+	@Test
+	public void validateNoEmail() 
+	{
+		registrationPage.click(registrationPage.emailTextbox);
+		registrationPage.click(registrationPage.registerButton);
+		errorMessage = registrationPage.getError(registrationPage.emailErrorTwo);
+		Assert.assertEquals(errorMessage, "Please provide an email address");
+	}
 //
 //	
 //	@Test
