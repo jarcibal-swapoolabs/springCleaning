@@ -93,12 +93,14 @@ public class registrationPage extends testBase {
 
 	// error messages
 	public String getError(WebElement element) {
+		loadingWait(element);
 		String getError = element.getText();
 		return getError;
 	}
 
 	// click
 	public void click(WebElement element) {
+		clickableWait(element);
 		element.click();
 	}
 
