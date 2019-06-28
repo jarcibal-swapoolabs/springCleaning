@@ -35,37 +35,37 @@ public class testBase {
 
 	public static void initialization() throws MalformedURLException {
 		// String browserName = prop.getProperty("browser");
-//		String browserName = "FF";
-//		
-//		if(browserName.equals("chrome")){
-//			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
-//			driver = new ChromeDriver(); 
-//		}
-//		else if(browserName.equals("FF")){
-//			System.setProperty("webdriver.gecko.driver", "/home/jarcibal/Downloads/geckodriver");	
-//			driver = new FirefoxDriver(); 		
-//		}
-//		else if(browserName.equals("linuxFirefox")){
-//		testBase.dockerf();
-//		}		
-//		else if(browserName.equals("linuxChrome")){
-//		testBase.dockerc();
-//		}
-
+		String browserName = "FF";
 		
-		if (System.getProperty("BROWSER") != null && System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
-			testBase.dockerf();
-		} else {
-			testBase.dockerc();
+		if(browserName.equals("chrome")){
+			System.setProperty("webdriver.chrome.driver", "C:\\qa\\chromedriver\\chromedriver.exe");	
+			driver = new ChromeDriver(); 
+		}
+		else if(browserName.equals("FF")){
+			System.setProperty("webdriver.gecko.driver", "/home/jarcibal/Downloads/geckodriver");	
+			driver = new FirefoxDriver(); 		
+		}
+		else if(browserName.equals("linuxFirefox")){
+		testBase.dockerf();
+		}		
+		else if(browserName.equals("linuxChrome")){
+		testBase.dockerc();
 		}
 
-		//commented out monday june 17
-		e_driver = new EventFiringWebDriver(driver);
-//		 Now create object of EventListerHandler to register it with
-//		 EventFiringWebDriver
-		eventListener = new webEventListener();
-		e_driver.register(eventListener);
-		driver = e_driver;
+		
+//		if (System.getProperty("BROWSER") != null && System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
+//			testBase.dockerf();
+//		} else {
+//			testBase.dockerc();
+//		}
+
+//		//commented out monday june 17
+//		e_driver = new EventFiringWebDriver(driver);
+////		 Now create object of EventListerHandler to register it with
+////		 EventFiringWebDriver
+//		eventListener = new webEventListener();
+//		e_driver.register(eventListener);
+//		driver = e_driver;
 		//driver = e_driver;
 		//((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 

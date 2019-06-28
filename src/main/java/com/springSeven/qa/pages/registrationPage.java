@@ -120,10 +120,14 @@ public class registrationPage extends testBase {
 	// clean
 	// input Email
 	public void proper(String email, String password, String confirmpw) {
+		loadingWait(emailTextbox);
 		emailTextbox.sendKeys(email);
+
+		clickableWait(registerButton);
 		registerButton.click();
 		loadingWait(emailIsUnique);
 		
+		loadingWait(passwordTextbox);
 		passwordTextbox.sendKeys(password);
 		clickableWait(registerButton);
 

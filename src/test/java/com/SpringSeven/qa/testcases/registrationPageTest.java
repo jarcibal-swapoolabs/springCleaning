@@ -43,8 +43,6 @@ public class registrationPageTest extends testBase {
 		loginPage = initialPage.loginClick();		
 		loadingWait(loginPage.loginButton);
 		
-//		homePage = loginPage.login("clarence.layba@swapoolabs.com","mksoft_password");
-//		loadingWait(homePage.loadingElement);
 		homePage = loginPage.login("jhesed.tacadena@swapoolabs.com","!SuperStr0ngPassword!");
 		tryCatch(homePage.loadingElement,homePage.securityQuestionsPromptLater);
 		
@@ -62,43 +60,42 @@ public class registrationPageTest extends testBase {
 //old way but since signup link is dynamic		
 //		initialization();
 //		registrationPage = new registrationPage();
-//		//driver.get("https://d34doyrhrdwlg4.cloudfront.net/signup?id=xCX3Kdt");
-//		driver.get("http://192.168.0.1/signup?id=mWjXpTM");
+//		driver.get("https://d34doyrhrdwlg4.cloudfront.net/signup?id=xCX3Kdt");
 //		processing();
 }
 
-//	@Test
-//	public void validateRegistrationPageTitle(){
-//		String header = registrationPage.getRegistrationPageTitle();
-//		Assert.assertEquals(header, "Register Now!");
-//	}
-//
-//	@Test
-//	public void validateNoEmail() 
-//	{
-//		registrationPage.click(registrationPage.emailTextbox);
-//		registrationPage.click(registrationPage.registerButton);
-//		errorMessage = registrationPage.getError(registrationPage.emailErrorTwo);
-//		Assert.assertEquals(errorMessage, "Please provide an email address");
-//	}
-//
-//	
-//	@Test
-//	public void validateInvalidEmailFormat() 
-//	{
-//		registrationPage.inputEmail("jarcibal");
-//		errorMessage = registrationPage.getError(registrationPage.emailErrorOne);
-//		Assert.assertEquals(errorMessage, "Please provide a valid email address format");
-//	}
-//
-//	@Test
-//	public void validateValidEmail() 
-//	{
-//		registrationPage.inputEmail("smileys010@gmail.com");
-//		loadingWait(registrationPage.emailIsUnique);
-//		errorMessage = registrationPage.getEmailIsUnique();
-//		Assert.assertEquals(errorMessage, "done Email is unique");
-//	}
+	@Test
+	public void validateRegistrationPageTitle(){
+		String header = registrationPage.getRegistrationPageTitle();
+		Assert.assertEquals(header, "Register Now!");
+	}
+
+	@Test
+	public void validateNoEmail() 
+	{
+		registrationPage.click(registrationPage.emailTextbox);
+		registrationPage.click(registrationPage.registerButton);
+		errorMessage = registrationPage.getError(registrationPage.emailErrorTwo);
+		Assert.assertEquals(errorMessage, "Please provide an email address");
+	}
+
+	
+	@Test
+	public void validateInvalidEmailFormat() 
+	{
+		registrationPage.inputEmail("jarcibal");
+		errorMessage = registrationPage.getError(registrationPage.emailErrorOne);
+		Assert.assertEquals(errorMessage, "Please provide a valid email address format");
+	}
+
+	@Test
+	public void validateValidEmail() 
+	{
+		registrationPage.inputEmail("smileys010@gmail.com");
+		loadingWait(registrationPage.emailIsUnique);
+		errorMessage = registrationPage.getEmailIsUnique();
+		Assert.assertEquals(errorMessage, "done Email is unique");
+	}
 
 	@Test
 	public void validateExistingEmail()
@@ -110,50 +107,50 @@ public class registrationPageTest extends testBase {
 		Assert.assertEquals(errorMessage, "This email already exists");
 	}	
 	
-//	@Test
-//	public void validatePasswordMismatch() {
-//		registrationPage.proper("smileys010@gmail.com", "Ppass", "Pword");
-//		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorOne);
-//		Assert.assertEquals(errorMessage, "Passwords do not match");
-//	}
-//
-//	@Test
-//	public void validatePasswordBlankOne() {
-//		registrationPage.proper("smileys010@gmail.com", "", "P@suwarudo01");
-//		errorMessage = registrationPage.getError(registrationPage.passwordError);
-//		Assert.assertEquals(errorMessage, "Please provide a password");
-//	}
-//
-//	@Test
-//	public void validatePasswordBlankTwo() {
-//		registrationPage.proper("smileys010@gmail.com", "", "");
-//		errorMessage = registrationPage.getError(registrationPage.passwordError);
-//		Assert.assertEquals(errorMessage, "Please provide a password");
-//	}
-//
-//	@Test
-//	public void validatePasswordBlankThree() {
-//		registrationPage.proper("smileys010@gmail.com", "", "P@suwarudo01");
-//		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorOne);
-//		Assert.assertEquals(errorMessage, "Passwords do not match");
-//	}
-//
-//	
-//	@Test
-//	public void validateConfirmPasswordBlankOne() {
-//		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "");
-//		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorTwo);
-//		Assert.assertEquals(errorMessage, "Please confirm your password");
-//	}
-//	
-//	@Test
-//	public void validateConfirmPasswordBlankTwo() {
-//		registrationPage.proper("smileys010@gmail.com", "", "");
-//		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorTwo);
-//		Assert.assertEquals(errorMessage, "Please confirm your password");
-//	}
-//
-//	
+	@Test
+	public void validatePasswordMismatch() {
+		registrationPage.proper("smileys010@gmail.com", "Ppass", "Pword");
+		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorOne);
+		Assert.assertEquals(errorMessage, "Passwords do not match");
+	}
+
+	@Test
+	public void validatePasswordBlankOne() {
+		registrationPage.proper("smileys010@gmail.com", "", "P@suwarudo01");
+		errorMessage = registrationPage.getError(registrationPage.passwordError);
+		Assert.assertEquals(errorMessage, "Please provide a password");
+	}
+
+	@Test
+	public void validatePasswordBlankTwo() {
+		registrationPage.proper("smileys010@gmail.com", "", "");
+		errorMessage = registrationPage.getError(registrationPage.passwordError);
+		Assert.assertEquals(errorMessage, "Please provide a password");
+	}
+
+	@Test
+	public void validatePasswordBlankThree() {
+		registrationPage.proper("smileys010@gmail.com", "", "P@suwarudo01");
+		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorOne);
+		Assert.assertEquals(errorMessage, "Passwords do not match");
+	}
+
+	
+	@Test
+	public void validateConfirmPasswordBlankOne() {
+		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "");
+		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorTwo);
+		Assert.assertEquals(errorMessage, "Please confirm your password");
+	}
+	
+	@Test
+	public void validateConfirmPasswordBlankTwo() {
+		registrationPage.proper("smileys010@gmail.com", "", "");
+		errorMessage = registrationPage.getError(registrationPage.confirmPasswordErrorTwo);
+		Assert.assertEquals(errorMessage, "Please confirm your password");
+	}
+
+	
 	@Test
 	public void validatePWRankingOne(){
 		registrationPage.proper("smileys010@gmail.com", "pass", "pass");
@@ -189,8 +186,6 @@ public class registrationPageTest extends testBase {
 		Assert.assertEquals(pwStrength, "STRONG");
 	}
 
-	
-
 
 	@Test
 	public void validateNotVerifiedEmail() {
@@ -199,46 +194,46 @@ public class registrationPageTest extends testBase {
 		Assert.assertEquals(errorMessage, "The email you are trying to register has not been verified");
 	}
 
-	@Test
-	public void validateVerificationErrorOne() {
-		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "P@suwarudo01");
-		registrationPage.inputVerificationOTP("");
-		errorMessage = registrationPage.getError(registrationPage.verificationErrorOne);
-		Assert.assertEquals(errorMessage, "Please provide a verification code");
-	}
-
-	@Test
-	public void validateVerificationErrorTwo() {
-		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "P@suwarudo01");
-		registrationPage.inputVerificationOTP("1");
-		errorMessage = registrationPage.getError(registrationPage.verificationErrorTwo);
-		Assert.assertEquals(errorMessage, "Invalid verification code");
-	}
-	
-	@Test
-	public void validateVerificationErrorThree() {
-		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "P@suwarudo01");
-		registrationPage.inputVerificationOTP("12345");
-		errorMessage = registrationPage.getError(registrationPage.verificationErrorTwo);
-		Assert.assertEquals(errorMessage, "Invalid verification code");
-	}
-
-	@Test
-	public void validateVerificationErrorFour() {
-		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "P@suwarudo01");
-		registrationPage.inputVerificationOTP("123456");
-		loadingWait(registrationPage.verificationErrorTwo);
-		errorMessage = registrationPage.getError(registrationPage.verificationErrorTwo);
-		Assert.assertEquals(errorMessage, "Invalid verification code");
-	}
-	
-	@Test
-	public void validateVerificationErrorFive() {
-		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "P@suwarudo01");
-		registrationPage.inputVerificationOTP("abcdef");
-		errorMessage = registrationPage.getError(registrationPage.verificationErrorOne);
-		Assert.assertEquals(errorMessage, "Please provide a verification code");
-	}
+//	@Test
+//	public void validateVerificationErrorOne() {
+//		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "P@suwarudo01");
+//		registrationPage.inputVerificationOTP("");
+//		errorMessage = registrationPage.getError(registrationPage.verificationErrorOne);
+//		Assert.assertEquals(errorMessage, "Please provide a verification code");
+//	}
+//
+//	@Test
+//	public void validateVerificationErrorTwo() {
+//		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "P@suwarudo01");
+//		registrationPage.inputVerificationOTP("1");
+//		errorMessage = registrationPage.getError(registrationPage.verificationErrorTwo);
+//		Assert.assertEquals(errorMessage, "Invalid verification code");
+//	}
+//	
+//	@Test
+//	public void validateVerificationErrorThree() {
+//		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "P@suwarudo01");
+//		registrationPage.inputVerificationOTP("12345");
+//		errorMessage = registrationPage.getError(registrationPage.verificationErrorTwo);
+//		Assert.assertEquals(errorMessage, "Invalid verification code");
+//	}
+//
+//	@Test
+//	public void validateVerificationErrorFour() {
+//		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "P@suwarudo01");
+//		registrationPage.inputVerificationOTP("123456");
+//		loadingWait(registrationPage.verificationErrorTwo);
+//		errorMessage = registrationPage.getError(registrationPage.verificationErrorTwo);
+//		Assert.assertEquals(errorMessage, "Invalid verification code");
+//	}
+//	
+//	@Test
+//	public void validateVerificationErrorFive() {
+//		registrationPage.proper("smileys010@gmail.com", "P@suwarudo01", "P@suwarudo01");
+//		registrationPage.inputVerificationOTP("abcdef");
+//		errorMessage = registrationPage.getError(registrationPage.verificationErrorOne);
+//		Assert.assertEquals(errorMessage, "Please provide a verification code");
+//	}
 
 	@AfterMethod
 	public void tearDown() {

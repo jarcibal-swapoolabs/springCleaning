@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.springSeven.qa.util.testListener"/>
-  </listeners>
-  <test thread-count="5" name="Spring 7 UI(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.SpringSeven.qa.testcases.forgotPasswordPageTest">
+      <class name="com.SpringSeven.qa.testcases.registrationPageTest">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="validateWorkingOTP"/>
+          <include name="validateNotVerifiedEmail"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.SpringSeven.qa.testcases.forgotPasswordPageTest -->
+      </class> <!-- com.SpringSeven.qa.testcases.registrationPageTest -->
     </classes>
-  </test> <!-- Spring 7 UI(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
