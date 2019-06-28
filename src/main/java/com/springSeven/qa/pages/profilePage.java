@@ -32,7 +32,8 @@ public class profilePage extends testBase{
 
 	//@FindBy(xpath="//div[@class='input-button-container__1sfu5']")
 	//@FindBy(xpath="//div[@class='floating-blocker__1_1QQ']")
-	@FindBy(xpath="//div[@class='share-link-text__2LAAf']")
+	//@FindBy(xpath="//div[@class='share-link-text__2LAAf']")
+	@FindBy(xpath="//div[starts-with(text(),'http')]")
 	public WebElement signupLinkTextbox;
 	
 	
