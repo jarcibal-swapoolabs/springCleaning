@@ -81,15 +81,9 @@ public class profilePage extends testBase{
 
 	public void copyLink()
 	{
-		System.out.println("method called copylink");
 		loadingWait(profilePageTitle);
 		String signupLink = signupLinkTextbox.getText();
-		System.out.println("ang link ng signup ay " + signupLink);
-
-		String shota = signupLinkTextbox3.getText();
-		System.out.println("shota" + shota);
-		//String signupLink = copyButon.getAttribute("value");
-		//driver.get(signupLink);
+		driver.get(signupLink);
 	}
 
 	

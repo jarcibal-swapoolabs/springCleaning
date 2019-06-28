@@ -55,11 +55,8 @@ public class registrationPageTest extends testBase {
 		loadingWait(profilePage.profilePageTitle);
 		profilePage.copyLink();
 		
-//		initialization();
-//		registrationPage = new registrationPage();
-//		//driver.get("https://d34doyrhrdwlg4.cloudfront.net/signup?id=xCX3Kdt");
-//		driver.get("http://192.168.0.1/signup?id=mWjXpTM");
-//		processing();
+		registrationPage = new registrationPage();
+		processing();
 }
 
 	@Test
