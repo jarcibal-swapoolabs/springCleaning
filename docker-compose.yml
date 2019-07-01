@@ -2,14 +2,16 @@ version: "2"
 services:
   selenium-hub:    
     image: selenium/hub
-    networks: 
-      - spring7
     privileged: true
+    environment:
+      - GRID_MAX_SESSION=16
+      - GRID_BROWSER_TIMEOUT=300
+      - GRID_TIMEOUT=300
+    ports:
+	  - "4444:4444"      
   chrome:
     image: selenium/node-chrome-debug
     shm_size: 2G
-    networks: 
-      - spring7
     privileged: true
     depends_on:
     environment:
@@ -17,13 +19,10 @@ services:
       - NODE_MAX_SESSIONS=2
       - NODE_MAX_INSTANCES=2
     volumes:
-      - /home/qa/Downloads:/home/seluser/Downloads/picsUpload/
       - /dev/shm:/dev/shm
   firefox:    
     image: selenium/node-firefox-debug
     shm_size: 2G
-    networks: 
-      - spring7
     privileged: true
     depends_on:
       - selenium-hub
@@ -32,12 +31,9 @@ services:
       - NODE_MAX_SESSIONS=2
       - NODE_MAX_INSTANCES=2
     volumes:
-      - /home/qa/Downloads:/home/seluser/Downloads/picsUpload/
       - /dev/shm:/dev/shm
   uiTestFirefox:    
     image: smileys009/selenium-docker-linux
-    networks: 
-      - spring7
     privileged: true
     depends_on:
       - chrome
@@ -50,8 +46,6 @@ services:
       - ./output/firefox:/usr/share/udemy/test-output
   uiTestChrome:
     image: smileys009/selenium-docker-linux
-    networks: 
-      - spring7
     privileged: true
     depends_on:
       - chrome
@@ -62,6 +56,3 @@ services:
       - MODULE=dockering.xml
     volumes:
       - ./output/chrome:/usr/share/udemy/test-output
-networks:
-  spring7:
-    external: true

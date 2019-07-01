@@ -17,11 +17,8 @@ ADD target/libs							libs
 # please ADD that as well
 
 # ADD suite files
-ADD tenmb.jpg					tenmb.jpg
 ADD dockering.xml				dockering.xml
-ADD dockering2.xml				dockering2.xml
 ADD healthcheck.sh				healthcheck.sh
-ADD screenshot/screenshot.png   screenshot.png				
 ADD healthcheck.sh				healthcheck.sh
 
 # BROWSER
