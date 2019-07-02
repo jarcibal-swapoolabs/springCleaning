@@ -109,28 +109,28 @@ public class testUtil extends testBase {
 //		return data;
 //	}
 
-	// screenshot
-	public static void takeScreenshotAtEndOfTest() throws IOException {
-		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		String currentDir = System.getProperty("user.dir");
-		System.out.println(currentDir + "located ako sa");
-		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshot/" + System.currentTimeMillis() + ".png"));
-	}
-
-	//screenshot 2
-	public static void getScreenshot(){
-
-		try
-		{			
-			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			String currentDir = System.getProperty("user.dir");
-			FileHandler.copy(scrFile, new File(currentDir + "/test-output/" + System.currentTimeMillis() + ".png"));
-		}
-		catch(IOException e)
-		{
-		e.printStackTrace();
-		}
-	}
+//	// screenshot
+//	public static void takeScreenshotAtEndOfTest() throws IOException {
+//		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//		String currentDir = System.getProperty("user.dir");
+//		System.out.println(currentDir + "located ako sa");
+//		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshot/" + System.currentTimeMillis() + ".png"));
+//	}
+//
+//	//screenshot 2
+//	public static void getScreenshot(){
+//
+//		try
+//		{			
+//			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//			String currentDir = System.getProperty("user.dir");
+//			FileHandler.copy(scrFile, new File(currentDir + "/test-output/" + System.currentTimeMillis() + ".png"));
+//		}
+//		catch(IOException e)
+//		{
+//		e.printStackTrace();
+//		}
+//	}
 
 
 	// JS Scroll

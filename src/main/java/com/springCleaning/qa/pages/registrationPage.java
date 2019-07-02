@@ -1,5 +1,6 @@
 package com.springCleaning.qa.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,7 +9,8 @@ import com.springCleaning.qa.base.testBase;
 
 public class registrationPage extends testBase {
 
-	public registrationPage() {
+	public registrationPage(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -137,7 +139,9 @@ public class registrationPage extends testBase {
 	}
 
 	public void inputEmail(String email) {
+		loadingWait(emailTextbox);
 		emailTextbox.sendKeys(email);
+		clickableWait(registerButton);
 		registerButton.click();
 	}
 
